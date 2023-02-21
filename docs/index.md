@@ -1,17 +1,24 @@
-# Welcome to MkDocs
+---
+template: home.html
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+<center>
 
-## Commands
+<br/><br/>
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+<img src="assets/UU_logo_color.svg" alt="drawing" width="200"/>
 
-## Project layout
+<br/><br/>
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+
+# Welcome to the Bianca workshop
+
+
+<br/><br/>
+
+[Get started using Bianca](login_bianca.md){ .md-button .md-button--primary }
+
+<br/><br/>
+
+
+</center>
