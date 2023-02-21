@@ -4,6 +4,7 @@ nav:
   - Home: index.md
   - Getting Started:
     - Logging into Bianca: login_bianca.md
+    - Overview: overview.md
     - Command-line intro: linux.md
     - Module system: modules1.md
     - Transfering files to/from Bianca: transfer.md
