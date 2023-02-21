@@ -3,7 +3,7 @@ site_name: Bianca workshop
 nav:
   - Home: index.md
   - Getting Started:
-    - Logging into Bianca: getting_started/login_bianca.md
+    - Logging into Bianca: login_bianca.md
 
 theme:
   name: material
