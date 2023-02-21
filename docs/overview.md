@@ -86,6 +86,7 @@
         end
 
         thinlinc -- usr-sensXXX + 2FA----> SubGraph1Flow
+        Node1 -- usr-sensXXX + 2FA----> SubGraph1Flow
         subgraph "Bianca"
         SubGraph1Flow(Bianca login) -- usr+passwd --> private(private cluster)
         private -- interactive --> calcB(calculation nodes)
@@ -99,9 +100,9 @@
 ```
 
 
-```keypoints
+!!! abstract "keypoints"
 - NAISS makes available large-scale high-performance computing resources, storage capacity, and advanced user support, for Swedish research. 
 - UPPMAX runs the local resources placed at Uppsala Universtiy
 - A cluster consists of several inter-connected computers that can work individually or together.
-```
+
 
