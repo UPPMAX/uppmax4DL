@@ -75,9 +75,9 @@
 
 ## Overview of the UPPMAX systems
 
-```{mermaid}
+```mermaid
 
-graph TB
+  graph TB
 
   Node1 -- interactive --> SubGraph2Flow
   Node1 -- sbatch --> SubGraph2Flow
@@ -99,7 +99,7 @@ graph TB
 ```
 
 
-```{keypoints}
+```keypoints
 - NAISS makes available large-scale high-performance computing resources, storage capacity, and advanced user support, for Swedish research. 
 - UPPMAX runs the local resources placed at Uppsala Universtiy
 - A cluster consists of several inter-connected computers that can work individually or together.
