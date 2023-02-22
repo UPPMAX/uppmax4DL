@@ -1,13 +1,13 @@
 # Command-line intro
 
 !!! info "Objectives"
-    - We'll use the commands and investiagte the Bianca environment
+    - We'll use the commands and investigate the Bianca environment
 
 !!! warning
 
     - We assume that you have already covered the Command-line material and tested on Rackham
-        - https://uppmax.github.io/uppmax_intro/linux.html
-        - https://uppmax.github.io/uppmax_intro/linux_basics.html
+        - [LINUX](https://uppmax.github.io/uppmax_intro/linux.html)
+        - [Basic toolkit](https://uppmax.github.io/uppmax_intro/linux_basics.html)
         
     ### Navigation and file management
 
