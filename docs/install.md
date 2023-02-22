@@ -9,9 +9,9 @@
     
 ## Install software yourself
 - You can install in your home directory.
-  - This is handy for personal needs, low numbers of files (i.e. not Conda).
+    - This is handy for personal needs, low numbers of files (i.e. not Conda).
 - Usually better to install in project directory.
-  - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
+    - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
 
 ### Python packages
 - [Python packages](https://uppmax.uu.se/support/user-guides/python-user-guide/)
