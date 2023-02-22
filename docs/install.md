@@ -1,6 +1,6 @@
 # Software installation without internet connection
 
-To be remeoved
+To be removed
 
     - Conda packages: installing/using [name=Jonas]
         - alternative: installing with pip
