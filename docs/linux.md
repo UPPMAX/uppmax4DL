@@ -35,4 +35,29 @@
 
 ### Navigating Bianca
 
+- Check the path to your $HOME folder
+
+```
+$ cd ~
+$ pwd
+$ pwd -P
+```
+
+??? question 
+    ```
+    /home/$USER
+    /castor/project/home/bjornc
+    ```
+- Check the path to your projects
+
+```
+$ cd /proj
+$ ls
+$ pwd
+$ pwd -P
+$ cd /sensXXX
+$ pwd
+$ pwd -P
+```
+??? question
 
