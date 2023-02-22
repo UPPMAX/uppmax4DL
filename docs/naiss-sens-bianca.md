@@ -1,10 +1,10 @@
-# NAISS SENS and Bianca
+# NAISS-SENS, sensitive data and Bianca
 
 !!! info "Objectives"
     - We'll briefly get an overview of kinds of sensitive data
     - ... and the **Bianca** system
 
-
+<div>
     - extended from intro course 
     - what is sensitive data?
     - puba & timelines
