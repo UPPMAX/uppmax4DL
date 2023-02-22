@@ -1,15 +1,7 @@
 # Overview
 
-```{questions}
-- What is UPPMAX?
-- What is SNIC/NAISS?
-- What is a cluster?
-
-```
-
-```{objectives}
-- We'll get an overview of UPPMAX and SNIC/NAISS and how a computer cluster works
-```
+!!! info "Objectives"
+    - We'll get an overview of UPPMAX and SNIC/NAISS and how a computer cluster works
 
 
 **UPPMAX = UppMACS**
@@ -20,10 +12,8 @@
 - Mission: to provide a quality high-performance computing environment nationally
 
 - Starting 1 January 2023, the National Academic Infrastructure for Supercomputing in Sweden (NAISS) is the new organization for high-performance computing, storage, and date services for academic users in Sweden. 
-  - Replaces SNIC — the Swedish National Infrastructure for Computing
-  - Linköping university is the host organization for NAISS, but NAISS acts independently with a national perspective and responsibility.
 - From the users perspective, there will initially only be minimal differences between the SNIC and NAISS regimes.
-  - FAQ:s — <https://www.naiss.se/>
+    - FAQ:s — <https://www.naiss.se/>
 - Application rounds: <https://www.naiss.se//#application-rounds-for-compute-and-storage-resources>
 - NAISS and Uppsala University fund UPPMAX — UU’s supercomputing center.
 
@@ -36,15 +26,15 @@
 ## UPPMAX systems
 
 - Clusters
-  - Rackham (general purpose)
-    - Snowy (Long runs and GPU:s)
-  - Bianca (sensitive data)
-    - Miarka (new for LifeScience)
+    - Rackham (general purpose)
+        - Snowy (Long runs and GPU:s)
+    - **Bianca (sensitive data)**
+        - Miarka (new for LifeScience)
 - Storage
-  - On-load directly connected to the clusters
-  - Off-load for large data not needed for computation analysis anymore
+    - On-load directly connected to the clusters
+    - Off-load for large data not needed for computation analysis anymore
 - Cloud
-  - Dis (region EAST-1)
+    - Dis (region EAST-1)
 
 ## High Performance Computing — HPC
 ### What is a cluster?
@@ -101,8 +91,8 @@
 
 
 !!! abstract "keypoints"
-- NAISS makes available large-scale high-performance computing resources, storage capacity, and advanced user support, for Swedish research. 
-- UPPMAX runs the local resources placed at Uppsala Universtiy
-- A cluster consists of several inter-connected computers that can work individually or together.
+    - NAISS makes available large-scale high-performance computing resources, storage capacity, and advanced user support, for Swedish research. 
+    - UPPMAX runs the local resources placed at Uppsala Universty
+    - A cluster consists of several inter-connected computers that can work individually or together.
 
 
