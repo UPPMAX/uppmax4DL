@@ -2,6 +2,7 @@ site_name: Bianca workshop
 
 nav:
   - Home: index.md
+  - Praxcticalities: practicalities.md
   - Getting Started:
     - Logging into Bianca: login_bianca.md
     - Overview: overview.md
