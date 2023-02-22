@@ -1,6 +1,7 @@
 # Module system (continued) and Slurm
 
 To be removed later
+
     - interactive vs. non-interactive sessions
     - why is interactive needed at all?
     - e.g. nextflow - main node should be on interactive
@@ -105,13 +106,16 @@ To be removed later
     - Need a queue:
 
 ![Image](./img/queue1.png)
+<br/>
 - x-axis: cores, one thread per core
 - y-axis: time
 <br/><br/>
+
 - [Slurm](https://slurm.schedmd.com/) is a jobs scheduler
 - Plan your job and but in the slurm job batch (sbatch)
-    `sbatch <flags> <program>` or
-    `sbatch <job script>`
+    
+    - `sbatch <flags> <program>` or
+     `sbatch <job script>`
 
 - Easiest to schedule *single-threaded*, short jobs
 
@@ -119,43 +123,43 @@ To be removed later
 ![Image](./img/queue3.png)
 - Left: 4 one-core jobs can run immediately (or a 4-core wide job).
 
-  - The jobs are too long to fit in core number 9-13.
+    - The jobs are too long to fit in core number 9-13.
 
 - Right: A 5-core job has to wait.
 
-  - Too long to fit in cores 9-13 and too wide to fit in the last cores.
+    - Too long to fit in cores 9-13 and too wide to fit in the last cores.
 
 ### Jobs
 - Job = what happens during booked time
 - Described in a Bash script file
-  - Slurm parameters (**flags**)
-  - Load software modules
-  - (Move around file system)
-  - Run programs
-  - (Collect output)
+    - Slurm parameters (**flags**)
+    - Load software modules
+    - (Move around file system)
+    - Run programs
+    - (Collect output)
 - ... and more
 
 ### Slurm parameters
 - 1 mandatory setting for jobs:
-  - Which compute project? (`-A`)
+    - Which compute project? (`-A`)
 - 3 settings you really should set:
-  - Type of queue? (`-p`)
-    - core, node, (for short development jobs and tests: devcore, devel)
-  - How many cores? (`-n`)
-    - up to 16 (20 on Rackham) for core job
-  - How long at most? (`-t`)
+    - Type of queue? (`-p`)
+        - core, node, (for short development jobs and tests: devcore, devel)
+    - How many cores? (`-n`)
+        - up to 16 (20 on Rackham) for core job
+    - How long at most? (`-t`)
 - If in doubt:
-  - -`p core`
-  - -`n 1`
-  - `-t 7-00:00:00`
+    - `-p core`
+    - `-n 1`
+    - `-t 7-00:00:00`
 
 ![Image](./img/queue1.png)
 
 - Where should it run? (`-p node` or `-p core`)
 - Use a whole node or just part of it?
-  - 1 node = 20 cores (16 on Bianca & Snowy)
-  - 1 hour walltime = 20 core hours = expensive
-   -Waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
+    - 1 node = 20 cores (16 on Bianca & Snowy)
+    - 1 hour walltime = 20 core hours = expensive
+        - Waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 - Default value: core
 
 ### Interactive jobs
@@ -164,14 +168,14 @@ To be removed later
 - Quickly give you a job and logs you in to the compute node
 - Require same Slurm parameters as other jobs
 
-``````{challenge} Try interactive
+#### Try interactive
 
 ```bash=
   interactive -A naiss2023-22-21 -p core -n 1 -t 10:00
 ```
 - Which node are you on?
   - Logout with `<Ctrl>-D` or `logout`
-``````
+
 
 
 
@@ -215,7 +219,7 @@ echo Hello world!
 - Finishedjobinfo — summary of finished jobs
 - Jobstats — efficiency of booked resources
 
-``````{challenge} Exercise at home
+#### Exercise at home
 - Copy the code just further up!
 - Put it into a file named “jobtemplate.sh”
 - Make the file executable (chmod)
@@ -237,7 +241,7 @@ $ ls -lrt slurm-*
 ```
 $ cat <filename>
 ```
-``````
+
  
  
 
