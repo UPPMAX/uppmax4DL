@@ -10,12 +10,12 @@ template: home.html
 
 <br/><br/>
 
+</center>
 
 # Welcome to the Bianca workshop
 
 !!! info "Introduction to Bianca: Handling Sensitive Research Data"
     
-    <left>
     Are you working with your sensitive data in your research? If yes, welcome to a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca. We will tell you about NAISS-SENS, how to login to Bianca, transfer files via wharf, Slurm and the module system, and how to work with Conda packages.
 
     You do not need to be a member of a NAISS-SENS project in order to join the workshop. A SUPR course project will be available to all participants. The workshop will consist of both lectures and exercise sessions.
@@ -24,8 +24,10 @@ template: home.html
     - Where: online via Zoom.
 
     For more information and registration please visit: https://www.uppmax.uu.se/support/courses-and-workshops/bianca-workshop-2023.
-  </left>
-  
+
+<center>
+<br><br>
+    
 ## Schedule
   
 |Topic|Start|Timing|Content|
