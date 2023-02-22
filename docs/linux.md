@@ -43,11 +43,12 @@ $ pwd
 $ pwd -P
 ```
 
-??? question 
+??? answer
     ```
     /home/$USER
     /castor/project/home/bjornc
     ```
+
 - Check the path to your projects
 
 ```
@@ -55,9 +56,22 @@ $ cd /proj
 $ ls
 $ pwd
 $ pwd -P
+```
+
+??? answer
+    ```
+    /proj
+    /proj
+    ```
+```
 $ cd /sensXXX
 $ pwd
 $ pwd -P
 ```
-??? question
+??? answer
+    ```
+    /proj/sensXXX
+    /castor/project/proj
+    ```
+
 
