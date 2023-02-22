@@ -5,6 +5,14 @@
     - ... and the **Bianca** system
 
 
+    - extended from intro course 
+    - what is sensitive data?
+    - puba & timelines
+    - how to apply for projects
+    - project management
+    - LINK to extra material
+    - contact persons
+
 ## Sensitive personal data
 
 - <https://www.snic.se/allocations/snic-sens/>
