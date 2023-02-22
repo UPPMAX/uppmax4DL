@@ -1,16 +1,19 @@
 # Module system (continued) and Slurm
+
+To be removed later
     - interactive vs. non-interactive sessions
     - why is interactive needed at all?
     - e.g. nextflow - main node should be on interactive
 
-# Software and tools
-```{objectives}
-- We'll briefly get overviews over 
-    -  software tools on UPPMAX
-    -  databases
-- Introduction quide for installing own software or packages
-- Very short introduction to developing old programs
-```
+## Software and tools
+
+!!! info "Objectives"
+    - We'll briefly get overviews over 
+        -  software tools on UPPMAX
+        -  databases
+    - Introduction quide for installing own software or packages
+    - Very short introduction to developing old programs
+
 
 - 800+ programs and packages are installed.
 - To avoid chaos and collisions, they are managed by a **module system**.
@@ -18,89 +21,88 @@
 - The modules are most often available across cluster (except for Miarka)
 
 
-```{note}
-- Bioinformatics tools require loading the “bioinfo-tools” module first.
-```
+!!! warning 
+    - Bioinformatics tools require loading the “bioinfo-tools” module first.
 
-## Modules
+
+### Modules
 
 - [Software at UPPMAX](https://www.uppmax.uu.se/resources/software/)
 - [Module system](https://www.uppmax.uu.se/resources/software/module-system/)
 
-### Some commands
+#### Some commands
 
 - list all available modules (also bio-informatics if `bioinfo-tools` is loaded)
-  - `module avail` or `ml av`
+    - `module avail` or `ml av`
 
 - Search for modules (full name not needed and case insensitive) 
-  - `module avail <part of tool name>` or `ml av <part of toolname>`
+    - `module avail <part of tool name>` or `ml av <part of toolname>`
 
 - Load a module 
-  - `module load <module name>` or `ml <module name>`
+    - `module load <module name>` or `ml <module name>`
 
 - Unload a module 
-  - `module unload <module name>` or `ml -<module name>`
+    - `module unload <module name>` or `ml -<module name>`
 
 - List loaded modules 
-  - `module list` or `ml`
+    - `module list` or `ml`
 
 - Display a brief module-specific help (not available for all modules)
-  - `module help <module name>` or `ml help <module name>` 
+    - `module help <module name>` or `ml help <module name>` 
  
 - Search (like `avail`) but otherwise hidden modules (`bioinfo-tools` and Easybuild modules) 
-  -  `module spider <part of tool name>` or `ml spider <module name>` 
+    -  `module spider <part of tool name>` or `ml spider <module name>` 
 
-## Installed software
+### Installed software
 - You can also find (almost) all installed software at:
-    <https://www.uppmax.uu.se/resources/software/installed-software/>
+    - <https://www.uppmax.uu.se/resources/software/installed-software/>
   
-## Installed databases
+### Installed databases
 - [Installed databases at UPPMAX](https://www.uppmax.uu.se/resources/databases/)
     
-``````{challenge} Hands on using a tool
-1. use matlab
+???+ question "Hands on using a tool""
 
-```
-$ matlab &
-```
-- Does not work!
-- Load module first
-```
-$ module avail matlab
+    1. use matlab
 
-$ module load matlab/R2020b
+    ```
+    $ matlab &
+    ```
+    - Does not work!
+    - Load module first
+    ```
+    $ module avail matlab
+    
+    $ module load matlab/R2020b
+    
+    $ matlab &
+    ```
+    - Matlab starts
+    - `module load matlab` will start default version (often latest)
 
-$ matlab &
-```
-- Matlab starts (if X11 is active)
-- `module load matlab` will start default version (often latest)
+    2. use Samtools
 
-2. use Samtools
+    ```
+    $ module load samtools
+    ```
+    "These module(s) or extension(s) exist but cannot be loaded as requested: "samtools""
+    ```
+    module load bioinfo-tools samtools
+    ```
+    - Bioinformatic tools are hidden by default
 
-```
-$ module load samtools
-```
-        "These module(s) or extension(s) exist but cannot be loaded as requested: "samtools""
-```
-module load bioinfo-tools samtools
-```
-- Bioinformatic tools are hidden by default
-
-``````
-
-## Run own scripts or programs
+### Run own scripts or programs
 - Unless your script or program is in the active path, you run it by the full path or `./<file>` if you are in the present directory.
 
 
-# Submitting jobs
-```{objectives}
-- This is a short introduction in how to reach the calculation nodes
-- Thursday afternoon is wedded to this topic!
-```
+## Submitting jobs
 
-## Slurm, sbatch, the job queue
+!!! info "Objectives"
+    - This is a short introduction in how to reach the calculation nodes
+
+
+### Slurm, sbatch, the job queue
 - Problem: 1000 users, 500 nodes, 10k cores
-- Need a queue:
+    - Need a queue:
 
 ![Image](./img/queue1.png)
 - x-axis: cores, one thread per core
@@ -123,7 +125,7 @@ module load bioinfo-tools samtools
 
   - Too long to fit in cores 9-13 and too wide to fit in the last cores.
 
-## Jobs
+### Jobs
 - Job = what happens during booked time
 - Described in a Bash script file
   - Slurm parameters (**flags**)
@@ -133,7 +135,7 @@ module load bioinfo-tools samtools
   - (Collect output)
 - ... and more
 
-## Slurm parameters
+### Slurm parameters
 - 1 mandatory setting for jobs:
   - Which compute project? (`-A`)
 - 3 settings you really should set:
@@ -156,7 +158,7 @@ module load bioinfo-tools samtools
    -Waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 - Default value: core
 
-## Interactive jobs
+### Interactive jobs
 - Most work is most effective as submitted jobs, but e.g. development needs responsiveness
 - Interactive jobs are high-priority but limited in `-n` and `-t`
 - Quickly give you a job and logs you in to the compute node
@@ -174,7 +176,7 @@ module load bioinfo-tools samtools
 
 
  
-### A simple job script template
+#### A simple job script template
 
 ```bash=
 #!/bin/bash -l 
@@ -206,7 +208,7 @@ echo Hello world!
 
 ```
 
-## Other Slurm tools
+### Other Slurm tools
 
 - Squeue — quick info about jobs in queue
 - Jobinfo — detailed info about jobs
