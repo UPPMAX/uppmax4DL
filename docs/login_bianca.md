@@ -40,15 +40,6 @@
  
 ![Image](./img/Thinlinc2.jpg)
 
-
-!!! info
-
-    Check out or Bianca Portal for info about:
-    - NAISS-SENS
-    - Sensitive data
-    - The Bianca solution
-    - Tranfer of data
-    
     
 
     
