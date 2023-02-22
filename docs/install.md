@@ -15,6 +15,8 @@ To be remeoved
     - This is handy for personal needs, low numbers of files (i.e. not Conda).
 - Usually better to install in project directory.
     - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
+- If not available on Bianca already you may have to use the Wharf to insatll your tools
+    - alternatively let a Application Expert install the tool as a module.
 
 ### Python packages
 - [Python packages](https://uppmax.uu.se/support/user-guides/python-user-guide/)
