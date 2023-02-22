@@ -21,7 +21,7 @@ theme:
     text: Lato
     code: JetBrains Mono
 
-  logo: assets/UU_logotyper_digitalt_svg_2022.svg
+  logo: assets/logo.svg
 
   features:
     - navigation.tabs
