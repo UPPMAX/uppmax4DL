@@ -121,6 +121,8 @@ To be removed later
 
 ![Image](./img/queue2.png)
 ![Image](./img/queue3.png)
+
+<br>
 - Left: 4 one-core jobs can run immediately (or a 4-core wide job).
 
     - The jobs are too long to fit in core number 9-13.
@@ -170,9 +172,10 @@ To be removed later
 
 #### Try interactive
 
-```bash=
-  interactive -A naiss2023-22-21 -p core -n 1 -t 10:00
 ```
+$ interactive -A naiss2023-22-21 -p core -n 1 -t 10:00
+```
+
 - Which node are you on?
   - Logout with `<Ctrl>-D` or `logout`
 
@@ -182,7 +185,7 @@ To be removed later
  
 #### A simple job script template
 
-```bash=
+```bash
 #!/bin/bash -l 
 # tell it is bash language and -l is for starting a session with a "clean environment, e.g. with no modules loaded and paths reset"
 
