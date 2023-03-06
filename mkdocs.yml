@@ -13,6 +13,13 @@ nav:
   - Using tools and install: 
     - Module system (continued) and Slurm: modules-slurm.md
     - Software installation without internet connection: install.md
+  - Extra material:
+    - conda.md
+    - pip.md
+    - Rpackages.md
+    - julia.md
+    - jupyter.md
+    - containers.md
      
  
 theme:
