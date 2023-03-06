@@ -16,7 +16,7 @@ nav:
   - Extra material:
     - conda.md
     - pip.md
-    - Rpackages.md
+    - rpackages.md
     - julia.md
     - jupyter.md
     - containers.md
