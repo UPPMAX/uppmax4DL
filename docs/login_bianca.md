@@ -46,7 +46,7 @@
 ### Bianca has no Internet
 ... but we have “solutions”
 
-![Image](./img/biancaorganisation-01.png)
+![Bianca](./img/biancaorganisation-01.png)
 
 - Bianca is only accessible from within Sunet (i.e. from university networks).
 - Use VPN outside Sunet. [Link to VPN for UU](https://mp.uu.se/en/web/info/stod/it-telefoni/it-support/network-on-campus/vpn-service)
