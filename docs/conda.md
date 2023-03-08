@@ -22,3 +22,5 @@ This where you use conda as you normally would. On Bianca this is equal to runni
 
 Customising
     - You may run 'source conda_init.sh' to initialise your shell to be able to run 'conda activate' and 'conda deactivate' etc. Just remember that this command ADDS STUFF TO YOUR SHELL outside the scope of the module system.
+
+Remember to run 'conda clean -a' once in a while. When you load the module, there is also a reminder displayed, so you get this info there also.
