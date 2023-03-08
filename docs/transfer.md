@@ -29,39 +29,41 @@
 
 - The path to this folder, once you are logged into your project's cluster, is:
 
-    /proj/<projid>/nobackup/wharf/<username>/<username>-<projid>
+    `/proj/<projid>/nobackup/wharf/<username>/<username>-<projid>`
 E.g.
-    /proj/sens2016999/nobackup/wharf/myuser/myuser-sens2016999
+    `/proj/sens2016999/nobackup/wharf/myuser/myuser-sens2016999`
 
 - To transfer data from Bianca, copy the files you want to transfer here
 - To get the files transfered to the wharf area from outside, move the files to you project folde or home folder.
     
 - Please note that in the wharf you only have access to upload your files to the directory that is named:
-   <username>-<projid>
+   `<username>-<projid>`
    e.g.
-   myuser-sens2016999
-##    
+   `myuser-sens2016999`
 
-      
-b.	Second step is from a computer outside of Bianca. 
-c.	Using standard sftp client
-d.	Some other sftp client
-e.	Mounting the sftp-server with sshfs
-f.	Bulk recursive transfer with only standard sftp client
-g.	Transit Server
+##  Methods  
+
+-	Second step is from a computer outside of Bianca. 
+-	Using standard sftp client
+-	Some other sftp client
+-	Mounting the wharf on you local computer
+- 	Transit Server from Rackham
 
 ## First steps
 
 
 ## Using standard sftp client (commandline)
 
+``` bash 
+
     $ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se
     Ex.
     $ sftp -q myuser-sens2016999@bianca-sftp.uppmax.uu.se
+```
 
 Notice the different host name!
 
-The -q flag is to be quiet (not showing the banner intended to help someone trying to ssh to the host), if your client does not support it, you can just skip it.
+The `-q` flag is to be quiet (not showing the banner intended to help someone trying to ssh to the host), if your client does not support it, you can just skip it.
 
 As password you use your normal UPPMAX password directly followed by
 the six digits from the second factor application from step 1.
@@ -72,21 +74,21 @@ Once connected you will have to type the sftp commands to upload/download files.
 
 Please note that in the wharf you only have access to upload your files to the directory that is named:
 
-<username>-<projid>
+`<username>-<projid>`
 e.g.
-myuser-sens2016999
+`myuser-sens2016999`
 
 so you will want to cd to that directory the first thing you do.
 
-sftp> cd myuser-sens2016999
+`sftp> cd myuser-sens2016999`
 
 Alternatively, you can specify this at the end of the sftp command, so that you will always end up in the correct folder directly.
 
-$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
+`$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>`
 E.g.
-$ sftp -q myuser-sens2016999@bianca-sftp.uppmax.uu.se:myuser-sens2016999
+`$ sftp -q myuser-sens2016999@bianca-sftp.uppmax.uu.se:myuser-sens2016999`
 
-sftp supports a recursive flag (put -r), but it seems to be very sensitive to combinations of different sftp servers and clients, so be warned... a bit further down you can see a rough solution for bulk transfers.
+sftp supports a recursive flag (put `-r`), but it seems to be very sensitive to combinations of different sftp servers and clients, so be warned... a bit further down you can see a rough solution for bulk transfers.
     
     
 ## Some other sftp client
@@ -98,7 +100,7 @@ So for example with lftp, you need to "set net:connection_limit 1". lftp may als
 
 An example command line for lftp would be
 
-lftp sftp://<username>-<projname>@bianca-sftp.uppmax.uu.se/<username>-<projname>/
+`lftp sftp://<username>-<projname>@bianca-sftp.uppmax.uu.se/<username>-<projname>/`
     
 ##	Mounting the sftp-server with sshfs on you local machine
 **Mount the wharf on your machine**
@@ -115,6 +117,7 @@ lftp sftp://<username>-<projname>@bianca-sftp.uppmax.uu.se/<username>-<projname>
 - It seems to be rather common with directory structures with symbolic links inside the directories that you should transfer. 
 - This is a very simple solution to copy everything in a specific folder (and follow symbolic links) to the wharf.
 
+``` bash 
 ==============
 ~/sftp-upload.sh
 ==============
@@ -124,12 +127,13 @@ find $* -type d | awk '{print "mkdir","\""$0"\""}'
 find $* -type f | awk '{print "put","\""$0"\"","\""$0"\"" }' 
 find $* -type l | awk '{print "put","\""$0"\"","\""$0"\"" }' 
 -----------
-
+```
 With this script you can do:
 
+``` bash 
 cd /home/myuser/glob/testing/nobackup/somedata
 ~/sftp-upload.sh *|sftp -oBatchMode=no -b- <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
-
+```
 The special "-b" makes the script stop on error.
     
 ## Transit
