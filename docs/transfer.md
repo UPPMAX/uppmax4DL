@@ -192,6 +192,12 @@ For example, if you need to download data from TCGA, log in to Rackham and insta
 - https://www.uppmax.uu.se/support/user-guides/deliver-user-guide/
 - https://www.uppmax.uu.se/support/user-guides/grus-user-guide/
 
+
+!!! info "Summary"
+
+    - When ..., use ...
+    - When ..., use ...
+
 !!! abstract "keypoints"
     - The "WHARF" works like a dock at the harbour.
     - There are several ways to use the wharf to tranfer files
