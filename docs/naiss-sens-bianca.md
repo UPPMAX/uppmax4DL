@@ -69,8 +69,6 @@ Content (To remove later)
 - Data can be transferred to or from a virtual project cluster through the Wharf, which is a special file area that is visible from the Internet.
 
 
-!!! info "Objectives"
-    - We'll ...
 
 !!! abstract "keypoints"
     - bullet 1
