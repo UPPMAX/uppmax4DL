@@ -3,7 +3,15 @@
 !!! info "Objectives" 
 
     - We'll go through the methods to log in
+    
+!!! note
 
+    - Remember that Rackham is your friend as well in your work. 
+    - Being able to work there as well will improve your possibilities to work effectively when you also need some sort of internet connection. For instance:
+      - installing tools
+      - installing Python, R and Julia packages
+      - transfer scripts
+      - updating your git repositories (not containing sensitive data)
 
 ## Bianca's design
 
