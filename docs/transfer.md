@@ -1,6 +1,6 @@
 !!! info "Objectives" 
 
-    - We'll go through the methods to tranfer files
+    - We'll go through the methods to transfer files
        - wharf
        - transit server
        - rsync, scp/sftp
@@ -8,7 +8,7 @@
        
 !!! warning
  
-    It is important to keep the entire chain of transfering the data secure
+    It is important to keep the entire chain of transferring the data secure
 
 ## How does it work?
 
@@ -19,7 +19,7 @@
 !!! info "Wharf is a harbour dock"
 
     - The Wharf area can be reached from both Bianca and any other place on Bianca.
-    - Therefore it serves as a bridge between Internet and Bianca.
+    - Therefore, it serves as a bridge between Internet and Bianca.
     
 ## Data transfers:
 - <https://www.uppmax.uu.se/support/user-guides/bianca-user-guide/> 
@@ -33,8 +33,8 @@
 E.g.
     `/proj/sens2016999/nobackup/wharf/myuser/myuser-sens2016999`
 
-- To transfer data from Bianca, copy the files you want to transfer here
-- To get the files transfered to the wharf area from outside, move the files to you project folde or home folder.
+- To transfer data from Bianca, copy the files you want to transfer here.
+- To get the files transferred to the wharf area from outside, move the files to you project folde or home folder.
     
 - Please note that in the wharf you only have access to upload your files to the directory that is named:
    `<username>-<projid>`
@@ -76,14 +76,14 @@ E.g.
 -	Mounting the wharf on you local computer
 - 	Transit Server from Rackham
 
-## Using standard sftp client (commandline)
+## Using standard sftp client (command line)
 
-    `$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se`
-    Ex.
-    `$ sftp -q myuser-sens2016999@bianca-sftp.uppmax.uu.se`
+`$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se`
+ Ex.
+`$ sftp -q myuser-sens2016999@bianca-sftp.uppmax.uu.se`
 
 
-Notice the different host name!
+Notice the different host name from before!
 
 The `-q` flag is to be quiet (not showing the banner intended to help someone trying to ssh to the host), if your client does not support it, you can just skip it.
 
@@ -170,27 +170,37 @@ username@transit:~$
 - Remember that you cannot make lasting changes to anything except for mounted wharf directories. Therefore you have to use rsync and scp to tranfer from the wharf to Rackham.
 - The mounted directory will be kept for later sessions.
 
+### Moving data from transit to Rackham
+- At Rackham:
+
+
+`scp transit:<path> <local path>
+
+Ex:
+`scp transit:sens2023531/test2 bianca_course/`
+ 
+
+
 ### Moving data between projects
 
-- You can use transit to transfer data between projects by mounting the wharfs for the different projects and transferring data with rsync. Note that you may of course only do this if this is allowed (agreements, permissions, etc.)
+- You can use transit to transfer data between projects by mounting the wharfs for the different projects and transferring data with rsync. 
+- Note that you may of course only do this if this is allowed (agreements, permissions, etc.)
 
 
 ### Software on Transit
 
 - While logged in to Transit, you cannot make lasting changes to anything except for mounted wharf directories. However, anything you have added to your Rackham home directory is available on Transit. In addition, some modules are available.
 
-For example, if you need to download data from TCGA, log in to Rackham and install the GDC client to your home directory. Then log in to Transit, mount the wharf, and run ./gdc-client.
+- For example, if you need to download data from TCGA, log in to Rackham and install the GDC client to your home directory. Then log in to Transit, mount the wharf, and run ./gdc-client.
 
 
-### Example 
-
-
+## Exercises
 
 ## NGI Deliver 
 
 - Not covered here but 
-- https://www.uppmax.uu.se/support/user-guides/deliver-user-guide/
-- https://www.uppmax.uu.se/support/user-guides/grus-user-guide/
+  - https://www.uppmax.uu.se/support/user-guides/deliver-user-guide/
+  - https://www.uppmax.uu.se/support/user-guides/grus-user-guide/
 
 
 !!! info "Summary"
@@ -200,7 +210,7 @@ For example, if you need to download data from TCGA, log in to Rackham and insta
 
 !!! abstract "keypoints"
     - The "WHARF" works like a dock at the harbour.
-    - There are several ways to use the wharf to tranfer files
+    - There are several ways to use the wharf to transfer files
         - copy
         - transit server
         - rsync, scp/sftp
