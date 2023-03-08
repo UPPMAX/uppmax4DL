@@ -49,9 +49,6 @@ E.g.
 -	Mounting the wharf on you local computer
 - 	Transit Server from Rackham
 
-## First steps
-
-
 ## Using standard sftp client (commandline)
 
 ``` bash 
@@ -113,29 +110,7 @@ An example command line for lftp would be
 !!! warning
     UPPMAX doesn't have sshfs client package installed for security reasons. sshfs is available on most Linux distributions: install the package sshfs on Ubuntu, fuse-sshfs on Fedora, RHEL7/CentOS7 (enable EPEL repository) and RHEL8 (enable codeready-builder repository) / CentOS8 (enable powertools repository).    
 
-##	Bulk recursive transfer with only standard sftp client
-- It seems to be rather common with directory structures with symbolic links inside the directories that you should transfer. 
-- This is a very simple solution to copy everything in a specific folder (and follow symbolic links) to the wharf.
-
-``` bash 
-==============
-~/sftp-upload.sh
-==============
-#!/bin/bash
-#sftp-upload.sh
-find $* -type d | awk '{print "mkdir","\""$0"\""}' 
-find $* -type f | awk '{print "put","\""$0"\"","\""$0"\"" }' 
-find $* -type l | awk '{print "put","\""$0"\"","\""$0"\"" }' 
------------
-```
-With this script you can do:
-
-``` bash 
-cd /home/myuser/glob/testing/nobackup/somedata
-~/sftp-upload.sh *|sftp -oBatchMode=no -b- <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
-```
-The special "-b" makes the script stop on error.
-    
+   
 ## Transit
 **Recommended way from Rackham?**
 - To facilitate secure data transfers to, from and within the system for computing on sensitive data (bianca/castor) a service is available via ssh at transit.uppmax.uu.se.
@@ -144,7 +119,35 @@ mount_wharf command
 which you can use to mount a project from the bianca wharf
 
 **More...*
+
+
+!!! info Tip
+
+    **Bulk recursive transfer with only standard sftp client**
+    - It seems to be rather common with directory structures with symbolic links inside the directories that you should transfer. 
+    - This is a very simple solution to copy everything in a specific folder (and follow symbolic links) to the wharf.
     
+    ``` bash 
+    ==============
+    ~/sftp-upload.sh
+    ==============
+    #!/bin/bash
+    #sftp-upload.sh
+    find $* -type d | awk '{print "mkdir","\""$0"\""}' 
+    find $* -type f | awk '{print "put","\""$0"\"","\""$0"\"" }' 
+    find $* -type l | awk '{print "put","\""$0"\"","\""$0"\"" }' 
+    -----------
+    ```
+    With this script you can do:
+    
+    ``` bash 
+    cd /home/myuser/glob/testing/nobackup/somedata
+    ~/sftp-upload.sh *|sftp -oBatchMode=no -b- <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
+    ```
+    The special "-b" makes the script stop on error.
+
+
+
 ## NGI Deliver 
 
 - Not covered here but 
