@@ -72,8 +72,8 @@ E.g.
 ##  Methods  
 
 -	Using standard sftp client
--	Some other sftp client
--	Mounting the wharf on you local computer
+-	Some other sftp clients
+-	Mounting the wharf on your local computer
 - 	Transit Server from Rackham
 
 ## Using standard sftp client (command line)
@@ -174,9 +174,10 @@ username@transit:~$
 - At Rackham:
 
 
-`scp transit:<path> <local path>
+`scp transit:<path> <local path>`
 
-Ex:
+- Ex:
+
 `scp transit:sens2023531/test2 bianca_course/`
  
 
