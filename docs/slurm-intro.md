@@ -101,6 +101,19 @@ echo Hello world!
 
 ```
 
+## How compute nodes are moved between project clusters
+
+The total job queue, made by putting together job queues of all project clusters, is monitored, and acted upon, by an external program, named meta-scheduler.
+
+In short, this program goes over the following procedure, over and over again:
+
+    Finds out where all the compute nodes are: on a specific project cluster or yet unallocated.
+    Reads status reports from all compute nodes, about all their jobs, all their compute nodes, and all their active users.
+    Are there unallocated compute nodes for all queued jobs?
+    Otherwise, try to "steal" nodes from project clusters, to get more unallocated compute nodes. This "stealing" is done in two steps: a/ "drain" a certain node, i.e. disallow more jobs to start on it; b/ remove the compute node from the project cluster, if no jobs are running on the node.
+    Use all unallocated nodes to create new compute nodes. Jobs with a higher priority get compute nodes first.
+
+
 ### Other Slurm tools
 
 - Squeue — quick info about jobs in queue
@@ -114,17 +127,6 @@ echo Hello world!
         -  databases
     - Introduction quide for installing own software or packages
     - Very short introduction to developing old programs
-
-
-
-- 800+ programs and packages are installed.
-- To avoid chaos and collisions, they are managed by a **module system**.
-- This system keeps installed software hidden by default, and users have to explicitly tell their terminal which version of which software they need.
-- The modules are most often available across cluster (except for Miarka)
-
-
-!!! warning 
-    - Bioinformatics tools require loading the “bioinfo-tools” module first.
 
 !!! abstract "Keypoints"
     - Centrally installed software are reached through the module system and available throughout all nodes.
