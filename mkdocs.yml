@@ -11,7 +11,7 @@ nav:
     - Transfering files to/from Bianca: transfer.md
   - NAISS-SENS and sensitive data: naiss-sens-bianca.md
   - Using tools and install: 
-    - Module system (continued) and Slurm: modules-slurm.md
+    - Module system (continued) and Slurm: slurm-intro.md
     - Software installation without internet connection: install.md
   - Extra material:
     - slurm.md
