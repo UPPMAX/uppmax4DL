@@ -42,32 +42,6 @@ E.g.
    `myuser-sens2016999`
 
 
-!!! info Tip
-
-    **Bulk recursive transfer with only standard sftp client**
-    
-    - It seems to be rather common with directory structures with symbolic links inside the directories that you should transfer. 
-    - This is a very simple solution to copy everything in a specific folder (and follow symbolic links) to the wharf.
-    
-    ``` bash 
-    ==============
-    ~/sftp-upload.sh
-    ==============
-    #!/bin/bash
-    #sftp-upload.sh
-    find $* -type d | awk '{print "mkdir","\""$0"\""}' 
-    find $* -type f | awk '{print "put","\""$0"\"","\""$0"\"" }' 
-    find $* -type l | awk '{print "put","\""$0"\"","\""$0"\"" }' 
-    -----------
-    ```
-    With this script you can do:
-    
-    ``` bash 
-    cd /home/myuser/glob/testing/nobackup/somedata
-    ~/sftp-upload.sh *|sftp -oBatchMode=no -b- <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
-    ```
-    The special ``-b`` makes the script stop on error.
-
 
 ##  Methods  
 
@@ -110,8 +84,35 @@ Alternatively, you can specify this at the end of the sftp command, so that you 
 E.g.
 `$ sftp -q myuser-sens2016999@bianca-sftp.uppmax.uu.se:myuser-sens2016999`
 
-sftp supports a recursive flag (put `-r`), but it seems to be very sensitive to combinations of different sftp servers and clients, so be warned... a bit further down you can see a rough solution for bulk transfers.
+- `sftp` supports a recursive flag (put `-r`), but it seems to be very sensitive to combinations of different sftp servers and clients, so be warned... a bit further down you can see a rough solution for bulk transfers.
+
+!!! info Tip
+
+    **Bulk recursive transfer with only standard sftp client**
     
+    - It seems to be rather common with directory structures with symbolic links inside the directories that you should transfer. 
+    - This is a very simple solution to copy everything in a specific folder (and follow symbolic links) to the wharf.
+    
+    ``` bash 
+    ==============
+    ~/sftp-upload.sh
+    ==============
+    #!/bin/bash
+    #sftp-upload.sh
+    find $* -type d | awk '{print "mkdir","\""$0"\""}' 
+    find $* -type f | awk '{print "put","\""$0"\"","\""$0"\"" }' 
+    find $* -type l | awk '{print "put","\""$0"\"","\""$0"\"" }' 
+    -----------
+    ```
+    With this script you can do:
+    
+    ``` bash 
+    cd /home/myuser/glob/testing/nobackup/somedata
+    ~/sftp-upload.sh *|sftp -oBatchMode=no -b- <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
+    ```
+    The special ``-b`` makes the script stop on error.
+
+
     
 ## Some other sftp client
 - Please notice that sftp is NOT the same as scp. So be sure to really use a sftp client -- not just a scp client.
@@ -123,6 +124,18 @@ sftp supports a recursive flag (put `-r`), but it seems to be very sensitive to 
 - An example command line for lftp would be
 
 `lftp sftp://<username>-<projname>@bianca-sftp.uppmax.uu.se/<username>-<projname>/`
+
+### WinSCP (Windows)
+- Does work!
+- Only connect with local computer (not Rackham)
+
+### Filezilla
+- Does work
+  - but asks for password everytime
+- Only connect with local computer (not Rackham)
+
+**Other?**
+- Cyberduck problem
 
 ### Example ??
     
@@ -143,11 +156,9 @@ sftp supports a recursive flag (put `-r`), but it seems to be very sensitive to 
 ## Transit
 **Recommended way from Rackham?**
 - To facilitate secure data transfers to, from and within the system for computing on sensitive data (bianca/castor) a service is available via ssh at transit.uppmax.uu.se.
-- You can connect to transit via ssh. Once connected, you should see a short help message. The most important thing there is the
-``mount_wharf`` command
-which you can use to mount a project from the bianca wharf
+- You can connect to transit via ssh. Once connected, you should see a short help message. The most important thing there is the ``mount_wharf`` command which you can use to mount a project from the bianca wharf
 
-Example from Rackham as Rackham session
+- Example from Rackham as Rackham session
 
 ``` sh
 ssh transit
@@ -155,7 +166,7 @@ username@transit:~$ mount_wharf sens2023531
 Mounting wharf (accessible for you only) to /home/<user>/sens2023531
 <user>-sens2023531@bianca-sftp.uppmax.uu.se's password: 
 ```
-Enter password + F2A
+- Enter password + F2A
 
 ```sh
 done.
