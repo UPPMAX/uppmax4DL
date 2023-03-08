@@ -41,9 +41,36 @@ E.g.
    e.g.
    `myuser-sens2016999`
 
+
+!!! info Tip
+
+    **Bulk recursive transfer with only standard sftp client**
+    
+    - It seems to be rather common with directory structures with symbolic links inside the directories that you should transfer. 
+    - This is a very simple solution to copy everything in a specific folder (and follow symbolic links) to the wharf.
+    
+    ``` bash 
+    ==============
+    ~/sftp-upload.sh
+    ==============
+    #!/bin/bash
+    #sftp-upload.sh
+    find $* -type d | awk '{print "mkdir","\""$0"\""}' 
+    find $* -type f | awk '{print "put","\""$0"\"","\""$0"\"" }' 
+    find $* -type l | awk '{print "put","\""$0"\"","\""$0"\"" }' 
+    -----------
+    ```
+    With this script you can do:
+    
+    ``` bash 
+    cd /home/myuser/glob/testing/nobackup/somedata
+    ~/sftp-upload.sh *|sftp -oBatchMode=no -b- <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
+    ```
+    The special ``-b`` makes the script stop on error.
+
+
 ##  Methods  
 
--	Second step is from a computer outside of Bianca. 
 -	Using standard sftp client
 -	Some other sftp client
 -	Mounting the wharf on you local computer
@@ -51,12 +78,10 @@ E.g.
 
 ## Using standard sftp client (commandline)
 
-``` bash 
-
-    $ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se
+    `$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se`
     Ex.
-    $ sftp -q myuser-sens2016999@bianca-sftp.uppmax.uu.se
-```
+    `$ sftp -q myuser-sens2016999@bianca-sftp.uppmax.uu.se`
+
 
 Notice the different host name!
 
@@ -89,17 +114,20 @@ sftp supports a recursive flag (put `-r`), but it seems to be very sensitive to 
     
     
 ## Some other sftp client
-Please notice that sftp is NOT the same as scp. So be sure to really use a sftp client -- not just a scp client.
+- Please notice that sftp is NOT the same as scp. So be sure to really use a sftp client -- not just a scp client.
 
-Also be aware that many sftp clients use reconnects (with a cached version of your password). This will not work for Bianca, because of the second factor! And some try to use multiple connections with the same password, which will fail.
+- Also be aware that many sftp clients use reconnects (with a cached version of your password). This will not work for Bianca, because of the second factor! And some try to use multiple connections with the same password, which will fail.
 
-So for example with lftp, you need to "set net:connection_limit 1". lftp may also defer the actual connection until it's really required unless you end your connect URL with a path.
+- So for example with lftp, you need to "set net:connection_limit 1". lftp may also defer the actual connection until it's really required unless you end your connect URL with a path.
 
-An example command line for lftp would be
+- An example command line for lftp would be
 
 `lftp sftp://<username>-<projname>@bianca-sftp.uppmax.uu.se/<username>-<projname>/`
+
+### Example ??
     
-##	Mounting the sftp-server with sshfs on you local machine
+## Mounting the sftp-server with sshfs on you local machine
+
 **Mount the wharf on your machine**
     
 - This is only possible on your own system. 
@@ -110,41 +138,51 @@ An example command line for lftp would be
 !!! warning
     UPPMAX doesn't have sshfs client package installed for security reasons. sshfs is available on most Linux distributions: install the package sshfs on Ubuntu, fuse-sshfs on Fedora, RHEL7/CentOS7 (enable EPEL repository) and RHEL8 (enable codeready-builder repository) / CentOS8 (enable powertools repository).    
 
+### Example 
    
 ## Transit
 **Recommended way from Rackham?**
 - To facilitate secure data transfers to, from and within the system for computing on sensitive data (bianca/castor) a service is available via ssh at transit.uppmax.uu.se.
 - You can connect to transit via ssh. Once connected, you should see a short help message. The most important thing there is the
-mount_wharf command
+``mount_wharf`` command
 which you can use to mount a project from the bianca wharf
 
-**More...*
+Example from Rackham as Rackham session
+
+``` sh
+ssh transit
+username@transit:~$ mount_wharf sens2023531
+Mounting wharf (accessible for you only) to /home/<user>/sens2023531
+<user>-sens2023531@bianca-sftp.uppmax.uu.se's password: 
+```
+Enter password + F2A
+
+```sh
+done.
+username@transit:~$ ls sens2023531/
+username@transit:~$ 
+```
+
+- Note that your home directory is mounted _read-only_, any changes you do to your "local" home directory (on transit) will be forgotten afterwards.
+
+- You can use commands like ``rsync``, ``scp`` to fetch data and transfer it to your bianca wharf.
+  - You can use cp to copy from Rackham to the wharf 
+- Remember that you cannot make lasting changes to anything except for mounted wharf directories. Therefore you have to use rsync and scp to tranfer from the wharf to Rackham.
+- The mounted directory will be kept for later sessions.
+
+### Moving data between projects
+
+- You can use transit to transfer data between projects by mounting the wharfs for the different projects and transferring data with rsync. Note that you may of course only do this if this is allowed (agreements, permissions, etc.)
 
 
-!!! info Tip
+### Software on Transit
 
-    **Bulk recursive transfer with only standard sftp client**
-    - It seems to be rather common with directory structures with symbolic links inside the directories that you should transfer. 
-    - This is a very simple solution to copy everything in a specific folder (and follow symbolic links) to the wharf.
-    
-    ``` bash 
-    ==============
-    ~/sftp-upload.sh
-    ==============
-    #!/bin/bash
-    #sftp-upload.sh
-    find $* -type d | awk '{print "mkdir","\""$0"\""}' 
-    find $* -type f | awk '{print "put","\""$0"\"","\""$0"\"" }' 
-    find $* -type l | awk '{print "put","\""$0"\"","\""$0"\"" }' 
-    -----------
-    ```
-    With this script you can do:
-    
-    ``` bash 
-    cd /home/myuser/glob/testing/nobackup/somedata
-    ~/sftp-upload.sh *|sftp -oBatchMode=no -b- <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
-    ```
-    The special "-b" makes the script stop on error.
+- While logged in to Transit, you cannot make lasting changes to anything except for mounted wharf directories. However, anything you have added to your Rackham home directory is available on Transit. In addition, some modules are available.
+
+For example, if you need to download data from TCGA, log in to Rackham and install the GDC client to your home directory. Then log in to Transit, mount the wharf, and run ./gdc-client.
+
+
+### Example 
 
 
 
