@@ -1,5 +1,9 @@
 # Log in to Bianca
 
+!!! info "Objectives" 
+
+    - We'll go through the methods to log in
+
 
 ## Bianca's design
 
@@ -56,4 +60,7 @@
 
 - The whole Bianca cluster (blue) contains hundreds of virtual project clusters (green), each of which is isolated from each other and the Internet.
 - Data can be transferred to or from a virtual project cluster through the Wharf, which is a special file area that is visible from the Internet.
+
+!!! abstract "keypoints"
+    - We recommend you to use ThinLinc to log in.
 
