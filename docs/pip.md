@@ -1,1 +1,9 @@
-## Install with pip to Bianca
+# Install with pip to Bianca
+
+
+!!! info "Objectives"
+    - We'll ...
+
+!!! abstract "keypoints"
+    - bullet 1
+    - bullet 2
