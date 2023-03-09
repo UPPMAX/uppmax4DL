@@ -1,14 +1,6 @@
-# Software installation without internet connection
+# Software and package installation on Bianca
 
-To be removed
 
-    - Conda packages: installing/using [name=Jonas]
-        - alternative: installing with pip
-    - R package installation not included in R packages [name=Marcus]
-    - Julia [name=Björn C]
-    - running jupyter notebooks [name=Lars]
-    - containers [name=Björn V]
- 
 !!! info "Objectives" 
 
     - We'll go through the methods to work with the modules
@@ -16,7 +8,7 @@ To be removed
 
 ## The module system
 
-- As we have seen this morning, there is a lot of praograms and tools installed as tools on Bianca.
+- As we have seen this morning, there is a lot of programs and tools installed as tools on Bianca.
 - These have typically been installed on Rackham and is synced over to Bianca a couple of times per day.
 - You can request installations but that may take several days or even weeks to be handled by the application experts at UPPMAX.
 - But you may be able to do installations yourself. Here the use of Rackham comes handy because of the:
@@ -85,6 +77,24 @@ To be removed
 - https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html
 
 ### Julia packages
+
+- At UPPMAX there is a central library with installed packages.
+- This is good, especially when working on Bianca, since you then do not need to install via the Wharf.
+- A selection of the Julia packages and libraries installed on UPPMAX are:
+
+        BenchmarkTools
+        CSV
+        CUDA
+        MPI
+        Distributed
+        IJulia
+        Plots
+        PyPlot
+        Gadfly
+        DataFrames
+        DistributedArrays
+        PlotlyJS
+
 - https://uppmax.github.io/bianca_workshop/julia/
 - https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html
 
