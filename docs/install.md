@@ -28,6 +28,10 @@
 
 ## Packages and libraries to scripting programs
 
+- Python, R and Julia all have some centrally installed packages that are available from the modules. R has a special module called ``R_packages``, and some Machine Learning python packages are included in the ``python_ml_packages`` module.
+- If not found there you can try to install those by yourself.
+
+
 !!! info "Tip Python packages"
 
     - Try Conda first directly on Bianca. We have mirrored all major conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
@@ -49,7 +53,9 @@
     - r
     - r2018.11
     - scilifelab-lts
-    - [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
+
+
+- [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
 - https://uppmax.github.io/bianca_workshop/conda/
 
 
@@ -72,6 +78,26 @@
 
 
 ### R packages
+
+- On UPPMAX the module R_packages is a package library containing almost all packages in the
+  - CRAN and BioConductor repositories. 
+  - As of 2021-11-11 there are a total of 21659 R packages installed in R_packages/4.1.1. A total of 21740 packages are available in CRAN and BioConductor.
+
+- You can quickly check if your package is there by:
+
+``$ ml R_packages/4.1.1``
+
+Then grep for some package, in this case "glmnet".
+
+```bash
+$ ls -l $R_LIBS_SITE | grep glmnet
+dr-xr-sr-x  9 douglas sw  4096 Sep  6  2021 EBglmnet
+dr-xr-sr-x 11 douglas sw  4096 Nov 11  2021 glmnet
+dr-xr-sr-x  8 douglas sw  4096 Sep  7  2021 glmnetcr
+dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
+```
+
+More info
 - https://uppmax.github.io/bianca_workshop/rpackages/
 - https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html
 - https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html
@@ -95,6 +121,7 @@
         DistributedArrays
         PlotlyJS
 
+More info:
 - https://uppmax.github.io/bianca_workshop/julia/
 - https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html
 
@@ -104,9 +131,11 @@
 
 #### Docker
 - Docker will unfortunately not work on the clusters, since it requires root permission.
+- However, Singularity may use Docker images.
 
 ### Build from source
 - We have several compiler versions from GNU and INTEL
+- The safest way is to transfer the source code to Bianca via the wharf.
 - [Guide for compiling serial and parallel programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/)
     
 ### Spack
