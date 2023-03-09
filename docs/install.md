@@ -22,7 +22,7 @@ To be removed
 - But you may be able to do installations yourself. Here the use of Rackham comes handy because of the:
   - internet connection
   - the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.
-  - you can use the wharf to transfer source files and binaries til Bianca from Rackham
+  - you can use the wharf to transfer source files and binaries to Bianca from Rackham
 
 ## Install software yourself
 - You can install in your home directory.
@@ -36,19 +36,57 @@ To be removed
 
 ## Packages and libraries to scripting programs
 
-### Python packages with pip
-- [Python packages](https://uppmax.uu.se/support/user-guides/python-user-guide/)
-- https://uppmax.github.io/bianca_workshop/pip/
+!!! info "Tip Python packages"
+
+    - Try Conda first directly on Bianca. We have mirrored all major conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+    - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the wharf.
 
 ### Conda
-- [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
+
+- We have mirrored all major conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+    We have the following channels available:
+    
+    - bioconda
+    - biocore
+    - conda-forge
+    - dranew
+    - free
+    - main
+    - pro
+    - qiime2
+    - r
+    - r2018.11
+    - scilifelab-lts
+    - [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
 - https://uppmax.github.io/bianca_workshop/conda/
+
+
+
+### Python packages with pip
+
+!!! info "Principle"
+
+    - install on Rackham
+        - pip install --user <package>
+        - python setup.py install --user or --prefix=<path>
+    - sync to wharf
+    -move the files on Bianca
+    - you may have to update $PYTHONPATH
+        
+- https://uppmax.github.io/bianca_workshop/pip/
+- [Python packages](https://uppmax.uu.se/support/user-guides/python-user-guide/)
+- https://uppmax.github.io/R-python-julia-HPC/python/packages.html
+- https://uppmax.github.io/R-python-julia-HPC/python/isolated.html
+
 
 ### R packages
 - https://uppmax.github.io/bianca_workshop/rpackages/
+- https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html
+- https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html
 
 ### Julia packages
 - https://uppmax.github.io/bianca_workshop/julia/
+- https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html
 
 ### "Containers"
 #### Singularity
