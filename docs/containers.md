@@ -37,20 +37,20 @@ Dockerhub?
 [https://hub.docker.com/r/broadinstitute/gatk/]  
 Perfect.
 
-<img src="img/gatk_syslabs.png" alt="drawing" width="400"/> <img src="img/gatk_dockerhub.png" alt="drawing" width="480"/>
+<img src="./img/gatk_syslabs.png" alt="drawing" width="400"/> <img src="img/gatk_dockerhub.png" alt="drawing" width="480"/>
 
 
 `apptainer pull gatk_4.3.0.0.sif docker://broadinstitute/gatk:4.3.0.0`
 
-<img src="img/apptainer_pull.png" alt="drawing" width="1000"/>
+<img src="./img/apptainer_pull.png" alt="drawing" width="1000"/>
 
 `sftp` to the wharf:
 
-<img src="img/sftp_gatk.png" alt="drawing" width="1000"/>
+<img src="./img/sftp_gatk.png" alt="drawing" width="1000"/>
 
 `apptainer exec gatk_4.3.0.0.sif gatk`
 
-<img src="img/apptainer_gatk.png" alt="drawing" width="1000"/>
+<img src="./img/apptainer_gatk.png" alt="drawing" width="1000"/>
 
 ## Set the Apptainer cache dirs to /proj/proj-id to prevent quota issues
 ```
