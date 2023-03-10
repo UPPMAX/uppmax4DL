@@ -14,7 +14,7 @@ Docker requires root privileges and therefore are run on local computers or the 
 HPC-clusters without root privileges uses Apptainer. 
 
 ## Public repositories
-Docker is the most common and has the biggest repository: [https://hub.docker.com/]
+Dockerhub is the most common and has the biggest repository: [https://hub.docker.com/]
 
 Apptainer/Singularity uses: [https://cloud.sylabs.io/library]  
 Luckily, Apptainer can convert docker containers into Apptainer containers. 
@@ -25,7 +25,7 @@ Anyone can upload a container to the repositories. So be cautious and look for v
 Read more on the Uppmax singularity workshop:  
 https://pmitev.github.io/UPPMAX-Singularity-workshop/
 
-## Example: I want gatk on bianca. 
+# Example: I want gatk on bianca
 
 Remember, no internet on bianca. Build on rackham and then transfer the container to the wharf. 
 
