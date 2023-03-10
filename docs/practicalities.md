@@ -13,7 +13,7 @@
 - 1st day of the intro course, 1/2-1 day at your own pace, beneficial to do before the workshop
 
     - [Linux](https://uppmax.github.io/uppmax_intro/linux.html)
-    - [](https://uppmax.github.io/uppmax_intro/linux_basics.html)
+    - [Basic toolkit](https://uppmax.github.io/uppmax_intro/linux_basics.html)
 
 ## 
 
