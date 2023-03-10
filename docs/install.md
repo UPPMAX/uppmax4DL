@@ -1,6 +1,23 @@
 # Software and package installation on Bianca
 
 
+!!! warning "ToDos"
+
+    - formatting
+    - remove
+        - spack
+        - own devel
+        - run scripts
+        - jupyter
+    - add
+        - link to compilers
+        - hardware info
+    
+  
+    
+    
+
+
 !!! info "Objectives" 
 
     - We'll go through the methods to work with the modules
