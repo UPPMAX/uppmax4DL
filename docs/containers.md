@@ -54,7 +54,7 @@ Perfect.
 ## Set the Apptainer cache dirs to /proj/proj-id to prevent quota issues
 ```
 mkdir -p /proj/staff/bjornv/apptainer_cache_dir/{cache,tmp,localcache}
-export APPTAINER_CACHEDIR=		/proj/staff/bjornv/apptainer_cache_dir/cache
-export APPTAINER_TMPDIR=		/proj/staff/bjornv/apptainer_cache_dir/tmp
+export APPTAINER_CACHEDIR=	/proj/staff/bjornv/apptainer_cache_dir/cache
+export APPTAINER_TMPDIR=	/proj/staff/bjornv/apptainer_cache_dir/tmp
 export APPTAINER_LOCALCACHEDIR=	/proj/staff/bjornv/apptainer_cache_dir/localcache
 ```
