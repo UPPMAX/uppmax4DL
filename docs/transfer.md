@@ -52,6 +52,8 @@ E.g.
 
 ## Using standard sftp client (command line)
 
+https://www.uppmax.uu.se/support/user-guides/basic-sftp-commands/
+
 `$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se`
  Ex.
 `$ sftp -q myuser-sens2016999@bianca-sftp.uppmax.uu.se`
