@@ -6,7 +6,7 @@ Do you need a program that has a very complicated and exhausting install? Or may
 Within a container you can install whatever you want and send it to whichever computer you want to run it from. 
 
 ## How?
-You can either download an existing container containing your software of of interest or build one yourself. 
+You can either download an existing container containing your software of interest or build one yourself. 
 
 ## Docker vs Singularity/Apptainer
 Docker requires root privileges and therefore are run on local computers or the cloud.
