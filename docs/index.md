@@ -38,29 +38,9 @@ template: home.html
 <center>
 <br>
     
-## Schedule
-  
-|Topic|Start|Timing|Content|
-|-----|-----|------|-------|
-|Syllabus and intro|9.00|10|intro|
-|Login|9.10|50|login ssh/ThinLinc, 2FA|
-|Coffee break|10.00|15|Break|
-|Working with the command-line|10.15|30|Command-line intro|
-|Module system|10.45|20| Module system|
-|Short break|11.05|5|Break|
-|Transferring files|11.10|50|Transfering files to/from Bianca|
-|LUNCH break|12.00|60| | 
-|NAISS-SENS and sensitive data|13.00|60|NAISS-SENS and sensitive data| 
-|Short break|14.00|5|Break|
-|Module system (cont.) and SLURM|14.05|20 |Module system (cont.) and SLURM|
-|Software installation without internet connection|14.25| 15|Software installation without internet connection|
-|Summary|14.40|10|Summary|
-|Coffee break|14.50|15|Break|
-|Q/A|15.05|55| Time for interaction|
-
 <br/><br/>
 
-[Get started using Bianca](login_bianca.md){ .md-button .md-button--primary }
+[Get started using Bianca](practicalities.md){ .md-button .md-button--primary }
 
 <br/><br/>
 
