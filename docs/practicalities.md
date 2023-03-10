@@ -20,7 +20,7 @@
 
     If you have just one screen (e.g. a laptop), we recommend arranging your windows like this:
 
-    ```c
+    ``` c
     ╔═══════════╗ ╔═════════════╗
     ║   WEB     ║ ║  TERMINAL   ║
     ║  BROWSER  ║ ║   WINDOW    ║
