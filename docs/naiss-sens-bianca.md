@@ -19,35 +19,78 @@ Content (To remove later)
 
 ## Sensitive personal data
 
-- <https://www.snic.se/allocations/snic-sens/>
-- Traced to now living persons, e.g.
-    - human genomic data
-    - images/videos containing persons
-    - health registry (health data records from healthcare providers)
-- More about sensitive data
-    - [GDPR](https://gdpr.eu/)
+- Personal data: Traced to now living persons, e.g.
+	- Name
+	- Address
+	- Food preference
+	- Size of left nostril
+
+- Sensitive personal data:
+	- ethnic origin
+	- political opinion
+	- religious or philosophical beliefs
+	- trade union membership
+	- health
+	- sex life
+	- genetic data
+	- biometric data that can uniquely identify a person
+		- including some image or auditory recordings
+    
+- More about sensitive personal data
+	- [IMY](https://www.imy.se/en/)
+    - [GDPR](https://www.gdpr.eu/)
     - [Data protection](https://ec.europa.eu/info/law/law-topic/data-protection_en)
     - [Skydd av personuppgifter](https://ec.europa.eu/info/law/law-topic/data-protection_sv)
+    - [SND](https://snd.gu.se/sv/hantera-data/planera/forskningsdata-med-personuppgifter)
   
 - When in doubt, contact your university's [data protection officer](https://www.uppmax.uu.se/support/faq/general-miscellaneous-faq/sensitive+data+questions/).
-- Generally, there must be a [Data Processing Agreement](https://www.uppmax.uu.se/support/faq/general-miscellaneous-faq/how-to-establish-a-puba-with-uu/) between UU and the data controlling university.
+
+- Other sensitive data:
+	- Confidential information
+		- e.g. IP from private industry
+	- Secrets
+		- sensitive environmental data, e.g. protected species		
+	- National security
+	
+- A Data Protection Impact Assessment is legal requirement for any project with GDPR-data.
+
+- If in doubt (especially with "new" data type), also do a information security evaluation to determine how you should handle the data.
+
+## Pseudonymisation and anonymisation
+- Anonymised: no theoretical way at all to determine an individual
+- Pseudonymised: anything less
+
+Pseudonymisation is a security mechanism that improves the security of sensitive personal data. *The data is still sensitive*.
+
+But how do you know whether data is anonymised? 
+	- "It depends..." 
+	- Some data cannot be anonymised at all (e.g. whole genome sequence)
+	- One metric for microdata is [K-anonymity](https://en.wikipedia.org/wiki/K-anonymity)
 
 ## Apply for project
+- [Detailed instructions for project application](https://www.uppmax.uu.se/support/getting-started/applying-for-sens-project/)
 [Open NAISS SENS Rounds](https://supr.naiss.se/round/open_type/?type=NAISS+SENS)
+- Before GDPR-data will be transferred to UPPMAX, there must be a [Data Processing Agreement](https://www.uppmax.uu.se/support/faq/general-miscellaneous-faq/how-to-establish-a-puba-with-uu/) between UU and the data controlling organisation. These are currently specific to the PI (and sometimes project).
+
+- Take home message: follow the above instructions. Submit requests early in the month. 
+
 
 ## Bianca
 - Bianca is a great platform for computationally intensive research on sensitive personal data. It can also be useful for:
     - national and international collaboration on sensitive personal data (without a high compute need)
     - other types of sensitive data
-- Bianca is not good for:
-    - storing data
-    - publishing data
-        - unless the dataset is very popular among Bianca users, e.g. [Swegen](https://snd.gu.se/en/catalogue/study/ext0285), [SIMPLER](https://www.simpler4health.se/)
+    - making sensitive data accessible (on Bianca)
+    	- [Swegen](https://snd.gu.se/en/catalogue/study/ext0285)
+    	- [SIMPLER](https://www.simpler4health.se/)
+- Bianca is not intended for:
+    - storing (inactive) data
 
  
 ## Bianca's design
 
 - Bianca was designed
+	- for sensitive data from large-scale molecular experiments
+		- but has since grown into new domains
     - to make accidental data leaks difficult
     - to make correct data management as easy as possible
     - to emulate the HPC cluster environment that SNIC/NAISS users were familiar with
