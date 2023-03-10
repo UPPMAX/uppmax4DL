@@ -5,12 +5,15 @@
 
 - SUPR/course project
 - set up 2FA
-- need to have access to a University network (SUNET) or set up VPN.
+    - [2-factor authentication](https://www.uppmax.uu.se/support/user-guides/setting-up-two-factor-authentication/)
+
+- Use VPN outside Sunet. [Link to VPN for UU](https://mp.uu.se/en/web/info/stod/it-telefoni/it-support/network-on-campus/vpn-service)
+  - You can get VPN credentials from all Swedish universities.
 
 - 1st day of the intro course, 1/2-1 day at your own pace, beneficial to do before the workshop
 
-    - https://uppmax.github.io/uppmax_intro/linux.html
-    - https://uppmax.github.io/uppmax_intro/linux_basics.html
+    - [Linux](https://uppmax.github.io/uppmax_intro/linux.html)
+    - [](https://uppmax.github.io/uppmax_intro/linux_basics.html)
 
 ## 
 
@@ -18,7 +21,7 @@
 
     If you have just one screen (e.g. a laptop), we recommend arranging your windows like this:
 
-    ``` c
+    ``` sh
     ╔═══════════╗ ╔═════════════╗
     ║   WEB     ║ ║  TERMINAL   ║
     ║  BROWSER  ║ ║   WINDOW    ║
