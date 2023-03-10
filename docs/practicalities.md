@@ -15,3 +15,17 @@
 
     - https://uppmax.github.io/uppmax_intro/linux.html
     - https://uppmax.github.io/uppmax_intro/linux_basics.html
+
+:::success
+## Suggestion for window layout
+If you have just one screen (e.g. a laptop), we recommend arranging your windows like this:
+```c
+╔═══════════╗ ╔═════════════╗
+║   WEB     ║ ║  TERMINAL   ║
+║  BROWSER  ║ ║   WINDOW    ║
+║  WINDOW   ║ ╚═════════════╝
+║   WITH    ║ ╔═════════════╗
+║   THE     ║ ║   BROWSER   ║
+║  STREAM   ║ ║   W/HACKMD  ║
+╚═══════════╝ ╚═════════════╝
+```
