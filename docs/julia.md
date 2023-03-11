@@ -12,19 +12,20 @@
 
 !!! info
    
-    A selection of
-
-      - BenchmarkT
+    The Julia application at UPPMAX comes with several preinstalled packages.
+	A selection of the Julia packages and libraries installed on UPPMAX are:
+    
+      - BenchmarkTools
       - CSV
       - CUDA
       - MPI
-      - Distribute
+      - Distributed
       - IJulia
       - Plots
       - PyPlot
       - Gadfly
       - DataFrames
-      - Distribute
+      - DistributedArrays
       - PlotlyJS
 
 
@@ -42,7 +43,7 @@
 
 ## Install yourself
 
-The julia lkical library directory looks like this:
+If you have started Julia once you will get the folders like this in the ~/.julia folder.
 
 ```bash
    $ tree .julia/ -d -L 1
@@ -59,7 +60,16 @@ The julia lkical library directory looks like this:
    └── scratchspaces
 ```
 
-...
+**The plan is that what you install on Rackham should be moved here in the same manner**
+
+- Make an installation of the package on Rackham in the Julia package manager
+- Use a transfer method to move the package files to the wharf
+    - To be certain to include all files, you may transfer the whole .julia dir. However, that can grow rather big with time.
+
+!!! warning
+    
+    **Continue**
+
 
 
 !!! abstract "keypoints"
