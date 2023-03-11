@@ -132,7 +132,7 @@
 
 ## What kind of work will you perform?
 
-```plantuml
+```puml
 @startuml
 start
 
