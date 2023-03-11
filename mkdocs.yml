@@ -72,6 +72,6 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 plugins:
-   — plantuml:
+   - plantuml:
         puml_url: https://www.plantuml.com/plantuml/
         num_workers: 8
