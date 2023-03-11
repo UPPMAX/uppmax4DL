@@ -42,6 +42,23 @@
 
 ## Install yourself
 
+The julia lkical library directory looks like this:
+
+```bash
+   $ tree .julia/ -d -L 1
+   .
+   ├── artifacts
+   ├── bin
+   ├── compiled
+   ├── conda
+   ├── environments
+   ├── logs
+   ├── packages
+   ├── prefs
+   ├── registries
+   └── scratchspaces
+```
+
 ...
 
 
