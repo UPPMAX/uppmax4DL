@@ -4,11 +4,7 @@
 !!! warning "ToDos"
 
     - formatting
-    - remove
-        - spack
-        - own devel
-        - run scripts
-        - jupyter
+
     - add
         - link to compilers
         - hardware info
@@ -29,9 +25,9 @@
 - These have typically been installed on Rackham and is synced over to Bianca a couple of times per day.
 - You can request installations but that may take several days or even weeks to be handled by the application experts at UPPMAX.
 - But you may be able to do installations yourself. Here the use of Rackham comes handy because of the:
-  - internet connection
-  - the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.
-  - you can use the wharf to transfer source files and binaries to Bianca from Rackham
+    - internet connection
+    - the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.
+    - you can use the wharf to transfer source files and binaries to Bianca from Rackham
 
 ## Install software yourself
 - You can install in your home directory.
@@ -45,7 +41,8 @@
 
 ## Packages and libraries to scripting programs
 
-- Python, R and Julia all have some centrally installed packages that are available from the modules. R has a special module called ``R_packages``, and some Machine Learning python packages are included in the ``python_ml_packages`` module.
+- Python, R and Julia all have some centrally installed packages that are available from the modules. 
+- R has a special module called ``R_packages``, and some Machine Learning python packages are included in the ``python_ml_packages`` module.
 - If not found there you can try to install those by yourself.
 
 
@@ -71,9 +68,10 @@
     - r2018.11
     - scilifelab-lts
 
+!!! info "More info"
 
-- [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
-- https://uppmax.github.io/bianca_workshop/conda/
+    - [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
+    - https://uppmax.github.io/bianca_workshop/conda/
 
 
 
@@ -85,13 +83,15 @@
         - pip install --user <package>
         - python setup.py install --user or --prefix=<path>
     - sync to wharf
-    -move the files on Bianca
+    - move the files on Bianca
     - you may have to update $PYTHONPATH
-        
-- https://uppmax.github.io/bianca_workshop/pip/
-- [Python packages](https://uppmax.uu.se/support/user-guides/python-user-guide/)
-- https://uppmax.github.io/R-python-julia-HPC/python/packages.html
-- https://uppmax.github.io/R-python-julia-HPC/python/isolated.html
+
+!!! info "More info"
+
+    - https://uppmax.github.io/bianca_workshop/pip/
+    - [Python packages](https://uppmax.uu.se/support/user-guides/python-user-guide/)
+    - https://uppmax.github.io/R-python-julia-HPC/python/packages.html
+    - https://uppmax.github.io/R-python-julia-HPC/python/isolated.html
 
 
 ### R packages
@@ -114,10 +114,11 @@ dr-xr-sr-x  8 douglas sw  4096 Sep  7  2021 glmnetcr
 dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
 ```
 
-More info
-- https://uppmax.github.io/bianca_workshop/rpackages/
-- https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html
-- https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html
+!!! info "More info"
+
+    - https://uppmax.github.io/bianca_workshop/rpackages/
+    - https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html
+    - https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html
 
 ### Julia packages
 
@@ -138,38 +139,24 @@ More info
         DistributedArrays
         PlotlyJS
 
-More info:
-- https://uppmax.github.io/bianca_workshop/julia/
-- https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html
+!!! info "More info"
 
-### "Containers"
-#### Singularity
+    - https://uppmax.github.io/bianca_workshop/julia/
+    - https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html
+
+## "Containers"
+### Singularity
 - [Singularity user guide](https://www.uppmax.uu.se/support/user-guides/singularity-user-guide/)
 
-#### Docker
+### Docker
 - Docker will unfortunately not work on the clusters, since it requires root permission.
 - However, Singularity may use Docker images.
 
-### Build from source
+## Build from source
 - We have several compiler versions from GNU and INTEL
 - The safest way is to transfer the source code to Bianca via the wharf.
 - [Guide for compiling serial and parallel programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/)
-    
-### Spack
-- The UPPMAX staff has already other ways to install most software applications. 
-- Please use Spack only if other ways to install your tool is not possible or very difficult, e.g. requiring very many dependencies and it is not available through, e.g. Easybuild.
-- [Spack user guide at UPPMAX](https://www.uppmax.uu.se/support/user-guides/spack-on-uppmax/)
 
-### Own development...
-- You may have your own code that you want to run on UPPMAX.
-- See the [guide for compiling serial and parallel programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/)
-- [User guide for debuggers and profilers](https://www.uppmax.uu.se/support/user-guides/debuggers-and-profiling-tools/)
-
-## Run own scripts or programs
-- Unless your script or program is in the active path, you run it by the full path or `./<file>` if you are in the present directory.
-
-## Running Jupyter
-- https://uppmax.github.io/bianca_workshop/jupyter/
 
 !!! abstract "Keypoints"
     - You have got an overview of the procedures to install packages/libraries and tools on Bianca through the wharf
