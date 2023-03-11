@@ -130,33 +130,6 @@
     - high intensity work on compute nodes (core hours are counted)
         - for development use the interactive sessions
 
-## What kind of work will you perform?
-
-```puml
-@startuml
-start
-
-:login;
-:Rackham login Node;
-if (Do CPU/memory intensive work) then (yes)
-  :Use calculation node;
-  if (Do interactive work) then (yes)
-    :$ interactive -A <proj> <options>;
-  else (no)
-    :Make a batch script;
-    :$ sbatch <script>;
-  endif 
-else (no)
-  :Stay on login node and laod your module(s):
-  $module load <software/tool>;
-  :Run tool: 
-  $<toolname> [- options, input, output];
-endif
-:finish;
-stop
-@enduml
-```
-
 !!! info
    
     More info about reaching the compute nodes in the afternoon!
