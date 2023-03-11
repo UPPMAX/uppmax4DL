@@ -52,10 +52,6 @@
     
 ## Workflows    
 
-    - how to interact with R packages / R studio
-        - do demos in Thinlinc
-    - gatk, vep, snipf, conda (loading only)
-
 **Change this example**    
 ???+ question "Hands on using a tool""
 
@@ -98,9 +94,80 @@
 - just loading procedure
 - more in afternoon
 
+### Common problems
+
+- Conda environment clash with loaded python modules
+- Forgotten environment variables defined in your `.bashrc` may give unexeptected errors when you run other programs or new versions of a program
+- A full ``$HOME`` folder may cause unexpected errors
+  - check with ``uquota``
+
 ### Jupyter
 
 - ?? Not shown here but presented in [Extra material](https://uppmax.github.io/bianca_workshop/jupyter/)
+
+## Summary
+
+!!! info "``$HOME`` dir and project dir"
+
+    **Quota**
+    - Disk usage and number of files
+    - check with `quota`
+    - ``$HOME`` has always 32 GB and 300,000 files
+    - Compute projects both have disk space (512 GB) and computing time attached to them
+
+    **Core hours**
+    - You  get core hours only from compute project
+    - check with ``projinfo``
+    - When they are used you can still get "BONUS" jobs if the resources allow.
+
+- Use your disk spaces wisely
+    - home folder just for general stuff and files needed by several projects
+       - always read and write protected for others by default
+    - otherside project folder which will more easily become public for other's
+       - by default available for all project members.
+- Use the computing resources wisely
+    - low intensity work on login node
+    - high intensity work on compute nodes (core hours are counted)
+        - for development use the interactive sessions
+
+## What kind of work will you perform?
+
+```plantuml
+@startuml
+start
+
+:login;
+:Rackham login Node;
+if (Do CPU/memory intensive work) then (yes)
+  :Use calculation node;
+  if (Do interactive work) then (yes)
+    :$ interactive -A <proj> <options>;
+  else (no)
+    :Make a batch script;
+    :$ sbatch <script>;
+  endif 
+else (no)
+  :Stay on login node and laod your module(s):
+  $module load <software/tool>;
+  :Run tool: 
+  $<toolname> [- options, input, output];
+endif
+:finish;
+stop
+@enduml
+```
+
+!!! info
+   
+    More info about reaching the compute nodes in the afternoon!
+
+## Common problems
+
+- Conda environment clash with loaded python modules
+- Forgotten environment variables defined in your `.bashrc` may give unexeptected errors when you run other programs or new versions of a program
+- A full ``$HOME`` folder may cause unexpected errors
+  - check with ``uquota``
+
 
 
 **To extend**
