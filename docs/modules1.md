@@ -98,6 +98,10 @@
 - just loading procedure
 - more in afternoon
 
+### Jupyter
+
+- ?? Not shown here but presented in [Extra material](https://uppmax.github.io/bianca_workshop/jupyter/)
+
 
 **To extend**
 !!! abstract "keypoints"
