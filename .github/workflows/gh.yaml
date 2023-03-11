@@ -12,10 +12,10 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
-      -
-        name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
-      # Install plantuml
-      - name: mkdocs build
-        uses: 'mikaelhg/mkdocs-material-plantuml@v4'
+#      -
+#        name: Set up Docker Buildx
+#        uses: docker/setup-buildx-action@v2
+#      # Install plantuml
+#      - name: mkdocs build
+#        uses: 'mikaelhg/mkdocs-material-plantuml@v4'
       - run: mkdocs gh-deploy --force
