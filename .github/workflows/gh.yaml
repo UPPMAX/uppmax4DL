@@ -11,5 +11,9 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
+      # Install plantuml
+      - name: Install OS package dependencies
+        run: |
+          sudo apt install plantuml
       - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
