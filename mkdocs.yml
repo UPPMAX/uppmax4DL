@@ -71,14 +71,3 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-plugins:
-  - build_plantuml:
-      render: 'server' # or "local" for local rendering
-      bin_path: '/usr/local/bin/plantuml' # ignored when render: server
-      server: 'http://www.plantuml.com/plantuml' # official plantuml server
-      disable_ssl_certificate_validation: true # for self-signed and invalid certs
-      output_format: 'svg' # or "png"
-      diagram_root: 'docs/diagrams' # should reside under docs_dir
-      output_folder: 'out'
-      input_folder: 'src'
-      input_extensions: '' # comma separated list of extensions to parse, by default every file is parsed
