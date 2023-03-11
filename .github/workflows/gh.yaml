@@ -13,7 +13,7 @@ jobs:
           python-version: 3.x
       # Install plantuml
       - name: mkdocs build
-        uses: 'docker://ghcr.io/mikaelhg/mkdocs-material-plantuml:latest'
+        uses: 'mikaelhg/mkdocs-material-plantuml@v4'
       
       - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
