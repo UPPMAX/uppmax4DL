@@ -11,8 +11,8 @@ nav:
     - Transfering files to/from Bianca: transfer.md
   - NAISS-SENS and sensitive data: naiss-sens-bianca.md
   - The compute nodes and install yourself: 
-    - Module system (continued) and Slurm: slurm-intro.md
-    - Software installation without internet connection: install.md
+    - Introduction to compute nodes: slurm-intro.md
+    - Software and package installation: install.md
   - Extra material:
     - slurm.md
     - conda.md
