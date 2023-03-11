@@ -34,6 +34,7 @@ theme:
 
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - search.suggest
     - content.code.annotate
