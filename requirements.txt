@@ -9,3 +9,4 @@ beautifulsoup4>=4.11.1
 plantuml
 mkdocs_puml>=1.1.1
 plantuml-markdown
+mkdocs-build-plantuml-plugin 
