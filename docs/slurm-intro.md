@@ -9,6 +9,11 @@ To be removed later
 
 ## What kind of work will you perform?
 
+::uml:: [format="png|svg|txt"] [classes="class1 class2 ..."] [alt="text for alt"] [title="Text for title"] [width="300px"] [height="300px"]
+  PlantUML script diagram
+::end-uml::
+
+
 ```uml
 @startuml
 start
