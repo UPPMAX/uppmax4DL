@@ -73,10 +73,10 @@ But how do you know whether data is anonymised?
 - Before GDPR-data will be transferred to UPPMAX, there must be a [Data Processing Agreement](https://www.uppmax.uu.se/support/faq/general-miscellaneous-faq/how-to-establish-a-puba-with-uu/) between UU and the data controlling organisation. These are currently specific to the PI (and sometimes project).
 
 !!! note "Some definitions"
-- Project: A collection of resource allocations and people, with an expiration date.
-- Compute resources: CPU time used by submitted jobs.
-- Storage resources: GB of disk space. /proj has backup, /proj/no-backup has no backup.
-- Allocation: The amount of resources a project may consume before hitting a limit.
+    - Project: A collection of resource allocations and people, with an expiration date.
+    - Compute resources: CPU time used by submitted jobs.
+    - Storage resources: GB of disk space. /proj has backup, /proj/no-backup has no backup.
+    - Allocation: The amount of resources a project may consume before hitting a limit.
 
 - Take home message: follow the above instructions, be as complete as detailed as you reasonably can. Submit requests early in the month. 
 
@@ -104,10 +104,10 @@ But how do you know whether data is anonymised?
     - and to satisfy regulations.
 
 !!! note "Some definitions"
-— Node: A basic "computer", with processor, RAM memory, local disk, and network connection.
-- Core: A *part* of a processor (CPU), capable of executing a thread of execution.
-- Thread: A series of logical steps, executing a program.
-- Multithreading: A program that runs with many threads in parallel. Each thread can occupy one core.
+    — Node: A basic "computer", with processor, RAM memory, local disk, and network connection.
+    - Core: A *part* of a processor (CPU), capable of executing a thread of execution.
+    - Thread: A series of logical steps, executing a program.
+    - Multithreading: A program that runs with many threads in parallel. Each thread can occupy one core.
 
 
 ### Bianca has no Internet
@@ -124,12 +124,29 @@ But how do you know whether data is anonymised?
 - The whole Bianca cluster (blue) contains hundreds of virtual project clusters (green), each of which is isolated from each other and the Internet.
 - Data can be transferred to or from a virtual project cluster through the Wharf, which is a special file area that is visible from the Internet.
 
+### Common Questions
 
-(todo: 
-- upplägg för projects using sensitive & nonsensitive data
-- multiple projects or single projects?
-- "I need more space/compute"
-- )
+What should I do if I have both sensitive and non-sensitive data?
+- It may be convenient to have a separate project on Rackham. Scripts and pipelines can then be built on Rackham and moved to Bianca.
+- Having non-sensitive data on Bianca is okay, if maintaining two separate projects is impractical.
+
+One project or many? When should I apply for another project? 
+- Because *every* member in a project should be assumed to have full access to all data, each different constellation of collaborators needs its own project.
+- Because of the extra effort required to move data between projects, NAISS SENS projects can be extended and a continuation proposal is not necessary.
+- Let data, ethical consent, and practicality rule.
+
+I need more core-hours!
+- Do you really? 
+	- First, use jobstats to determine whether you've been using your allocation efficiently.
+	- Second, remember that you can still submit and run jobs after your allocation is out. Such "bonus" jobs run after normal-priority jobs. Typically, they will run in the evening, within a couple of days.
+- If you know that you've been submitting efficient jobs and the wait time in the queue is an actual problem, then contact UPPMAX support and request more time. Motivate your request.
+
+I need more storage space!
+- Do you really?
+	- First, make an inventory of the data in your project — what do you have, how much space does it take, and why is it there?
+	- Second, delete data that you don't have an immediate plan to analyse.
+	- Also convert all .sam files to .bam and compress all your .fastq files.
+- If you've done all this and you still need space, contact UPPMAX support and request more space. Motivate your request by summarising your inventory. Include an estimate of your future needs. 
 
 
 !!! abstract "Keypoints"
