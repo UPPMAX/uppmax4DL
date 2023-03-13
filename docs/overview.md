@@ -90,8 +90,8 @@
         end
 
         terminal ----> Node01
-        terminal -- usr-sensXXX + 2FA (VPN)----> SubGraph1Flow
-        thinlinc -- usr-sensXXX + 2FA (VPN)----> SubGraph1Flow
+        terminal -- usr-sensXXX + 2FA (VPN) ----> SubGraph1Flow
+        thinlinc -- usr-sensXXX + 2FA (VPN) ----> SubGraph1Flow
         Node1 -- usr-sensXXX + 2FA (VPN not needed) ----> SubGraph1Flow
         subgraph "Bianca"
         SubGraph1Flow(Bianca login) -- usr+passwd --> private(private cluster)
