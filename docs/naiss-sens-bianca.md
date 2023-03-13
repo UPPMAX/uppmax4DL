@@ -1,20 +1,9 @@
 # NAISS-SENS, sensitive data and Bianca
 
 !!! info "Objectives"
-    - We'll briefly get an overview of kinds of sensitive data
-    - ... and the **Bianca** system
-
-Content (To remove later)
-
-    - extended from intro course 
-    - what is sensitive data?
-    - puba & timelines
-    - how to apply for projects
-    - project management
-    - LINK to extra material
-    - contact persons
-
-
+    - A brief overview of various aspects of sensitive data projects
+    - A discussion of NAISS SENS projects, proposals, and allocations
+    - ... and an overview of the **Bianca** system
 
 
 ## Sensitive personal data
@@ -37,7 +26,7 @@ Content (To remove later)
 		- including some image or auditory recordings
     
 - More about sensitive personal data
-	- [IMY](https://www.imy.se/en/)
+    - [IMY](https://www.imy.se/en/)
     - [GDPR](https://www.gdpr.eu/)
     - [Data protection](https://ec.europa.eu/info/law/law-topic/data-protection_en)
     - [Skydd av personuppgifter](https://ec.europa.eu/info/law/law-topic/data-protection_sv)
