@@ -1,6 +1,6 @@
 # bianca_workshop
 
-This repository contains the source code for the [Bianca woerkshop](https://uppmax.github.io/bianca_workshop/)
+This repository contains the source code for the [Bianca workshop](https://uppmax.github.io/bianca_workshop/)
 
 
 ## Credits
