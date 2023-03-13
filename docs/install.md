@@ -6,7 +6,7 @@
     - formatting
 
     - add
-        - link to compilers
+
         - hardware info
     
   
@@ -154,8 +154,36 @@ dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
 
 ## Build from source
 - We have several compiler versions from GNU and INTEL
+- check with: ``$ ml avail gcc`` and ``$ ml avail intel``
 - The safest way is to transfer the source code to Bianca via the wharf.
 - [Guide for compiling serial and parallel programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/)
+- Available combinations of compilers and parallel libraries (openmpi): https://hackmd.io/_IqCbOiyS8SZ0Uqpa3UpHg?view
+
+## Summary about the Bianca Hardware
+
+- Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes with 128, 256 or 512 GB memory
+- GPU nodes withtwo NVIDIA A100 40GB GPUs each.
+
+**Cores per node**|16/64|
+
+**Details about the compute nodes**
+
+- Thin nodes
+    - 204 compute nodes with single or dual CPUs and one 4TB mechanical drive or 1TB SSD
+    - Each CPU has 8 cores
+- Fat nodes
+    - 75 compute nodes, 256 GB memory each.
+    - 15 compute nodes, 512 GB memory each
+    - 10 compute nodes each equipped with 2xNVIDIA A100 (40GB) GPUs
+- Total number of CPU cores is 4800
+- Login nodes have 2vCPU each and 16GB memory
+- Network
+    - Dual 10 Gigabit Ethernet for all nodes
+
+**Storage**
+|**Local disk (scratch)**| 4 TB |
+|**"Home" storage**|Castor|
+|**"Project" Storage**|Castor|
 
 
 !!! abstract "Keypoints"
