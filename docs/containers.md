@@ -37,16 +37,8 @@ Dockerhub?
 [https://hub.docker.com/r/broadinstitute/gatk/]  
 Perfect.
 
-<table>
-   <tr>
-      <td> 
-![gatk_syslabs](./img/gatk_syslabs.png) 
-      </td>
-      <td> 
-![gatk_dockerhub](./img/gatk_dockerhub.png) 
-         <\td>
-   </tr>
-</table>
+| ![gatk_syslabs](./img/gatk_syslabs.png) | ![gatk_dockerhub](./img/gatk_dockerhub.png) |
+|---|---|
 
 `apptainer pull gatk_4.3.0.0.sif docker://broadinstitute/gatk:4.3.0.0`
 
