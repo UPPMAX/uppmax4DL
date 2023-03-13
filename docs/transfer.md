@@ -219,8 +219,9 @@ username@transit:~$
 
 !!! info "Summary"
 
-    - When ..., use ...
-    - When ..., use ...
+    - Make sure you access Bianca from SUNET Network - use VPN, connect from Rackham, use university connection...
+    - For simple transfers use SFP to connect to `bianca-sftp.uppmax.uu.se` - use command line `sftp` or tools that support SFTP protocol to connect to `bianca-sftp.uppmax.uu.se`.
+    - For `rsync` - sync files to pre-mounted wharf folder from Rackham or secure local computer.
 
 !!! abstract "keypoints"
     - The "WHARF" works like a dock at the harbour.
