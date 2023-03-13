@@ -1,3 +1,4 @@
+![Apptainer](./img/apptainer.png)
 # Containers
 
 ## Why?
