@@ -106,6 +106,10 @@
         end
 ```
 
+!!! info "Next session"
+
+    We will try the different forms to log in to Bianca!
+
 
 !!! abstract "keypoints"
     - NAISS makes available large-scale high-performance computing resources, storage capacity, and advanced user support, for Swedish research. 
