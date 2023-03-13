@@ -72,7 +72,13 @@ But how do you know whether data is anonymised?
 [Open NAISS SENS Rounds](https://supr.naiss.se/round/open_type/?type=NAISS+SENS)
 - Before GDPR-data will be transferred to UPPMAX, there must be a [Data Processing Agreement](https://www.uppmax.uu.se/support/faq/general-miscellaneous-faq/how-to-establish-a-puba-with-uu/) between UU and the data controlling organisation. These are currently specific to the PI (and sometimes project).
 
-- Take home message: follow the above instructions. Submit requests early in the month. 
+!!! note "Some definitions"
+- Project: A collection of resource allocations and people, with an expiration date.
+- Compute resources: CPU time used by submitted jobs.
+- Storage resources: GB of disk space. /proj has backup, /proj/no-backup has no backup.
+- Allocation: The amount of resources a project may consume before hitting a limit.
+
+- Take home message: follow the above instructions, be as complete as detailed as you reasonably can. Submit requests early in the month. 
 
 
 ## Bianca
@@ -97,6 +103,13 @@ But how do you know whether data is anonymised?
     - to provide a maximum amount of resources
     - and to satisfy regulations.
 
+!!! note "Some definitions"
+— Node: A basic "computer", with processor, RAM memory, local disk, and network connection.
+- Core: A *part* of a processor (CPU), capable of executing a thread of execution.
+- Thread: A series of logical steps, executing a program.
+- Multithreading: A program that runs with many threads in parallel. Each thread can occupy one core.
+
+
 ### Bianca has no Internet
 ... but we have “solutions”
 
@@ -112,7 +125,13 @@ But how do you know whether data is anonymised?
 - Data can be transferred to or from a virtual project cluster through the Wharf, which is a special file area that is visible from the Internet.
 
 
+(todo: 
+- upplägg för projects using sensitive & nonsensitive data
+- multiple projects or single projects?
+- "I need more space/compute"
+- )
 
-!!! abstract "keypoints"
+
+!!! abstract "Keypoints"
     - Sensitive Personal data is data that could identify a person and that have implication
     - The workflow for a project is When doing your Data management plan, do a DPIA, apply for PUBA(if apropriate), apply for project, DO scicens , Transfer resulted data, close project.
