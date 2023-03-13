@@ -82,11 +82,11 @@ so you will want to cd to that directory the first thing you do.
 
 Alternatively, you can specify this at the end of the sftp command, so that you will always end up in the correct folder directly.
 
-`$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>`
-E.g.
+`$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>`  
+E.g.  
 `$ sftp -q myuser-sens2016999@bianca-sftp.uppmax.uu.se:myuser-sens2016999`
 
-- `sftp` supports a recursive flag (put `-r`), but it seems to be very sensitive to combinations of different sftp servers and clients, so be warned... a bit further down you can see a rough solution for bulk transfers.
+- `sftp` supports a recursive flag (`put -r`), but it seems to be very sensitive to combinations of different sftp servers and clients, so be warned... a bit further down you can see a rough solution for bulk transfers.
 
 !!! info Tip
 
