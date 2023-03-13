@@ -21,12 +21,31 @@
     - to emulate the HPC cluster environment that SNIC users were familiar with
     - to provide a maximum amount of resources
     - and to satisfy regulations.
-
-!!! info "Bianca has no internet"
-
+    
+### Bianca has no Internet
     - Still you can log in, but it is done in two steps!
     - We recomend the ThinLink web portal, to enable graphics
-    
+
+![Bianca](./img/biancaorganisation-01.png)
+
+- Bianca is only accessible from within Sunet (i.e. from university networks).
+- Use VPN outside Sunet. [Link to VPN for UU](https://mp.uu.se/en/web/info/stod/it-telefoni/it-support/network-on-campus/vpn-service)
+  - You can get VPN credentials from all Swedish universities.
+
+<br>
+
+- The whole Bianca cluster (blue) contains hundreds of virtual project clusters (green), each of which is isolated from each other and the Internet.
+- Data can be transferred to or from a virtual project cluster through the Wharf, which is a special file area that is visible from the Internet.
+
+
+## Log in
+
+- You can ogin either through ThinLinc or via ssh
+- If you are using graphics of an kind, use ThinLinc
+- Otherwise, if you just ned the commandline, it is enough to use ssh.
+    - ssh from home terminal
+    - ssh from a session on Rackham 
+
 ## Log in to Bianca with ThinLinc
 
 - Bianca offers graphical login
@@ -34,6 +53,12 @@
     - On web:
         - [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se)
         - requires [2-factor authentication](https://www.uppmax.uu.se/support/user-guides/setting-up-two-factor-authentication/)
+
+!!! warning
+
+    The ThinLinc application will work for Rackham but not Bianca
+
+![Image](./img/Thinlinc2.jpg)
 
 ### The log in steps
 1. When you log in to [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se), your SSH or ThinLinc client first meets the blue Bianca login node.
@@ -49,26 +74,23 @@
 4. Inside each virtual project cluster, by default there is just a one-core login node. When you need more memory or more CPU power, you submit a job (interactive or batch), and an idle node will be moved into your project cluster.
 
 
- 
-![Image](./img/Thinlinc2.jpg)
+  
+## Start an interactive session
+    
+To be able to work with the type alongs we strongly recommend you to start an interactive session already now.
 
+    - More about interactive sessions and Slurm in the afternoon, but we don't need a further insight in this to procees now!
+   
+!!! info "Start the interactive session"
+    
+    We start an 8 hour session with 2 cores.
+    
+    ``` bash
+    & interactive -A sens2023531 -p core -n 2 -t 8:0:0
+    ```
     
 
     
-### Bianca has no Internet
-... but we have “solutions”
-
-![Bianca](./img/biancaorganisation-01.png)
-
-- Bianca is only accessible from within Sunet (i.e. from university networks).
-- Use VPN outside Sunet. [Link to VPN for UU](https://mp.uu.se/en/web/info/stod/it-telefoni/it-support/network-on-campus/vpn-service)
-  - You can get VPN credentials from all Swedish universities.
-
-<br>
-
-- The whole Bianca cluster (blue) contains hundreds of virtual project clusters (green), each of which is isolated from each other and the Internet.
-- Data can be transferred to or from a virtual project cluster through the Wharf, which is a special file area that is visible from the Internet.
-
 !!! abstract "keypoints"
     - We recommend you to use ThinLinc to log in.
 
