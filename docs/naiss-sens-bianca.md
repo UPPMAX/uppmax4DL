@@ -52,7 +52,7 @@ Content (To remove later)
 		- sensitive environmental data, e.g. protected species		
 	- National security
 	
-- A Data Protection Impact Assessment is legal requirement for any project with GDPR-data.
+- A Data Protection Impact Assessment(DPIA) is legal requirement for any project with GDPR-data.
 
 - If in doubt (especially with "new" data type), also do a information security evaluation to determine how you should handle the data.
 
@@ -114,5 +114,5 @@ But how do you know whether data is anonymised?
 
 
 !!! abstract "keypoints"
-    - bullet 1
-    - bullet 2
+    - Sensitive Personal data is data that could identify a person and that have implication
+    - The workflow for a project is When doing your Data management plan, do a DPIA, apply for PUBA(if apropriate), apply for project, DO scicens , Transfer resulted data, close project.
