@@ -184,16 +184,13 @@ username@transit:~$
 - The mounted directory will be kept for later sessions.
 
 ### Moving data from transit to Rackham
-- At Rackham:
+- **On Rackham:** copy files to Bianca via transit:   
+`scp path/my_files transit:sens2023531/`
 
+- **On transit:** copy files to Bianca from Rackham  
+`scp  rackham:path/my_files ~/sens2023531/`
 
-`scp transit:<path> <local path>`
-
-- Ex:
-
-`scp transit:sens2023531/test2 bianca_course/`
- 
-
+> Keep in mind that project folders on Rackham are not available on transit.
 
 ### Moving data between projects
 
@@ -220,8 +217,9 @@ username@transit:~$
 !!! info "Summary"
 
     - Make sure you access Bianca from SUNET Network - use VPN, connect from Rackham, use university connection...
-    - For simple transfers use SFP to connect to `bianca-sftp.uppmax.uu.se` - use command line `sftp` or tools that support SFTP protocol to connect to `bianca-sftp.uppmax.uu.se`.
+    - For simple transfers use SFP to connect to `bianca-sftp.uppmax.uu.se` - use command line `sftp` or tools that support SFTP protocol.
     - For `rsync` - sync files to pre-mounted wharf folder from Rackham or secure local computer.
+    - Keep in mind that project folders on Rackham are not available on transit.
 
 !!! abstract "keypoints"
     - The "WHARF" works like a dock at the harbour.
