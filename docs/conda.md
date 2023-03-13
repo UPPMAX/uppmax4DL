@@ -25,30 +25,92 @@ Customising
 
 Remember to run 'conda clean -a' once in a while. When you load the module, there is also a reminder displayed, so you get this info there also.
 
-::: questions
+# Install with pip
+
+You use `pip` this way, in a Linux shell OR a python shell:
+
+``` sh 
+$ pip install --user <package>
+```
+
+Use `pip3` if you loaded python3.
+
+Then the package ends up in
+`~/.local/lib/python<version>/site-packages/` .
+
+Note that python\<version\> is omitting the last number (bug fix), like
+3.8 for python-3.8.7. We HIGHLY recommend using a virtual environment
+during installation, since this makes it easier to install for different
+versions of Python. More information will follow later in this course
+(<https://uppmax.github.io/HPC-python/isolated.html>).
+
+<div class="note">
+
+<div class="title">
+
+Note
+
+</div>
+
+You will test this in the separated sessions about isolated environments
+in a while.
+
+</div>
+
+<div class="keypoints">
+
+-   You can check for packages
+
+> -   from the Python shell with the `import` command
+>
+> -   from BASH shell with the
+>
+>     > -   `pip list` command at both centers
+>     > -   `ml help python/3.9.5` at UPPMAX
+
+-   Installation of Python packages can be done either with **PYPI** or
+    **Conda**
+-   You install own packages with the `pip install` command (This is the
+    recommended way on HPC2N)
+-   At UPPMAX Conda is also available (See Conda section)
+
+</div>
+
+# Conda
+
+<div class="questions">
+
 -   What does Conda do?
 -   How to create a Conda environment
-:::
 
-::: objectives
+</div>
+
+<div class="objectives">
+
 -   Learn pros and cons with Conda
 -   Learn how to install packages and work with the Conda (isolated)
     environment
-:::
 
-::: hint
-::: title
+</div>
+
+<div class="hint">
+
+<div class="title">
+
 Hint
-:::
+
+</div>
 
 -   On Bianca (with no internet), Conda is the first choice when
     installing packages, because there is a local mirror of most of the
     Conda repositories.
-:::
 
-# Using Conda
+</div>
 
-::: admonition
+## Using Conda
+
+<div class="admonition">
+
 Conda cheat sheet
 
 -   List packages in present environment: `conda list`
@@ -60,18 +122,22 @@ Conda cheat sheet
 -   Create a new environment: `conda create --name myenvironment`
 -   Create a new environment from requirements.txt:
     `conda create --name myenvironment --file requirements.txt`
--   On e.g. HPC systems where you don't have write access to central
-    installation directory: conda create \--prefix /some/path/to/env\`\`
+-   On e.g. HPC systems where you don’t have write access to central
+    installation directory: conda create --prefix /some/path/to/env\`\`
 -   Activate a specific environment: `conda activate myenvironment`
 -   Deactivate current environment: `conda deactivate`
-:::
 
-# Install with conda (UPPMAX)
+</div>
 
-::: note
-::: title
+## Install with conda (UPPMAX)
+
+<div class="note">
+
+<div class="title">
+
 Note
-:::
+
+</div>
 
 We have mirrored all major conda repositories directly on UPPMAX, on
 both Rackham and Bianca. These are updated every third day. We have the
@@ -89,40 +155,48 @@ following channels available:
 -   r2018.11
 -   scilifelab-lts
 
-You reach them all by loading the conda module. You don\'t have to state
+You reach them all by loading the conda module. You don't have to state
 the specific channel when using UPPMAX. Otherwise you do with
 `conda -c <channel> ...`
-:::
 
-# First steps
+</div>
 
-::: tip
-::: title
+## First steps
+
+<div class="tip">
+
+<div class="title">
+
 Tip
-:::
+
+</div>
 
 There will be an exercise in the end!
-:::
+
+</div>
 
 1.  First load our conda module (there is no need to install you own
     miniconda, for instance)
 
-> ::: prompt
-> bash \$
+> <div class="prompt">
+>
+> bash $
 >
 > module load conda
-> :::
+>
+> </div>
 >
 > -   This grants you access to the latest version of Conda and all
 >     major repositories on all UPPMAX systems.
 > -   Check the text output as conda is loaded, especially the first
 >     time, see below
 >
-> > ::: {.admonition .dropdown}
+> > <div class="admonition dropdown">
+> >
 > > Conda load output
 > >
 > > -   The variable CONDA_ENVS_PATH contains the location of your
-> >     environments. Set it to your project\'s environments folder if
+> >     environments. Set it to your project's environments folder if
 > >     you have one.
 > > -   Otherwise, the default is \~/.conda/envs.
 > > -   You may run `source conda_init.sh` to initialise your shell to
@@ -131,37 +205,42 @@ There will be an exercise in the end!
 > >     the scope of the module system.
 > > -   REMEMBER TO `conda clean -a` once in a while to remove unused
 > >     and unnecessary files
-> > :::
+> >
+> > </div>
 
 2.  First time
 
 > -   The variable CONDA_ENVS_PATH contains the location of your
->     environments. Set it to your project\'s environments folder if you
+>     environments. Set it to your project's environments folder if you
 >     have one.
 >
 > -   Otherwise, the default is \~/.conda/envs.
 >
 > -   Example:
 >
->     > ::: prompt
->     > bash \$
+>     > <div class="prompt">
+>     >
+>     > bash $
 >     >
 >     > export
 >     > CONDA_ENVS_PATH=/proj/\<your-project-id\>/nobackup/\<username\>
->     > :::
+>     >
+>     > </div>
 >
-> > ::: {.admonition .dropdown}
+> > <div class="admonition dropdown">
+> >
 > > By choice
 > >
 > > Run `source conda_init.sh` to initialise your shell (bash) to be
 > > able to run `conda activate` and `conda deactivate` etcetera instead
 > > of `source activate`. It will modify (append) your `.bashrc` file.
-> > :::
+> >
+> > </div>
 > >
 > > -   When conda is loaded you will by default be in the base
 > >     environment, which works in the same way as other conda
 > >     environments. include a Python installation and some core system
-> >     libraries and dependencies of Conda. It is a "best practice" to
+> >     libraries and dependencies of Conda. It is a “best practice” to
 > >     avoid installing additional packages into your base software
 > >     environment.
 
@@ -169,35 +248,43 @@ There will be an exercise in the end!
 
 > -   Example:
 >
->     ::: prompt
->     bash \$
+>     <div class="prompt">
 >
->     conda create \--name python36-env python=3.6 numpy=1.13.1
+>     bash $
+>
+>     conda create --name python36-env python=3.6 numpy=1.13.1
 >     matplotlib=2.2.2
->     :::
 >
->     ::: {.admonition .dropdown}
+>     </div>
+>
+>     <div class="admonition dropdown">
+>
 >     The `mamba` alternative
->     :::
+>
+>     </div>
 >
 >     -   `mamba` is a fast drop-in alternative to conda, using
->         \"libsolv\" for dependency resolution. It is available from
->         the `conda` module.
+>         "libsolv" for dependency resolution. It is available from the
+>         `conda` module.
 >
 >     -   Example:
 >
->         > ::: prompt
->         > bash \$
->         > :::
+>         > <div class="prompt">
 >         >
->         > mamba create \--name python37-env python=3.7 numpy=1.13.1
+>         > bash $
+>         >
+>         > </div>
+>         >
+>         > mamba create --name python37-env python=3.7 numpy=1.13.1
 >         > matplotlib=2.2.2
 
 4.  Activate the conda environment by:
 
-    > ::: prompt
-    > bash \$
-    > :::
+    > <div class="prompt">
+    >
+    > bash $
+    >
+    > </div>
     >
     > source activate python36-env
     >
@@ -208,27 +295,33 @@ There will be an exercise in the end!
 
 6.  Deactivate
 
-> ::: {.prompt language="bash" prompts="(python-36-env) $"}
+> <div class="prompt" language="bash" prompts="(python-36-env) $">
+>
 > conda deactivate
-> :::
+>
+> </div>
 
-::: warning
-::: title
+<div class="warning">
+
+<div class="title">
+
 Warning
-:::
+
+</div>
 
 -   Conda is known to create **many** *small* files. Your diskspace is
     not only limited in GB, but also in number of files (typically
-    `300000` in \$home).
+    `300000` in $home).
 -   Check your disk usage and quota limit with `uquota`
 -   Do a `conda clean -a` once in a while to remove unused and
     unnecessary files
-:::
+
+</div>
 
 -   [More info about Conda on
     UPPMAX](https://uppmax.uu.se/support/user-guides/conda-user-guide/)
 
-# Working with Conda environments defined by files
+## Working with Conda environments defined by files
 
 -   Create an environment based on dependencies given in an environment
     file:
@@ -266,16 +359,19 @@ dependencies:
 - scipy=1.6.2
 ```
 
-::: admonition
+<div class="admonition">
+
 More on dependencies
 
 -   Dependency management from course [Python for Scientific
     computing](https://aaltoscicomp.github.io/python-for-scicomp/dependencies/)
-:::
 
-## Exercises
+</div>
 
-::: challenge
+# Exercises
+
+<div class="challenge">
+
 UPPMAX: Create a conda environment and install some packages
 
 -   First check the current installed packages while having
@@ -285,11 +381,8 @@ UPPMAX: Create a conda environment and install some packages
 -   Use the conda module on Rackham and create an environment with name
     `HPC-python23` with `python 3.7` and `numpy 1.15`
 
-> -   
->
->     Use your a path for `CONDA_ENVS_PATH` of your own choice or `/proj/py-r-jl/<user>/python`
->
->     :   -   (It may take a minute or so)
+> -   Use your a path for `CONDA_ENVS_PATH` of your own choice or `/proj/py-r-jl/<user>/python`  
+>     -   (It may take a minute or so)
 
 -   Activate!
 -   Check with `pip list` what is there. Compare with the environment
@@ -297,11 +390,13 @@ UPPMAX: Create a conda environment and install some packages
 
 > -   Which version of Python did you get?
 
--   Don\'t forget to deactivate the Conda environment before doing other
+-   Don't forget to deactivate the Conda environment before doing other
     exercises!
-:::
 
-::: {.solution .dropdown}
+</div>
+
+<div class="solution dropdown">
+
 Solution for UPPMAX
 
 Write this in the terminal
@@ -315,9 +410,11 @@ $ pip list
 $ python -V
 $ source deactivate
 ```
-:::
 
-::: keypoints
+</div>
+
+<div class="keypoints">
+
 -   Conda is an installer of packages but also bigger toolkits
 
 -   Conda creates isolated environments (see next section) not clashing
@@ -328,4 +425,5 @@ $ source deactivate
 
     > -   That is, you cannot load the python module and use the
     >     packages therein inside you Conda environment.
-:::
+
+</div>
