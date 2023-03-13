@@ -76,21 +76,27 @@
 
 ## Log in via ssh
     
+You may try to log in any of your terminals https://uppmax.github.io/uppmax_intro/login2.html#terminals
     
-    
-  
+``` bash
+    $ ssh <user>-sens2023531@bianca.uppmax.uu.se
+```
+- you are prompted to give your password directly followed by the 6-digit 2-factor
+        - like: verysecret678123
+
+
 ## Start an interactive session
     
 To be able to work with the type alongs we strongly recommend you to start an interactive session already now.
 
-    - More about interactive sessions and Slurm in the afternoon, but we don't need a further insight in this to procees now!
+- More about interactive sessions and Slurm in the afternoon, but we don't need a further insight in this to procees now!
    
 !!! info "Start the interactive session"
     
     We start an 8 hour session with 2 cores.
     
     ``` bash
-    & interactive -A sens2023531 -p core -n 2 -t 8:0:0
+    $ interactive -A sens2023531 -p core -n 2 -t 8:0:0
     ```
     
 
