@@ -40,7 +40,7 @@
 
 ## Log in
 
-- You can ogin either through ThinLinc or via ssh
+- You can log in either through ThinLinc or via ssh
 - If you are using graphics of an kind, use ThinLinc
 - Otherwise, if you just ned the commandline, it is enough to use ssh.
     - ssh from home terminal
@@ -74,6 +74,10 @@
 4. Inside each virtual project cluster, by default there is just a one-core login node. When you need more memory or more CPU power, you submit a job (interactive or batch), and an idle node will be moved into your project cluster.
 
 
+## Log in via ssh
+    
+    
+    
   
 ## Start an interactive session
     
