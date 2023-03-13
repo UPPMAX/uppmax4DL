@@ -29,8 +29,8 @@
 
 - The path to this folder, once you are logged into your project's cluster, is:
 
-    `/proj/<projid>/nobackup/wharf/<username>/<username>-<projid>`
-E.g.
+    `/proj/<projid>/nobackup/wharf/<username>/<username>-<projid>`  
+E.g.  
     `/proj/sens2016999/nobackup/wharf/myuser/myuser-sens2016999`
 
 - To transfer data from Bianca, copy the files you want to transfer here.
