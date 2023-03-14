@@ -52,7 +52,7 @@ E.g.
 
 ## Using standard sftp client (command line)
 
-https://www.uppmax.uu.se/support/user-guides/basic-sftp-commands/
+<https://www.uppmax.uu.se/support/user-guides/basic-sftp-commands/>
 
 `$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se`  
  Ex.  
@@ -135,28 +135,23 @@ E.g.
 - Does work
   - but asks for password everytime
 - Only connect with local computer (not Rackham)
-
-**Other?**
-- Cyberduck problem
-
-### Example ??
     
 ## Mounting the sftp-server with sshfs on you local machine
 
 **Mount the wharf on your machine**
     
 - This is only possible on your own system. 
-- sshfs allows you to mount the wharf on your own machine. 
+- ``sshfs`` allows you to mount the wharf on your own machine. 
 - You will be able to copy and work on the data using your own local tools such as cp or vim. 
 - Remember that you are neither logged in on the distant server, nor is the data physically on your local disk (until you have copied it).
 
 !!! warning
-    UPPMAX doesn't have sshfs client package installed for security reasons. sshfs is available on most Linux distributions: install the package sshfs on Ubuntu, fuse-sshfs on Fedora, RHEL7/CentOS7 (enable EPEL repository) and RHEL8 (enable codeready-builder repository) / CentOS8 (enable powertools repository).    
-
-### Example 
+    - UPPMAX doesn't have sshfs client package installed for security reasons. 
+    - sshfs is available on most Linux distributions: 
+        - install the package sshfs on Ubuntu, 
+        - fuse-sshfs on Fedora, RHEL7/CentOS7 (enable EPEL repository) and RHEL8 (enable codeready-builder repository) / CentOS8 (enable powertools repository).    
    
 ## Transit
-**Recommended way from Rackham?**
 - To facilitate secure data transfers to, from and within the system for computing on sensitive data (bianca/castor) a service is available via ssh at transit.uppmax.uu.se.
 - You can connect to transit via ssh. Once connected, you should see a short help message. The most important thing there is the ``mount_wharf`` command which you can use to mount a project from the bianca wharf
 
@@ -204,8 +199,6 @@ username@transit:~$
 
 - For example, if you need to download data from TCGA, log in to Rackham and install the GDC client to your home directory. Then log in to Transit, mount the wharf, and run ./gdc-client.
 
-
-## Exercises
 
 ## NGI Deliver 
 
