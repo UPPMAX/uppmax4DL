@@ -371,18 +371,3 @@ $ source deactivate
     >     packages therein inside you Conda environment.
 
 </div>
-
-
-
-# Installing using pip
-
-You use `pip` or `pip3` in the usual way, in a Linux shell OR a python shell. However, you need to have downloaded the package beforehand, preferrably on rackham since it uses the same operating system.
-
-``` sh 
-$ pip download <package-name>
-``` 
-Then move the package to the wharf and install it using the usual
-
-``` sh 
-$ pip install --user <path-to-package-name>
-```
