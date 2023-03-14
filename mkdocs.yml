@@ -38,6 +38,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
+    - navigation.path
     - search.suggest
     - content.code.annotate
     - content.tabs.link
@@ -46,6 +47,8 @@ theme:
     
 extra_css:
   - stylesheets/extra.css
+  
+include_next_prev: 
 
 markdown_extensions:
   - toc:
