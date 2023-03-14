@@ -38,20 +38,20 @@ to this is to install your own packages.
 Here we will look at installing R packages with automatic download and with
 manual download. It is also possible to install from inside Rstudio. 
 
-### Methods
+## Methods
 
-- setup
+- setup (first time)
 - automatic download and install from CRAN
 - automatic download and install from GitHub
 - manual download and install
 
-#### setup 
+### setup (first time)
 
 https://uppmax.github.io/bianca_workshop/rpackages/#setup
 
-We need to create a place for the own-installed packages to be and to tell R where to find them. The initial setup only needs to be done once, but separate package directories need to be created for each R version used.
+- We need to create a place for the own-installed packages to be and to tell R where to find them. The initial setup only needs to be done once, but separate package directories need to be created for each R version used.
 
-R reads the $HOME/.Renviron file to setup its environment. It should be created by R on first run, or you can create it with the command: touch $HOME/.Renviron
+- R reads the ``$HOME/.Renviron`` file to setup its environment. It should be created by R on first run, or you can create it with the command: touch $HOME/.Renviron
 
 NOTE: In this example we are going to assume you have chosen to place the R packages in a directory under your home directory. As mentioned, you will need separate ones for each R version.
 
@@ -87,30 +87,26 @@ version 4.0.4:
 
 https://uppmax.github.io/bianca_workshop/rpackages/#automatical-download-and-install-from-cran
 
-.. note:: 
+!!! note
 
     You find a list of packages in CRAN (https://cran.r-project.org/) and a list of repos here: https://cran.r-project.org/mirrors.html 
 
     Please choose a location close to you when picking a repo. 
 
 
-.. tabs::
+=== "From command line"
 
-   .. tab:: From command line
-
-      .. code-block:: sh 
-
-          R --quiet --no-save --no-restore -e "install.packages('<r-package>', repos='<repo>')"
+    ``` sh 
+    R --quiet --no-save --no-restore -e "install.packages('<r-package>', repos='<repo>')"
+    ```
     
-   .. tab:: From inside R
+=== "From inside R"
 
-      .. code-block:: sh 
+     ``` R
+     install.packages('<r-package>', repos='<repo>')
+     ```  
 
-          install.packages('<r-package>', repos='<repo>')
-       
-
-In either case, the dependencies of the package will be downloaded and
-installed as well. 
+In either case, the dependencies of the package will be downloaded and installed as well. 
 
 
 ### Automatic download and install from GitHub
