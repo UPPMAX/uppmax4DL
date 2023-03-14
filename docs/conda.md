@@ -61,7 +61,7 @@ Conda cheat sheet
 -   Create a new environment from requirements.txt:
     `conda create --name myenvironment --file requirements.txt`
 -   On e.g. HPC systems where you don’t have write access to central
-    installation directory: conda create --prefix /some/path/to/env\`\`
+    installation directory: ```conda create --prefix /some/path/to/env```
 -   Activate a specific environment: `conda activate myenvironment`
 -   Deactivate current environment: `conda deactivate`
 
