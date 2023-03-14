@@ -58,18 +58,19 @@ NOTE: In this example we are going to assume you have chosen to place the R pack
 If you have not yet installed any packages to R yourself, the environment file
 should be empty and you can update it like this: 
 
-.. code-block:: sh 
+``` sh 
 
     echo R_LIBS_USER=\"$HOME/R-packages-%V\" > ~/.Renviron
+```
 
 If it is **not** empty, you can edit ``$HOME/.Renviron`` with your favorite
 editor so that ``R_LIBS_USER`` contain the path to your chosen directory for
 own-installed R packages. It should look something like this when you are done:
 
-.. code-block:: sh 
+``` sh 
 
     R_LIBS_USER="/home/u/user/R-packages-%V"
-
+```
 
 | NOTE: Replace ``/home/u/user`` with the value of ``$HOME``. Run ``echo $HOME`` to see its value.
 | NOTE: The ``%V`` should be written as-is, it's substituted at runtime with the active R version.
@@ -78,10 +79,10 @@ For each version of R you are using, create a directory matching the pattern
 used in ``.Renviron`` to store your packages in. This example is shown for R
 version 4.0.4:
 
-.. code-block:: sh 
+``` sh 
 
     mkdir -p $HOME/R-packages-4.0.4
-
+```
 
 ### Automatical download and install from CRAN
 
@@ -91,7 +92,7 @@ https://uppmax.github.io/bianca_workshop/rpackages/#automatical-download-and-ins
 
     You find a list of packages in CRAN (https://cran.r-project.org/) and a list of repos here: https://cran.r-project.org/mirrors.html 
 
-    Please choose a location close to you when picking a repo. 
+    - Please choose a location close to you when picking a repo. 
 
 
 === "From command line"
@@ -113,39 +114,36 @@ In either case, the dependencies of the package will be downloaded and installed
 
 https://uppmax.github.io/bianca_workshop/rpackages/#automatic-download-and-install-from-github
 
-If you want to install a package that is not on CRAN, but which do have a
-GitHub page, then there is an automatic way of installing, but you need to
-handle prerequsites yourself by installing those first. It can also be that the
-package is not in as finished a state as those on CRAN, so be careful. 
+If you want to install a package that is not on CRAN, but which do have a GitHub page, then there is an automatic way of installing, but you need to
+handle prerequsites yourself by installing those first. 
+-  It can also be that the package is not in as finished a state as those on CRAN, so be careful. 
 
-To install packages from GitHub directly, from inside R, you first need to
-install the devtools package. Note that you only need to install this **once**. 
+!!! note
+
+    To install packages from GitHub directly, from inside R, you first need to install the devtools package. Note that you only need to install this **once**. 
 
 This is how you install a package from GitHub, inside R:
 
- .. code-block:: R
+ ``` R
  
     install.packages("devtools")   # ONLY ONCE
     devtools::install_github("DeveloperName/package")
-    
+```    
     
 ### Manual download and install
 
 https://uppmax.github.io/bianca_workshop/rpackages/#manual-download-and-install
 
-If the package is not on CRAN or you want the development version, or you for
-other reason want to install a package you downloaded, then this is how to
-install from the command line: 
+If the package is not on CRAN or you want the development version, or you for other reason want to install a package you downloaded, then this is how to install from the command line: 
 
-.. code-block:: sh 
+``` sh 
 
     R CMD INSTALL -l <path-to-R-package>/R-package.tar.gz
-    
+```    
 
-**NOTE** that if you install a package this way, you need to handle any
-dependencies yourself. 
+**NOTE** that if you install a package this way, you need to handle any dependencies yourself. 
 
-.. note:: 
+!!! note::
 
    Places to look for R packages
    
@@ -156,84 +154,114 @@ dependencies yourself.
 
 ## Example — Install Tidycmprsk
 
+### Install on Rackham
+
 You can install this for yourself by beginning on rackham. Do
 
-    module load R_packages/4.1.1
-
+``` bash
+module load R_packages/4.1.1
+```
 and then, within R, do
 
-    install.packages('tidycmprsk')
+``` R
+install.packages('tidycmprsk')
+```
 
 You will see two questions to answer yes to:
 
-    Warning in install.packages("tidycmprsk") :
+``` R
+Warning in install.packages("tidycmprsk") :
       'lib = "/sw/apps/R_packages/4.1.1/rackham"' is not writable
     Would you like to use a personal library instead? (yes/No/cancel) yes
+```
 
 and
 
-    Would you like to create a personal library
+``` R
+Would you like to create a personal library
     '~/R/x86_64-pc-linux-gnu-library/4.1'
     to install packages into? (yes/No/cancel) yes
+``
 
 This will then to an extended installation process that also does some updates.  This creates a directory ~/R that contains the installations and updates of R packages.
 
+### Transfer to the Wharf
+
 After installation, the next step is to copy the contents of this directory over to bianca so that it is the same directory within your bianca home directory.
 
-Make sure you are in your home directory. Then connect to the bianca wharf.  Replace my name and project with your bianca user name and project.
+Make sure you are in your **home directory**. Then connect to the bianca wharf.  Replace the name and project with your bianca user name and project.
 
-    sftp douglas-sens2017625@bianca-sftp
+``` bash
+sftp douglas-sens2017625@bianca-sftp
+```
 
-You log in here like you log into bianca: the first password is your password followed by the 6-digit authenticator code, the second password (if required for you) is only your password.
+You log in here like you log into bianca: the first password is your **password followed by the 6-digit authenticator code**, the second password (if required for you) is only your password.
 
-Once sftp has connected, the contentsf the current directory can be listed with
+Once sftp has connected, the contents of the current directory can be listed with
 
-    dir
+``` bash
+dir
+```
 
-For me, this shows
+It should look like this:
 
     sftp> dir
     douglas-sens2017625
 
-Now cd to this directory, which is your wharf directory within your project.
+Now ``cd`` to this directory, which is your wharf directory within your project.
 
-    sftp> cd douglas-sens2017625/
-    sftp> dir
-    sftp>
+``` bash
+sftp> cd douglas-sens2017625/
+sftp> dir
+sftp>
+```
 
 If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
 
 Now, upload your R directory here.
 
-    sftp> put -r R
+``` bash
+sftp> put -r R
+```
 
 This will take a while to upload all the files. When it has completed, quit.
 
-    sftp> quit
+``` bash
+sftp> quit
+```
 
 Now, log into bianca using the shell, or using the web interface and start a terminal. Once you have a bianca shell, change to your wharf directory within your project.  Replace my user and project with yours.
 
-    cd /proj/sens2017625/nobackup/wharf/douglas/douglas-sens2017625
+``` bash
+cd /proj/sens2017625/nobackup/wharf/douglas/douglas-sens2017625
+```
 
 Within this directory should be your R directory.
 
-    [douglas@sens2017625-bianca douglas-sens2017625]$ ls -l
-    total 1892
-    drwxrwxr-x  3 douglas douglas    4096 Mar  2 14:27 R
-
+``` bash
+[douglas@sens2017625-bianca douglas-sens2017625]$ ls -l
+total 1892
+drwxrwxr-x  3 douglas douglas    4096 Mar  2 14:27 R
+```
 Now sync this to your home directory:
 
-    [douglas@sens2017625-bianca douglas-sens2017625]$ rsync -Pa R ~/
+``` bash
+[douglas@sens2017625-bianca douglas-sens2017625]$ rsync -Pa R ~/
+```
 
 To use R_packages/4.1.1 with these new installations/updates, change to the directory you want to work in, load the R_packages/4.1.1 module.  Substitute your directory for my example directory.
 
-    [douglas@sens2017625-bianca douglas-sens2017625]$ cd /proj/sens2017625/nobackup/douglas/
+``` bash
+[douglas@sens2017625-bianca douglas-sens2017625]$ cd /proj/sens2017625/nobackup/douglas/
     [douglas@sens2017625-bianca douglas]$ module load R_packages/4.1.1
+```
 
 Then start R, and load the new package.
 
-    [douglas@sens2017625-bianca douglas]$ R
-
+``` bash
+[douglas@sens2017625-bianca douglas]$ R
+```
+``` R
     R version 4.1.1 (2021-08-10) -- "Kick Things"
     Copyright (C) 2021 The R Foundation for Statistical Computing
     ....
@@ -243,5 +271,5 @@ Then start R, and load the new package.
 
     > library(tidycmprsk)
     >
-
+```
 
