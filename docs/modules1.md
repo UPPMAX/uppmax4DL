@@ -152,6 +152,9 @@ Again, this is required (just once) before loading bioinformatics software.
 - Load a module 
     - `module load <module name>` or `ml <module name>`
 
+When loading a module, there is a "default" module available, which is almost always the latest version.
+However, we rarely want to rely on that.
+For reproducibility, we want to load specific version of our bioinformatics tools.
 To load the `samtools/1.17` module, which is a bioinformatics module.
 
 ```
@@ -169,8 +172,8 @@ Currently Loaded Modules:
   1) uppmax   2) bioinfo-tools   3) samtools/1.17
 ```
 
-Now to load `GATK/4.3.0.0`, `bioinfo-tools` is not required.
-This also demonstrates that loading some modules produces messages that may be helpful for using the module at UPPMAX.
+To load `GATK/4.3.0.0` now, `bioinfo-tools` is not required because it is already loaded.
+Loading this module also shows that sometimes, loading a module results in a message that is helpful for using the module at UPPMAX.
 
 ```
 $ ml GATK/4.3.0.0
@@ -217,7 +220,7 @@ For more help getting started, see
 ...
 ```
 
-When we list the modules we see that `GATK/4.3.0.0` is also loaded, as is its prerequisite module `java/sun_jdk1.8.0_151`.
+When we list the modules loaded with `ml`, we see that `GATK/4.3.0.0` is now loaded, as is its prerequisite module `java/sun_jdk1.8.0_151`.
 
 ```
 $ ml
@@ -232,41 +235,53 @@ Modules can also be unloaded, which also unloads their prerequisites.
     - `module unload <module name>` or `ml -<module name>`
 
 ### Installed software
-- You can also find (almost) all installed software at:
+
+You can find almost all installed software at:
+
     - <https://www.uppmax.uu.se/resources/software/installed-software/>
   
-### Installed databases
-- [Installed databases at UPPMAX](https://www.uppmax.uu.se/resources/databases/)
+#### Installed databases
+
+You can find almost all installed databases at:
+
+    - [Installed databases at UPPMAX](https://www.uppmax.uu.se/resources/databases/)
     
-## Workflows    
+### Workflows    
 
-???+ question "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff""
+???+ question "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff"
 
-    1. Copy example BAM file to your working directory. This contains a subset of reads from a sample from European Nucleotide Archive project [PRJEB6463](https://www.ebi.ac.uk/ena/browser/view/PRJEB6463) aligned to human genome build hg38. These reads are from the region `chr1:100300000-100800000`.
+This workflow uses a pre-made BAM file that contains a subset of reads from a sample from European Nucleotide Archive project [PRJEB6463](https://www.ebi.ac.uk/ena/browser/view/PRJEB6463) aligned to human genome build hg38. These reads are from the region `chr1:100300000-100800000`.
 
+    1. Copy example BAM file to your working directory.
     ```
-    $ cp -a /proj/sens2023531/data/ERR1252289.subset.bam .
+    $ cp -a /proj/sens2023531/workshop/data/ERR1252289.subset.bam .
     ```
+
     2. Take a quick look at the BAM file. First see if `samtools` is available.
     ```
     $ which samtools
     ```
+
     3. If `samtools` is not found, load `bioinfo-tools` then `samtools/1.17`
     ```
     $ ml bioinfo-tools samtools/1.17
     ```
+
     4. Now examine the first 10 reads aligned within the BAM file.
     ```
     $ samtools view ERR1252289.subset.bam | head
     ```
+
     5. Looks good. Now load the `GATK/4.3.0.0` module.
     ```
     $ module load GATK/4.3.0.0
     ```
+
     6. Make symbolic links to hg38 genome resources already available on UPPMAX. This provides local symbolic links for the hg38 resources `genome.fa`, `genome.fa.fai` and `genome.dict`.
     ```
     $ ln -s /sw/data/iGenomes/Homo_sapiens/UCSC/hg38/Sequence/WholeGenomeFasta/genome.* .
     ```
+
     7. Create a VCF containing inferred variants. Speed it up by confining the analysis to this region of chr1.
     ```
     $ gatk HaplotypeCaller --reference genome.fa --input ERR1252289.subset.bam --intervals chr1:100300000-100800000 --output ERR1252289.subset.vcf
@@ -311,88 +326,59 @@ Modules can also be unloaded, which also unloads their prerequisites.
 
     To add your own snpEff database, see the guide at http://pcingola.github.io/SnpEff/se_buildingdb/#option-1-building-a-database-from-gtf-files
     ```
+
     9. Annotate the variants.
     ```
     $ java -jar $SNPEFF_ROOT/snpEff.jar eff hg38 ERR1252289.subset.vcf > ERR1252289.subset.snpEff.vcf
     ```
+
     10. Take a quick look!
     ```
     $ less ERR1252289.subset.snpEff.vcf
     ```
-    11. Compress the annotated VCF and index it, using `bgzip` and `tabix` provided by the `samtools/1.17` module, which is already loaded.
+
+    11. Compress the annotated VCF and index it, using `bgzip` and `tabix` provided by the `samtools/1.17` module, already loaded.
     ```
     $ bgzip ERR1252289.subset.snpEff.vcf
     $ tabix -p vcf ERR1252289.subset.snpEff.vcf.gz
     ```
 
 
-* Print a plot using R_packages/4.1.1 within RStudio
+???+ question "Hands on: Running R within RStudio, use ggplot2 from R_packages/4.1.1"
+
+    1. Load the `R_packages/4.1.1` module and the latest `RStudio` module, and start RStudio with `rstudio &`.
+    ![ThinLinc load R_packages RStudio](./img/modules-1-ml-rstudio.png)
+
+    2. Load the `ggplot2` R library, provided by `R_packages/4.1.1`, and produce an example plot.
+    ![ThinLinc ggplot2](./img/modules-2-ggplot2.png)
+
+    2. Save the plot using `ggsave`.1.1`, and produce an example plot.
+    ![ThinLinc ggsave](./img/modules-3-ggsave.png)
 
 
+???+ question "Hands on: Loading the conda/latest module"
 
-### R
+    1. Load the `conda/latest` module.
+    ```
+    $ ml conda/latest
+    The variable CONDA_ENVS_PATH contains the location of your environments. Set it to your project's environments folder if you have one.
+    Otherwise, the default is ~/.conda/envs. Remember to export the variable with export CONDA_ENVS_PATH=/proj/...
 
-### GATK
+    You may run "source conda_init.sh" to initialise your shell to be able
+    to run "conda activate" and "conda deactivate" etc.
+    Just remember that this command adds stuff to your shell outside the scope of the module system.
 
-### SNIPF
+    REMEMBER TO USE 'conda clean -a' once in a while
+    ```
 
-### Conda
-
-- just loading procedure
-- more in afternoon
-
-### Common problems
-
-- Conda environment clash with loaded python modules
-- Forgotten environment variables defined in your `.bashrc` may give unexeptected errors when you run other programs or new versions of a program
-- A full ``$HOME`` folder may cause unexpected errors
-  - check with ``uquota``
-
-### Jupyter
-
-- ?? Not shown here but presented in [Extra material](https://uppmax.github.io/bianca_workshop/jupyter/)
-
-## Summary
-
-!!! info "``$HOME`` dir and project dir"
-
-    **Quota**
-    - Disk usage and number of files
-    - check with `quota`
-    - ``$HOME`` has always 32 GB and 300,000 files
-    - Compute projects both have disk space (512 GB) and computing time attached to them
-
-    **Core hours**
-    - You  get core hours only from compute project
-    - check with ``projinfo``
-    - When they are used you can still get "BONUS" jobs if the resources allow.
-
-- Use your disk spaces wisely
-    - home folder just for general stuff and files needed by several projects
-       - always read and write protected for others by default
-    - otherside project folder which will more easily become public for other's
-       - by default available for all project members.
-- Use the computing resources wisely
-    - low intensity work on login node
-    - high intensity work on compute nodes (core hours are counted)
-        - for development use the interactive sessions
-
-!!! info
-   
-    More info about reaching the compute nodes in the afternoon!
-
-## Common problems
-
-- Conda environment clash with loaded python modules
-- Forgotten environment variables defined in your `.bashrc` may give unexeptected errors when you run other programs or new versions of a program
-- A full ``$HOME`` folder may cause unexpected errors
-  - check with ``uquota``
+    We want to set the `CONDA_ENVS_PATH` variable to a directory within our project, rather than use the default which is our home directory.
+    If you do not set this variable, your home directory will easily exceed its quotas when creating even a single conda environment.
+    This will be covered in more detail in the afternoon.
 
 
-
-**To extend**
 !!! abstract "keypoints"
     
-    - Centrally installed software are reached through the module system and available throughout all nodes. 
-    - Your own installed software, scripts, python packages etcetera are available from their paths.
+    - Use the module system to use centrally installed software that is available on all nodes. 
+    - Include versions when loading modules, for reproducibility!
+    - Your own installed software, scripts, python packages etc. are available from their paths.
     
