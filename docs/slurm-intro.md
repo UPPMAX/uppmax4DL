@@ -68,8 +68,7 @@ $ interactive -A sens2023531 -p core -n 1 -t 10:00
 #### A simple job script template
 
 ```bash
-#!/bin/bash -l 
-# tell it is bash language and -l is for starting a session with a "clean environment, e.g. with no modules loaded and paths reset"
+#!/bin/bash
 
 #SBATCH -A sens2023531  # Project ID
 
