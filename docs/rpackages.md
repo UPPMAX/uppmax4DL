@@ -154,6 +154,13 @@ If the package is not on CRAN or you want the development version, or you for ot
 
 ## Example — Install Tidycmprsk
 
+[tidycmprsk on GitHub](https://mskcc-epi-bio.github.io/tidycmprsk/)
+
+!!! info
+   
+    The tidycmprsk package provides an intuitive interface for working with the competing risk endpoints. The package wraps the cmprsk package, and exports functions for univariate cumulative incidence estimates with cuminc() and competing risk regression with crr().
+
+
 ### Install on Rackham
 
 You can install this for yourself by beginning on rackham. Do
@@ -181,7 +188,7 @@ and
 Would you like to create a personal library
     '~/R/x86_64-pc-linux-gnu-library/4.1'
     to install packages into? (yes/No/cancel) yes
-``
+```
 
 This will then to an extended installation process that also does some updates.  This creates a directory ~/R that contains the installations and updates of R packages.
 
@@ -218,7 +225,7 @@ sftp>
 
 If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
 
-Now, upload your R directory here.
+Now, upload your (whole) ``R`` directory here.
 
 ``` bash
 sftp> put -r R
@@ -230,7 +237,8 @@ This will take a while to upload all the files. When it has completed, quit.
 sftp> quit
 ```
 
-Now, log into bianca using the shell, or using the web interface and start a terminal. Once you have a bianca shell, change to your wharf directory within your project.  Replace my user and project with yours.
+- Now, **log into bianca** using the shell, or using the web interface and start a terminal. 
+- Once you have a bianca shell, **change to your wharf directory** within your project.  Replace my user and project with yours.
 
 ``` bash
 cd /proj/sens2017625/nobackup/wharf/douglas/douglas-sens2017625
@@ -243,11 +251,16 @@ Within this directory should be your R directory.
 total 1892
 drwxrwxr-x  3 douglas douglas    4096 Mar  2 14:27 R
 ```
-Now sync this to your home directory:
+
+### Sync from Wharf to Home directory
+
+- Now sync this to your home directory:
 
 ``` bash
 [douglas@sens2017625-bianca douglas-sens2017625]$ rsync -Pa R ~/
 ```
+
+### Start an R session and load the new package
 
 To use R_packages/4.1.1 with these new installations/updates, change to the directory you want to work in, load the R_packages/4.1.1 module.  Substitute your directory for my example directory.
 
@@ -261,6 +274,7 @@ Then start R, and load the new package.
 ``` bash
 [douglas@sens2017625-bianca douglas]$ R
 ```
+
 ``` R
     R version 4.1.1 (2021-08-10) -- "Kick Things"
     Copyright (C) 2021 The R Foundation for Statistical Computing
