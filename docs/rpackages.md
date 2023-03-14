@@ -124,7 +124,7 @@ handle prerequsites yourself by installing those first.
 
 This is how you install a package from GitHub, inside R:
 
- ``` R
+``` R
  
     install.packages("devtools")   # ONLY ONCE
     devtools::install_github("DeveloperName/package")
@@ -137,20 +137,19 @@ https://uppmax.github.io/bianca_workshop/rpackages/#manual-download-and-install
 If the package is not on CRAN or you want the development version, or you for other reason want to install a package you downloaded, then this is how to install from the command line: 
 
 ``` sh 
-
     R CMD INSTALL -l <path-to-R-package>/R-package.tar.gz
 ```    
 
 **NOTE** that if you install a package this way, you need to handle any dependencies yourself. 
 
-!!! note::
+!!! note
 
-   Places to look for R packages
+    Places to look for R packages
    
-   - CRAN (https://cran.r-project.org/)
-   - R-Forge (https://r-forge.r-project.org/)
-   - Project's own GitHub page
-   - etc.
+    - CRAN (https://cran.r-project.org/)
+    - R-Forge (https://r-forge.r-project.org/)
+    - Project's own GitHub page
+    - etc.
 
 ## Example — Install Tidycmprsk
 
