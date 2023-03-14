@@ -64,7 +64,6 @@ $ ml spider R
         R/3.4.3
         R/3.5.0
         R/3.5.2
-        R/3.6.0-foss-2019a
         R/3.6.0
         R/3.6.1
         R/4.0.0
@@ -241,42 +240,95 @@ Modules can also be unloaded, which also unloads their prerequisites.
     
 ## Workflows    
 
-* Command-line workflow with human BAM file aligned to hg38.  Examine the BAM file and call variants with GATK.
+???+ question "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff""
 
-* Use snpEff to annotate the variants.
+    1. Copy example BAM file to your working directory. This contains a subset of reads from a sample from European Nucleotide Archive project [PRJEB6463](https://www.ebi.ac.uk/ena/browser/view/PRJEB6463) aligned to human genome build hg38. These reads are from the region `chr1:100300000-100800000`.
+
+    ```
+    $ cp -a /proj/sens2023531/data/ERR1252289.subset.bam .
+    ```
+    2. Take a quick look at the BAM file. First see if `samtools` is available.
+    ```
+    $ which samtools
+    ```
+    3. If `samtools` is not found, load `bioinfo-tools` then `samtools/1.17`
+    ```
+    $ ml bioinfo-tools samtools/1.17
+    ```
+    4. Now examine the first 10 reads aligned within the BAM file.
+    ```
+    $ samtools view ERR1252289.subset.bam | head
+    ```
+    5. Looks good. Now load the `GATK/4.3.0.0` module.
+    ```
+    $ module load GATK/4.3.0.0
+    ```
+    6. Make symbolic links to hg38 genome resources already available on UPPMAX. This provides local symbolic links for the hg38 resources `genome.fa`, `genome.fa.fai` and `genome.dict`.
+    ```
+    $ ln -s /sw/data/iGenomes/Homo_sapiens/UCSC/hg38/Sequence/WholeGenomeFasta/genome.* .
+    ```
+    7. Create a VCF containing inferred variants. Speed it up by confining the analysis to this region of chr1.
+    ```
+    $ gatk HaplotypeCaller --reference genome.fa --input ERR1252289.subset.bam --intervals chr1:100300000-100800000 --output ERR1252289.subset.vcf
+    ```
+    This produces as its output the files `ERR1252289.subset.vcf` and `ERR1252289.subset.vcf.idx`.
+
+    8. Now use `snpEff/5.1` to annotate the variants. Loading `snpEff/5.1` results in a change of java prerequisite. Also take a quick look at the help for the module for help with running this tool at UPPMAX.
+    ```
+    $ ml snpEff/5.1
+
+    The following have been reloaded with a version change:
+      1) java/sun_jdk1.8.0_151 => java/OpenJDK_12+32
+
+    $ ml help snpEff/5.1
+
+    ------------------- Module Specific Help for "snpEff/5.1" --------------------
+        snpEff - use snpEff 5.1
+        Version 5.1
+
+        Usage: java -jar $SNPEFF_ROOT/snpEff.jar ...
+
+        Usage: java -jar $SNPEFF_ROOT/SnpSift.jar ...
+        along with the desired command and possible java options for memory, etc
+
+        Note that databases must be added by an admin -- request via support@uppmax.uu.se
+        See http://snpeff.sourceforge.net/protocol.html for general help
+
+    Every database that is provided by snpEff/5.1 as of this installation is installed.  This complete list
+    can be generated with
+
+        java -jar $SNPEFF_ROOT/snpEff.jar databases
+
+    Three additional databases have been installed.
+
+        Database name                  Description                                      Notes
+        -------------                  -----------                                      -----
+        c_elegans.PRJNA13758.WS283     Caenorhabditis elegans genome version WS283      MtDNA uses Invertebrate_Mitochondrial codon table
+        canFam4.0                      Canis familiaris genome version 4.0
+        fAlb15.e73                     Ficedula albicollis ENSEMBLE 73 release
+
+    The complete list of locally installed databases is available at $SNPEFF_ROOT/data/databases_list.installed
+
+    To add your own snpEff database, see the guide at http://pcingola.github.io/SnpEff/se_buildingdb/#option-1-building-a-database-from-gtf-files
+    ```
+    9. Annotate the variants.
+    ```
+    $ java -jar $SNPEFF_ROOT/snpEff.jar eff hg38 ERR1252289.subset.vcf > ERR1252289.subset.snpEff.vcf
+    ```
+    10. Take a quick look!
+    ```
+    $ less ERR1252289.subset.snpEff.vcf
+    ```
+    11. Compress the annotated VCF and index it, using `bgzip` and `tabix` provided by the `samtools/1.17` module, which is already loaded.
+    ```
+    $ bgzip ERR1252289.subset.snpEff.vcf
+    $ tabix -p vcf ERR1252289.subset.snpEff.vcf.gz
+    ```
+
 
 * Print a plot using R_packages/4.1.1 within RStudio
 
-**Change this example**    
-???+ question "Hands on using a tool""
 
-    1. use matlab
-
-    ```
-    $ matlab &
-    ```
-    - Does not work!
-    - Load module first
-    ```
-    $ module avail matlab
-    
-    $ module load matlab/R2020b
-    
-    $ matlab &
-    ```
-    - Matlab starts
-    - `module load matlab` will start default version (often latest)
-
-    2. use Samtools
-
-    ```
-    $ module load samtools
-    ```
-    "These module(s) or extension(s) exist but cannot be loaded as requested: "samtools""
-    ```
-    module load bioinfo-tools samtools
-    ```
-    - Bioinformatic tools are hidden by default
 
 ### R
 
