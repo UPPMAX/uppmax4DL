@@ -1,13 +1,13 @@
 # Conda
 
 !!! info "Objectives"
-    - We'll ...
+    - This is a brief description of the necessary steps to use the local Conda repository at UPPMAX, and install things for yourself or your project using Conda. 
 
 !!! abstract "keypoints"
-    - bullet 1
-    - bullet 2
+    - No internet
+    - Local repositories
 
-This is a brief description of the necessary steps to use the local Conda repository at UPPMAX, and install things for yourself or your project using Conda. 
+
 
 To use conda on UPPMAX Bianca you could use the following steps:
 
@@ -28,56 +28,7 @@ Remember to run 'conda clean -a' once in a while. When you load the module, ther
 
 
 
-# Install with pip
 
-You use `pip` this way, in a Linux shell OR a python shell:
-
-``` sh 
-$ pip install --user <package>
-```
-
-Use `pip3` if you loaded python3.
-
-Then the package ends up in
-`~/.local/lib/python<version>/site-packages/` .
-
-Note that python\<version\> is omitting the last number (bug fix), like
-3.8 for python-3.8.7. We HIGHLY recommend using a virtual environment
-during installation, since this makes it easier to install for different
-versions of Python. More information will follow later in this course
-(<https://uppmax.github.io/HPC-python/isolated.html>).
-
-<div class="note" markdown="1">
-
-<div class="title" markdown="1">
-
-Note
-
-</div>
-
-You will test this in the separated sessions about isolated environments
-in a while.
-
-</div>
-
-<div class="keypoints" markdown="1">
-
--   You can check for packages
-
-> -   from the Python shell with the `import` command
->
-> -   from BASH shell with the
->
->     > -   `pip list` command at both centers
->     > -   `ml help python/3.9.5` at UPPMAX
-
--   Installation of Python packages can be done either with **PYPI** or
-    **Conda**
--   You install own packages with the `pip install` command (This is the
-    recommended way on HPC2N)
--   At UPPMAX Conda is also available (See Conda section)
-
-</div>
 
 # Conda
 
@@ -432,5 +383,58 @@ $ source deactivate
 
     > -   That is, you cannot load the python module and use the
     >     packages therein inside you Conda environment.
+
+</div>
+
+
+
+# Install with pip
+
+You use `pip` this way, in a Linux shell OR a python shell:
+
+``` sh 
+$ pip install --user <package>
+```
+
+Use `pip3` if you loaded python3.
+
+Then the package ends up in
+`~/.local/lib/python<version>/site-packages/` .
+
+Note that python\<version\> is omitting the last number (bug fix), like
+3.8 for python-3.8.7. We HIGHLY recommend using a virtual environment
+during installation, since this makes it easier to install for different
+versions of Python. More information will follow later in this course
+(<https://uppmax.github.io/HPC-python/isolated.html>).
+
+<div class="note" markdown="1">
+
+<div class="title" markdown="1">
+
+Note
+
+</div>
+
+You will test this in the separated sessions about isolated environments
+in a while.
+
+</div>
+
+<div class="keypoints" markdown="1">
+
+-   You can check for packages
+
+> -   from the Python shell with the `import` command
+>
+> -   from BASH shell with the
+>
+>     > -   `pip list` command at both centers
+>     > -   `ml help python/3.9.5` at UPPMAX
+
+-   Installation of Python packages can be done either with **PYPI** or
+    **Conda**
+-   You install own packages with the `pip install` command (This is the
+    recommended way on HPC2N)
+-   At UPPMAX Conda is also available (See Conda section)
 
 </div>
