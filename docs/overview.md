@@ -43,7 +43,7 @@
 
 - From small scale RaspberryPi cluster... 
      
-![RaspBerry](./img/IMG_5111.jpeg){ width="300" }
+![RaspBerry](./img/IMG_5111.jpeg){ width="400" }
 
 - To supercomputers like Rackham.
 
@@ -59,7 +59,7 @@
 
 ![RaspBerry](./img/nodes.png)
 
-![RaspBerry](./img/Bild1.png)
+![RaspBerry](./img/Bild1.png){ width="400" }
 
 - The **calculation nodes** have to be used for intense computing. 
 
