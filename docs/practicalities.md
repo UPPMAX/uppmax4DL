@@ -51,7 +51,8 @@
  
     It is OK to take parts of the course only!
 
-  
+## Preliminary schedule 
+
 |Topic|Start|Timing|Content|
 |-----|-----|------|-------|
 |Syllabus and overview|9.00|15|intro|
@@ -64,8 +65,8 @@
 |LUNCH break|12.00|60| | 
 |NAISS-SENS and sensitive data|13.00|60|NAISS-SENS and sensitive data| 
 |Short break|14.00|5|Break|
-|Module system (cont.) and SLURM|14.05|20 |Module system (cont.) and SLURM|
-|Software installation without internet connection|14.25| 15|Software installation without internet connection|
+|Compute nodes and slurm|14.05|20 |Compute nodes and slurm|
+|Software installation |14.25| 15|Software installation |
 |Summary|14.40|10|Summary|
 |Coffee break|14.50|15|Break|
 |Q/A|15.05|55| Time for interaction|
