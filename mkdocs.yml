@@ -13,6 +13,7 @@ nav:
   - The compute nodes and install yourself: 
     - Introduction to compute nodes: slurm-intro.md
     - Software and package installation: install.md
+  - Summary: summary.md
   - Extra material:
     - slurm.md
     - conda.md
