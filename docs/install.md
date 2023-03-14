@@ -1,19 +1,6 @@
 # Software and package installation on Bianca
 
 
-!!! warning "ToDos"
-
-    - formatting
-
-    - add
-
-        - hardware info
-    
-  
-    
-    
-
-
 !!! info "Objectives" 
 
     - We'll go through the methods to work with the modules
@@ -104,7 +91,7 @@
 
 ``$ ml R_packages/4.1.1``
 
-Then grep for some package, in this case "glmnet".
+Then ``grep`` for some package, in this case "glmnet".
 
 ```bash
 $ ls -l $R_LIBS_SITE | grep glmnet
