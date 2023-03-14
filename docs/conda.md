@@ -1,4 +1,4 @@
-# Conda
+# Conda on Bianca
 
 !!! info "Objectives"
     - This is a brief description of the necessary steps to use the local Conda repository at UPPMAX, and install things for yourself or your project using Conda. 
