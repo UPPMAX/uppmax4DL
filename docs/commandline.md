@@ -1,8 +1,3 @@
----
-hide:
-  - footer
----
-
 # The command-line on Bianca
 
 !!! info "Objectives"
