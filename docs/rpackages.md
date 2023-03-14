@@ -2,8 +2,7 @@
 
 https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html
 
-What is a package, really?
-##########################
+## What is a package, really?
 
 An R package is essentialy a contained folder and file structure containing R
 code (and possibly C/C++ or other code) and other files relevant for the
@@ -11,7 +10,7 @@ package e.g. documentation(vignettes), licensing and configuration files. Let
 us look at a very simple example 
 
 
-.. code-block:: sh
+``` sh
 
    $ git clone git@github.com:MatPiq/R_example.git
 
@@ -27,8 +26,9 @@ us look at a very simple example
    │   └── hello.Rd
    └── r_example.Rproj
    
-   Installing your own packages
-----------------------------
+```
+   
+## Installing your own packages
 
 Sometimes you will need R packages that are not already installed. The solution
 to this is to install your own packages. These packages will usually come from
@@ -38,8 +38,8 @@ sometimes from other places, like GitHub or R-Forge
 Here we will look at installing R packages with automatic download and with
 manual download. It is also possible to install from inside Rstudio. 
 
-Setup
-#####
+### Setup
+
 
 We need to create a place for the own-installed packages to be and to tell R
 where to find them. The initial setup only needs to be done once, but separate
@@ -81,8 +81,8 @@ version 4.0.4:
     mkdir -p $HOME/R-packages-4.0.4
 
 
-Automatical download and install from CRAN
-##########################################
+### Automatical download and install from CRAN
+
 
 .. note:: 
 
@@ -132,8 +132,7 @@ repository http://ftp.acc.umu.se/mirror/CRAN/
 
 
 
-Automatic download and install from GitHub
-##########################################
+### Automatic download and install from GitHub
 
 If you want to install a package that is not on CRAN, but which do have a
 GitHub page, then there is an automatic way of installing, but you need to
@@ -172,8 +171,7 @@ so we need to install those as well.
    devtools::install_github("braverock/quantstrat")
 
     
-Manual download and install
-###########################
+### Manual download and install
 
 If the package is not on CRAN or you want the development version, or you for
 other reason want to install a package you downloaded, then this is how to
