@@ -352,7 +352,7 @@ You can find almost all installed databases at:
     2. Load the `ggplot2` R library, provided by `R_packages/4.1.1`, and produce an example plot.
     ![ThinLinc ggplot2](./img/modules-2-ggplot2.png)
 
-    2. Save the plot using `ggsave`.1.1`, and produce an example plot.
+    2. Save the plot using `ggsave`.
     ![ThinLinc ggsave](./img/modules-3-ggsave.png)
 
 
