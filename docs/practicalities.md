@@ -55,7 +55,6 @@
 |Topic|Start|Timing|Content|
 |-----|-----|------|-------|
 |Syllabus and overview|9.00|15|intro|
-
 |Login|9.15|45|Login ssh/ThinLinc, 2FA|
 |Coffee break|10.00|15|Break|
 |Working with the command-line|10.15|30|Command-line intro|
