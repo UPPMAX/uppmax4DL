@@ -47,6 +47,12 @@ dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
 
 - Sync or move the R directory or the specific folders to ~/R 
 
+### Test your installation
+
+- Start an R session and load the new package
+
+
+
 ## Example — Install Tidycmprsk
 
 [tidycmprsk on GitHub](https://mskcc-epi-bio.github.io/tidycmprsk/)
