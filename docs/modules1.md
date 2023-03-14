@@ -250,7 +250,7 @@ You can find almost all installed databases at:
 
 ???+ question "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff"
 
-This workflow uses a pre-made BAM file that contains a subset of reads from a sample from European Nucleotide Archive project [PRJEB6463](https://www.ebi.ac.uk/ena/browser/view/PRJEB6463) aligned to human genome build hg38. These reads are from the region `chr1:100300000-100800000`.
+    This workflow uses a pre-made BAM file that contains a subset of reads from a sample from European Nucleotide Archive project [PRJEB6463](https://www.ebi.ac.uk/ena/browser/view/PRJEB6463) aligned to human genome build hg38. These reads are from the region `chr1:100300000-100800000`.
 
     1. Copy example BAM file to your working directory.
     ```
