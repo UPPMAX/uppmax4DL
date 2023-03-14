@@ -1,14 +1,14 @@
 # Installing R packages on Bianca
 
-https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html
+[R on UPPMAX course](https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html)
 
 ## What is a package, really?
 
-An R package is essentialy a contained folder and file structure containing R
+- An R package is essentialy a contained folder and file structure containing R
 code (and possibly C/C++ or other code) and other files relevant for the
-package e.g. documentation(vignettes), licensing and configuration files. Let
-us look at a very simple example 
+package e.g. documentation(vignettes), licensing and configuration files. 
 
+- Let us look at a very simple example 
 
 ``` sh
 
@@ -31,27 +31,29 @@ us look at a very simple example
 ## Installing your own packages
 
 Sometimes you will need R packages that are not already installed. The solution
-to this is to install your own packages. These packages will usually come from
-CRAN (https://cran.r-project.org/) - the Comprehensive R Archive Network, or
-sometimes from other places, like GitHub or R-Forge
+to this is to install your own packages. 
+- These packages will usually come from CRAN (https://cran.r-project.org/) - the Comprehensive R Archive Network, or
+- sometimes from other places, like GitHub or R-Forge
 
 Here we will look at installing R packages with automatic download and with
 manual download. It is also possible to install from inside Rstudio. 
 
-### Setup
+### Methods
 
+- setup
+- automatic download and install from CRAN
+- automatic download and install from GitHub
+- manual download and install
 
-We need to create a place for the own-installed packages to be and to tell R
-where to find them. The initial setup only needs to be done once, but separate
-package directories need to be created for each R version used. 
+#### setup 
 
-R reads the ``$HOME/.Renviron`` file to setup its environment. It should be
-created by R on first run, or you can create it with the command: ``touch
-$HOME/.Renviron``
+https://uppmax.github.io/bianca_workshop/rpackages/#setup
 
-**NOTE**: In this example we are going to assume you have chosen to place the R
-packages in a directory under your home directory. As mentioned, you will need
-separate ones for each R version.
+We need to create a place for the own-installed packages to be and to tell R where to find them. The initial setup only needs to be done once, but separate package directories need to be created for each R version used.
+
+R reads the $HOME/.Renviron file to setup its environment. It should be created by R on first run, or you can create it with the command: touch $HOME/.Renviron
+
+NOTE: In this example we are going to assume you have chosen to place the R packages in a directory under your home directory. As mentioned, you will need separate ones for each R version.
 
 If you have not yet installed any packages to R yourself, the environment file
 should be empty and you can update it like this: 
@@ -83,6 +85,7 @@ version 4.0.4:
 
 ### Automatical download and install from CRAN
 
+https://uppmax.github.io/bianca_workshop/rpackages/#automatical-download-and-install-from-cran
 
 .. note:: 
 
@@ -109,30 +112,10 @@ version 4.0.4:
 In either case, the dependencies of the package will be downloaded and
 installed as well. 
 
-      
-Example
-*******
-
-In this example, we will install the R package ``stringr`` and use the
-repository http://ftp.acc.umu.se/mirror/CRAN/ 
-
-.. tabs::
-
-   .. tab:: From command line
-
-      .. code-block:: sh 
-
-          R --quiet --no-save --no-restore -e "install.packages('stringr', repos='http://ftp.acc.umu.se/mirror/CRAN/')"
-       
-   .. tab:: From inside R
-
-      .. code-block:: sh 
-
-          install.packages('stringr', repos='http://ftp.acc.umu.se/mirror/CRAN/')
-
-
 
 ### Automatic download and install from GitHub
+
+https://uppmax.github.io/bianca_workshop/rpackages/#automatic-download-and-install-from-github
 
 If you want to install a package that is not on CRAN, but which do have a
 GitHub page, then there is an automatic way of installing, but you need to
@@ -149,29 +132,10 @@ This is how you install a package from GitHub, inside R:
     install.packages("devtools")   # ONLY ONCE
     devtools::install_github("DeveloperName/package")
     
-
-Example
-*******
-
-In this example we want to install the package ``quantstrat``. It is not on
-CRAN, so let's get it from the GitHub page for the project:
-https://github.com/braverock/quantstrat 
-
-We also need to install devtools so we can install packages from GitHub. In
-addition, ``quantstrat`` has some prerequisites, some on CRAN, some on GitHub,
-so we need to install those as well. 
-
-.. code-block:: sh 
-
-   install.packages("devtools") # ONLY ONCE
-   install.packages("FinancialInstrument") 
-   install.packages("PerformanceAnalytics") 
-   
-   devtools::install_github("braverock/blotter")
-   devtools::install_github("braverock/quantstrat")
-
     
 ### Manual download and install
+
+https://uppmax.github.io/bianca_workshop/rpackages/#manual-download-and-install
 
 If the package is not on CRAN or you want the development version, or you for
 other reason want to install a package you downloaded, then this is how to
@@ -194,11 +158,7 @@ dependencies yourself.
    - Project's own GitHub page
    - etc.
 
-Install Tidycmprsk
-
-Hi,
-
-We are still perhaps a month away from having R_packages/4.2.1.
+## Example — Install Tidycmprsk
 
 You can install this for yourself by beginning on rackham. Do
 
