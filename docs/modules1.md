@@ -238,13 +238,13 @@ Modules can also be unloaded, which also unloads their prerequisites.
 
 You can find almost all installed software at:
 
-    - <https://www.uppmax.uu.se/resources/software/installed-software/>
+- <https://www.uppmax.uu.se/resources/software/installed-software/>
   
 #### Installed databases
 
-You can find almost all installed databases at:
+You can find descriptions of almost all installed databases at:
 
-    - [Installed databases at UPPMAX](https://www.uppmax.uu.se/resources/databases/)
+- [Installed databases at UPPMAX](https://www.uppmax.uu.se/resources/databases/)
     
 ### Workflows    
 
