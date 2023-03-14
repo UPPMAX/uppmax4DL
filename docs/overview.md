@@ -43,7 +43,7 @@
 
 - From small scale RaspberryPi cluster... 
      
-![RaspBerry](./img/IMG_5111.jpeg)
+![RaspBerry](./img/IMG_5111.jpeg){ width="300" }
 
 - To supercomputers like Rackham.
 
