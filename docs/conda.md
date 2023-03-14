@@ -16,11 +16,7 @@
     - Remember to run 'conda clean -a' once in a while. When you load the module, there is also a reminder displayed, so you get this info there also.
 
 
-
-
-
-
-# Conda
+# Conda basics
 
 <div class="questions" markdown="1">
 
@@ -45,9 +41,7 @@ Hint
 
 </div>
 
--   On Bianca (with no internet), Conda is the first choice when
-    installing packages, because there is a local mirror of most of the
-    Conda repositories.
+-   On Bianca Conda is the first choice when installing packages, because there is a local mirror of most of the Conda repositories.
 
 </div>
 
@@ -73,7 +67,7 @@ Conda cheat sheet
 
 </div>
 
-## Install with conda (UPPMAX)
+## Installing using Conda
 
 <div class="note" markdown="1">
 
