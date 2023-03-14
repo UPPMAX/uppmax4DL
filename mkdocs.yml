@@ -6,8 +6,7 @@ nav:
   - Getting Started:
     - Overview: overview.md
     - Logging into Bianca: login_bianca.md
-    - Command-line intro: linux.md
-    - Command-line intro2: commandline.md
+    - Command-line intro: commandline.md
     - Module system: modules1.md
     - Transfering files to/from Bianca: transfer.md
   - NAISS-SENS and sensitive data: naiss-sens-bianca.md
