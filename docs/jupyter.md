@@ -1,9 +1,35 @@
 # Running Jupyter on Bianca
 
+!!! info
 
-!!! info "Objectives"
-    - We'll ...
+    - You can run Python in a jupyter notebook,  i.e. in a web interface with possibility of inline figures and debugging.
+    - Jupyter-lab is installed in python>=3.10.8
+    - You can install a personal version of juputer-lab with Conda for lower versions. An easy way to do this is to load the python module as well. In shell:
 
-!!! abstract "keypoints"
-    - bullet 1
-    - bullet 2
+Start a notebook like this:
+
+```bash
+module load python/<version>
+jupyter-notebook
+```
+or
+``` bash
+jupyter-lab
+```
+
+A Firefox session should start with the Jupyter notebook/lab interface. If not,  copy-paste one of the addresses into the address files in an open firefox session.
+
+## Jupyter in a virtual environment (venv)
+
+You could also use jupyter- (lab or notebook) in a virtual environment.
+
+If you decide to use the --system-site-packages configuration you will get jupyter from the python modules you created you virtual environment with.
+However, you won't find your locally installed packages from that jupyter session. To solve this reinstall jupyter within the virtual environment by force:
+
+```bash
+$ pip install -I jupyter
+```
+and run it as above
+
+Be sure to start the kernel with the virtual environment name, like "Example", and not "Python 3 (ipykernel)".
+      
