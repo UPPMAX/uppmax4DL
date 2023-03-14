@@ -267,8 +267,9 @@ You can find descriptions of almost all installed databases at:
     $ ml bioinfo-tools samtools/1.17
     ```
 
-    4. Now examine the first 10 reads aligned within the BAM file.
+    4. Now create an index for the BAM file, and examine the first 10 reads aligned within the BAM file.
     ```
+    $ samtools index ERR1252289.subset.bam
     $ samtools view ERR1252289.subset.bam | head
     ```
 
