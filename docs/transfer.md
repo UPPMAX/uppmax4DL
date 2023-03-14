@@ -203,8 +203,8 @@ username@transit:~$
 ## NGI Deliver 
 
 - Not covered here but 
-  - https://www.uppmax.uu.se/support/user-guides/deliver-user-guide/
-  - https://www.uppmax.uu.se/support/user-guides/grus-user-guide/
+  - <https://www.uppmax.uu.se/support/user-guides/deliver-user-guide/>
+  - <https://www.uppmax.uu.se/support/user-guides/grus-user-guide/>
 
 
 !!! info "Summary"
