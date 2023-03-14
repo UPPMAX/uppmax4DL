@@ -11,9 +11,9 @@
 
 !!! info "TLDR;"
     - ```module load conda```
-    - ```export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/
+    - ```export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/```
     - ```conda create``` ... etc
-    - Remember to run 'conda clean -a' once in a while. When you load the module, there is also a reminder displayed, so you get this info there also.
+    - Remember to run ```conda clean -a``` once in a while. When you load the module, there is also a reminder displayed, so you get this info there also.
 
 
 # Conda basics
