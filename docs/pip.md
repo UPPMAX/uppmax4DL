@@ -8,19 +8,37 @@
 - ``pip list`` command 
 - ``ml help python/3.9.5`` at UPPMAX
 
-## Install on Rackham
-
-- You use ``pip`` this way, in a Linux shell OR a python shell: 
-
-```bash 
-    $ pip install --user <package>
-```    
-
-Use ``pip3`` if you loaded python3.
+**Is it not there? Then proceed!
 
 !!! info
 
-    **Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
+    **Methods:**
+    - You can either just download a python package, transfer to Wharf and Bianca and install there.
+    - Install it on Rackham. Perhaps you need it here as well! Then transfer to Wharf and Bianca local python library.
+    - Make a virtual environment with one or several packages on Rackham. Then transfer to Wharf and Bianca (any place).
+
+
+
+## Just download on Rackham and install on Bianca
+
+``` sh 
+$ pip download <package-name>
+``` 
+
+Then move the package to the Wharf and install it (Yes, you can do it from this place) using the usual
+
+``` sh 
+$ pip install --user <path-to-package-name>
+```
+
+**Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
+
+
+## Install on Rackham
+
+!!! info
+
+    **The package ends up on Rackham in ``~/.local/lib/python<version>/site-packages/`` .**
 
     - Note that python<version> is omitting the last number (bug fix), like 3.8 for python-3.8.7.
     
@@ -50,7 +68,7 @@ $ python -m venv --system-site-packages <proj-dir>/projectB
 - Virtual environments can be saved easily anywhere
 	
 
-## Moving the files from Rackham to Bianca
+### Moving the files from Rackham to Bianca
     
     
-    To be filled
+
