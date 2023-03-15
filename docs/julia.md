@@ -32,6 +32,15 @@
     Pkg.activate(DEPOT_PATH[1]*"/environments/v1.8");     #to return to user library
 
 ```
+### First time run on Bianca
+
+You may have to build a package the first time with Pkg.build(“<package>”). Since “<package> is pre-installed centrally on UPPMAX you must activate the central environment by following these steps below. This should only be needed the first time like this
+
+``` julia
+> using Pkg
+> Pkg.activate(DEPOT_PATH[2]*"/environments/v1.8");
+> Pkg.build("<package>")
+```
 
 ## Install yourself
 
