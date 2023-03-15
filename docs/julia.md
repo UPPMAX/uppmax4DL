@@ -1,13 +1,5 @@
 # Using Julia packages on Bianca
 
-
-!!! info "Objectives"
-    - We'll ...
-
-   - At UPPMAX there is a central library with installed packages.
-   - This is good, especially when working on Bianca, since you don't need to install via the Wharf.
-   - If you work on Rackham you can actually ignore it and do all installations by yourself. The reason is that you need some more steps.
-
 ## UPPMAX Central library
 
 !!! info
@@ -66,13 +58,43 @@ If you have started Julia once you will get the folders like this in the ~/.juli
 - Use a transfer method to move the package files to the wharf
     - To be certain to include all files, you may transfer the whole .julia dir. However, that can grow rather big with time.
 
-!!! warning
-    
-    **Continue**
+**Transfer to the Wharf**
 
+``` bash
+sftp douglas-sens2017625@bianca-sftp
+sftp> cd douglas-sens2017625/
+sftp> dir
+sftp>
+```
+If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
 
+- **Alt1: If you would like all yor locally installed packages:**
 
-!!! abstract "keypoints"
-    - bullet 1
-    - bullet 2
+``` bash
+sftp> put -r ~/.local/lib/python<version>/site-packages/
+```
+
+- **Alt 2: Just transfer the latest installed python package(s)**
+
+- Check what was installed. It may have been several dependency packages as well. Look at the times!
+
+``` bash
+sftp>  lls -lrt ~/.local/lib/python<version>/site-packages/
+```
+
+``` bash
+sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 1>
+# and if several packages
+sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 2>
+# and so on...
+```
+
+**Move to site-packages folder**
+On Bianca
+
+``` bash
+cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
+mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
+```
+
 
