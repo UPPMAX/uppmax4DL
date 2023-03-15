@@ -119,9 +119,9 @@ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
 
     you may want to tar before copying to include all possible symbolic links:
 
-	``` bash
-    	$ tar cfz <tarfile.tar.gz> <package>
-	```
+    ``` bash
+    $ tar cfz <tarfile.tar.gz> <package>
+    ```
     and in target directory (wharf_mnt) on Bianca:
 
     ``` bash 
@@ -162,10 +162,10 @@ $ source <path>/projectB/bin/activate
 - Install the packages from the file::
 
 ```
-  $ pip install -r requirements.txt
+$ pip install -r requirements.txt
 
-   $ pip list   # check
-   $ deactivate
+$ pip list   # check
+$ deactivate
 ```
 
 - Virtual environments can be saved easily anywhere
@@ -192,6 +192,7 @@ cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
 mv –a  projectB <path to any place, like project folder>
 ```
 
+<br><br><br>
 
 !!! error
 
