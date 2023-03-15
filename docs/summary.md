@@ -8,7 +8,7 @@
 
 ## Today's topics
 
-- Overview of UPPMAX systems
+- **Overview of UPPMAX systems**
 
     - Several clusters, like 
 
@@ -17,7 +17,7 @@
 
     - Login and compute nodes
 
-- Logging in
+- **Logging in**
  
     - ThinLinc, a must for graphics
     - ssh, may be faster if you just use command-line
@@ -25,14 +25,14 @@
     - 2FA
 
 
-- command-line intro
+- **Command-line intro**
 
     - navigation 
     - aliases
     - chmod
 
 
-- Module systems and workflows
+- **Module system and workflows**
 
 
     - modules adds paths to tools
@@ -45,7 +45,7 @@
     - workflows
 
 
-- Transfering files
+- **Transfering files**
 
 
     - The "WHARF" works like a dock at the harbour.
@@ -57,7 +57,7 @@
       - rsync, scp/sftp
 
 
-- NAISS-SENS and sensitive data
+- **NAISS-SENS and sensitive data**
 
 
     - Sensitive personal data
@@ -65,7 +65,7 @@
     - Apply for project
 
 
-- Introduction to compute nodes
+- **Introduction to compute nodes**
 
     - Submitting jobs
 
@@ -84,7 +84,7 @@
 
     - Other Slurm tools
 
-- Software and package installation
+- **Software and package installation**
 
 
     - Install software yourself
