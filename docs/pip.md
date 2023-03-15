@@ -146,7 +146,7 @@ $ source <path>/projectB/bin/activate
 
 - Virtual environments can be saved easily anywhere
 	
-** Moving the files from Rackham to Bianca
+** Moving the files from Rackham to Bianca**
 
 ``` bash
     $ cp –a <package_dir> <wharf_mnt_path>
