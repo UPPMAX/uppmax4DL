@@ -9,10 +9,56 @@
 ## Today's topics
 
 - Overview of UPPMAX systems
+  - Several clusters, like 
+    - Bianca
+    - Rackham
+  - login and compute nodes 
 - Logging in
+  - ThinLinc, a must for graphics
+  - ssh, may be faster if you just use command-line
+  - VPN
+  - 2FA
 - command-line intro
+  - navigation
+  - aliases
+  - chmod
 - Module systems and workflows
+  - modules adds paths to tools
+    - module load ...
+    - bioinfo-tools may be required to load you tool
+  - workflows
 - Transfering files
+  - The "WHARF" works like a dock at the harbour.
+  - There are several ways to use the wharf to transfer files
+    - copy
+    - transit server
+    - rsync, scp/sftp
 - NAISS-SENS and sensitive data
+  - Sensitive personal data
+  - Pseudonymisation and anonymisation
+  - Apply for project
 - Introduction to compute nodes
+  - Submitting jobs
+    - Slurm, sbatch, the job queue
+    - Jobs
+    - Slurm parameters
+    - Interactive jobs
+  - How compute nodes are moved between project clusters
+    - Other Slurm tools
+
 - Software and package installation
+  - Install software yourself
+  - Packages and libraries to scripting programs
+
+    - Conda
+    - Python packages with pip
+    - R packages
+    - Julia packages
+
+  - "Containers"
+
+    - Singularity
+    - Docker
+
+  - Build from source
+  - Summary about the Bianca Hardware
