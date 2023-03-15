@@ -3,8 +3,8 @@
 
 !!! info "Objectives" 
 
-    - We'll go through the methods to work with the modules
-    - We'll go through some typical workflows   
+    - We'll go through the methods to install packages and tools
+    - We'll briefly get an overview of the hardware on Bianca
 
 ## The module system
 
@@ -144,7 +144,7 @@ dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
 - check with: ``$ ml avail gcc`` and ``$ ml avail intel``
 - The safest way is to transfer the source code to Bianca via the wharf.
 - [Guide for compiling serial and parallel programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/)
-- Available combinations of compilers and parallel libraries (openmpi): https://hackmd.io/_IqCbOiyS8SZ0Uqpa3UpHg?view
+- Available combinations of compilers and parallel libraries (openmpi): <https://hackmd.io/_IqCbOiyS8SZ0Uqpa3UpHg?view>
 
 ## Summary about the Bianca Hardware
 
