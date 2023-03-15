@@ -52,7 +52,7 @@ $ pip install --user <path-to-package-name>
 **Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
 
 
-## Install on Rackham
+## Install on Rackham and then tranfer to Bianca
 
 !!! info
 
@@ -60,13 +60,52 @@ $ pip install --user <path-to-package-name>
 
     - Note that python<version> is omitting the last number (bug fix), like 3.8 for python-3.8.7.
     
-    - We HIGHLY recommend using a virtual environment during installation, since this makes it easier to install for different versions of Python.  
-    - More information [here](https://uppmax.github.io/HPC-python/isolated.html). 
 
-	
+**Install on Rackham**
+
+``` sh 
+$ ml python/<version>		# this is to make use the correct python version and possible dependencies already available
+$ pip install --user <package-name>
+```
+
+**Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
+
+**Transfer to the Wharf**
+
+``` bash
+sftp douglas-sens2017625@bianca-sftp
+sftp> cd douglas-sens2017625/
+sftp> dir
+sftp>
+```
+If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
+
+- Alt1: If you would like all yor locally installed packages:
+
+``` bash
+sftp> put -r ~/.local/lib/python<version>/site-packages/
+```
+
+- Alt 2: Just tranfer the latest installed python package(s)
+
+- Check what was installed. It may have been several dependency packages as well. Look at the times!
+
+``` bash
+$ ls -lrt ~/.local/lib/python<version>/site-packages/
+
+``` bash
+$ sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 1>
+# and if several packages
+$ sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 2>
+# and so on...
+```
+
+
 ## Isolated/virtual environments
 
-[Python on UPPMAX course](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html)
+- We HIGHLY recommend using a virtual environment during installation, since this makes it easier to install for different versions of Python.  
+- More information [here](https://uppmax.github.io/HPC-python/isolated.html). 
+
 
 !!! note
    
