@@ -51,7 +51,6 @@ $ pip install --user <path-to-package-name>
 
 **Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
 
-
 ## Install on Rackham and then tranfer to Bianca
 
 !!! info
@@ -67,8 +66,13 @@ $ pip install --user <path-to-package-name>
 $ ml python/<version>		# this is to make use the correct python version and possible dependencies already available
 $ pip install --user <package-name>
 ```
+- If there is a requirements.txt file with the content of packages to be installed:
 
-**Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
+```bash
+pip install --user -r requirements.txt
+```
+
+**Then the package(s) ends up in ``~/.local/lib/python<version>/site-packages/`` .**
 
 **Transfer to the Wharf**
 
@@ -80,32 +84,31 @@ sftp>
 ```
 If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
 
-- Alt1: If you would like all yor locally installed packages:
+- **Alt1: If you would like all yor locally installed packages:**
 
+- Start sftp
 ``` bash
 sftp> put -r ~/.local/lib/python<version>/site-packages/
 ```
 
-- Alt 2: Just tranfer the latest installed python package(s)
+- **Alt 2: Just transfer the latest installed python package(s)**
 
 - Check what was installed. It may have been several dependency packages as well. Look at the times!
 
 ``` bash
 $ ls -lrt ~/.local/lib/python<version>/site-packages/
+```
 
+- Start sftp
 ``` bash
 $ sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 1>
 # and if several packages
 $ sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 2>
 # and so on...
 ```
-
-
 ## Isolated/virtual environments
 
 - We HIGHLY recommend using a virtual environment during installation, since this makes it easier to install for different versions of Python.  
-- More information [here](https://uppmax.github.io/HPC-python/isolated.html). 
-
 
 !!! note
    
@@ -114,24 +117,36 @@ $ sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 2>
     - You can install specific package, also older, versions into them.
     - You can create one for each project and no problem if the two projects require different versions.
     - You can remove the environment and create a new one, if not needed or with errors.
-    
-Example:
+
+- More information [here](https://uppmax.github.io/HPC-python/isolated.html). 
+
+**Example, where python packages from the loaded module are used**
 
 ``` bash
 $ module load python/3.6.8
-$ python -m venv --system-site-packages <proj-dir>/projectB
+$ python -m venv --system-site-packages <path>/projectB
 ```
 
 “projectB” is the name of the virtual environment. The directory “projectB” is created in the present working directory. The ``-m`` flag makes sure that you use the libraries from the python version you are using.	
 
+- Activate and install with pip (package one by one or from requirements.txt)
+
+``` bash
+ $ source <path>/projectB/bin/activate
+ ```
+- Note that your prompt is changing to start with (analysis) to show that you are within an environment.
+- Install the packages from the file::
+
+```
+  $ pip install -r requirements.txt
+
+   $ pip list   # check
+   $ deactivate
+```
+
 - Virtual environments can be saved easily anywhere
 	
-
-### Moving the files from Rackham to Bianca
-
-You may have to:
-
-    in source directory:
+** Moving the files from Rackham to Bianca
 
     $ cp –a <package_dir> <wharf_mnt_path>
 
@@ -144,6 +159,8 @@ You may have to:
 $ tar xfz <tarfile.tar.gz> #if there is a tar file!
 $ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
 
-If problems arise, send an email to support@uppmax.uu.se and we'll help you.
+!!! error
+
+    If problems arise, send an email to support@uppmax.uu.se and we'll help you.
     
 
