@@ -21,11 +21,29 @@
 
 ## Just download on Rackham and install on Bianca
 
+**Rackham**
 ``` sh 
 $ pip download <package-name>
 ``` 
 
-Then move the package to the Wharf and install it (Yes, you can do it from this place) using the usual
+**Transfer to the wharf**
+
+``` bash
+sftp douglas-sens2017625@bianca-sftp
+sftp> cd douglas-sens2017625/
+sftp> dir
+sftp>
+```
+If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
+
+Now, upload your (whole) ``R`` directory here.
+
+``` bash
+sftp> put -r <package-name>
+```
+
+**Install on Bianca**
+install it (Yes, you can do it from this place) using the usual
 
 ``` sh 
 $ pip install --user <path-to-package-name>
