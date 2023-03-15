@@ -72,6 +72,21 @@ $ python -m venv --system-site-packages <proj-dir>/projectB
 
 ### Moving the files from Rackham to Bianca
 
+You may have to:
 
+    in source directory:
+
+    $ cp –a <package_dir> <wharf_mnt_path>
+
+    you may want to tar before copying to include all possible symbolic links:
+
+    $ tar cfz <tarfile.tar.gz> <package>
+
+    and in target directory (wharf_mnt) on Bianca:
+
+$ tar xfz <tarfile.tar.gz> #if there is a tar file!
+$ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
+
+If problems arise, send an email to support@uppmax.uu.se and we'll help you.
     
 
