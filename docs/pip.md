@@ -8,7 +8,7 @@
 - ``pip list`` command 
 - ``ml help python/3.9.5`` at UPPMAX
 
-**Is it not there? Then proceed!
+**Is it not there? Then proceed!**
 
 !!! info
 
@@ -60,15 +60,18 @@ $ pip install --user <path-to-package-name>
     
 Example:
 
+``` bash
 $ module load python/3.6.8
 $ python -m venv --system-site-packages <proj-dir>/projectB
-	
+```
+
 “projectB” is the name of the virtual environment. The directory “projectB” is created in the present working directory. The ``-m`` flag makes sure that you use the libraries from the python version you are using.	
 
 - Virtual environments can be saved easily anywhere
 	
 
 ### Moving the files from Rackham to Bianca
-    
+
+
     
 
