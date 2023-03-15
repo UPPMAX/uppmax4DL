@@ -3,12 +3,6 @@
 !!! info "Objectives"
     - This is a brief description of the necessary steps to use the local Conda repository at UPPMAX, and install things for yourself or your project using Conda. 
 
-!!! abstract "keypoints"
-    - No internet
-    - Local repositories
-
-
-
 !!! info "TLDR;"
     - ```module load conda```
     - ```export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/```
@@ -371,3 +365,8 @@ $ source deactivate
     >     packages therein inside you Conda environment.
 
 </div>
+
+!!! abstract "keypoints"
+    - No internet
+    - Local repositories
+
