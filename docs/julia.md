@@ -80,7 +80,7 @@ If you have not uploaded anything to your wharf, this will be empty. It might ha
 - **Alt1: If you would like all yor locally installed packages:**
 
 ``` bash
-sftp> put -r ~/.local/lib/python<version>/site-packages/
+sftp> put -r ~/.julia
 ```
 
 - **Alt 2: Just transfer the latest installed python package(s)**
@@ -88,13 +88,13 @@ sftp> put -r ~/.local/lib/python<version>/site-packages/
 - Check what was installed. It may have been several dependency packages as well. Look at the times!
 
 ``` bash
-sftp>  lls -lrt ~/.local/lib/python<version>/site-packages/
+sftp>  lls -lrt ~/.julia/packages
 ```
 
 ``` bash
-sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 1>
+sftp> put -r ~/.julia/packages/<package name 1>
 # and if several packages
-sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 2>
+sftp> put -r ~/.julia/packages/<package name 2>
 # and so on...
 ```
 
@@ -103,7 +103,7 @@ On Bianca
 
 ``` bash
 cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
-mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
+mv –a  <file(s)> ~/.julia/packages/
 ```
 
 
