@@ -58,7 +58,7 @@
 !!! info "More info"
 
     - [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
-    - https://uppmax.github.io/bianca_workshop/conda/
+    - <https://uppmax.github.io/bianca_workshop/conda/>
 
 
 
@@ -75,10 +75,10 @@
 
 !!! info "More info"
 
-    - https://uppmax.github.io/bianca_workshop/pip/
+    - <https://uppmax.github.io/bianca_workshop/pip/>
     - [Python packages](https://uppmax.uu.se/support/user-guides/python-user-guide/)
-    - https://uppmax.github.io/R-python-julia-HPC/python/packages.html
-    - https://uppmax.github.io/R-python-julia-HPC/python/isolated.html
+    - <https://uppmax.github.io/R-python-julia-HPC/python/packages.html>
+    - <https://uppmax.github.io/R-python-julia-HPC/python/isolated.html>
 
 
 ### R packages
@@ -103,9 +103,9 @@ dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
 
 !!! info "More info"
 
-    - https://uppmax.github.io/bianca_workshop/rpackages/
-    - https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html
-    - https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html
+    - <https://uppmax.github.io/bianca_workshop/rpackages/>
+    - <https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html>
+    - <https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html>
 
 ### Julia packages
 
@@ -128,8 +128,8 @@ dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
 
 !!! info "More info"
 
-    - https://uppmax.github.io/bianca_workshop/julia/
-    - https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html
+    - <https://uppmax.github.io/bianca_workshop/julia/>
+    - <https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html>
 
 ## "Containers"
 ### Singularity
@@ -168,9 +168,9 @@ dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
     - Dual 10 Gigabit Ethernet for all nodes
 
 **Storage**
-|**Local disk (scratch)**| 4 TB |
-|**"Home" storage**|Castor|
-|**"Project" Storage**|Castor|
+- Local disk (scratch): 4 TB 
+- Home storage: 32 GB at Castor
+- Project Storage: Castor
 
 
 !!! abstract "Keypoints"
