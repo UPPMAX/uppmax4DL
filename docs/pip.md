@@ -48,8 +48,12 @@ On Bianca
 install it (Yes, you can do it from this place) using the usual
 
 ``` sh 
+$ ml python
 $ pip install --user <path-to-package-name>
+# or
+$ pip install --user --no-index --find-links <path-to-packages> <package-name>
 ```
+<path-to-packages> is where your packages are, if in present working directory it is ``.``
 
 **Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
 
