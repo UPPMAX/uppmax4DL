@@ -34,10 +34,14 @@
 ## Questions
 
 **Most questions here, please**
+
 - HackMD: <https://hackmd.io/@bclaremar/Bianca-workshop-March23?both>
 - This is archived and can be used as part of the course material afterwards
+- Type in the left frame. 
+    - Don't bother about the formatting if you are not acquainted with markdown language!
 
-**Relevant for the presenting teacher  
+**Relevant for the presenting teacher**
+
 - Zoom chat
 
 ## Schedule
