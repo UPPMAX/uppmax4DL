@@ -90,8 +90,7 @@ following channels available:
 -   pytorch
 
 You reach them all by loading the conda module. You don't have to state
-the specific channel when using UPPMAX. Otherwise you do with
-`conda -c <channel> ...`
+the specific channel when using UPPMAX. Also, you are offline on Bianca which means that the default is `--offline`, which you can specify if you want to simulate the experience on Rackham.
 
 </div>
 
