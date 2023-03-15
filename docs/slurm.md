@@ -1,9 +1,3 @@
 # More about Slurm
 
-
-!!! info "Objectives"
-    - We'll ...
-
-!!! abstract "keypoints"
-    - bullet 1
-    - bullet 2
+[Link to Slurm session in Intro to UPPMAX course](https://www.uppmax.uu.se/digitalAssets/560/c_560271-l_1-k_uppmax-slurm-2023-02.pdf)
