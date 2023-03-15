@@ -105,5 +105,17 @@ On Bianca
 cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
 mv –a  <file(s)> ~/.julia/packages/
 ```
+!!! info "If many files or packages"
 
+    you may want to tar before copying to include all possible symbolic links:
+
+    ``` bash
+    $ tar cfz <tarfile.tar.gz> <package>
+    ```
+    and in target directory (wharf_mnt) on Bianca:
+
+    ``` bash 
+    $ tar xfz <tarfile.tar.gz> #if there is a tar file!
+    $ mv –a  <file(s)> .julia/packages/
+    ```
 
