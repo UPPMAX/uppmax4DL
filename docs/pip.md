@@ -36,7 +36,7 @@ sftp>
 ```
 If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
 
-Now, upload your (whole) ``R`` directory here.
+Now, upload to the wharf the package <package-name> and all the dependency packages ``pip download`` got you.
 
 ``` bash
 sftp> put -r <package-name>
@@ -45,12 +45,10 @@ sftp> put -r <package-name>
 **Install on Bianca**
 
 On Bianca
-install it (Yes, you can do it from this place) using the usual
+install it (Yes, you can do it from this place) by telling pip where to look for packages and dependencies
 
 ``` sh 
 $ ml python
-$ pip install --user <path-to-package-name>
-# or
 $ pip install --user --no-index --find-links <path-to-packages> <package-name>
 ```
 <path-to-packages> is where your packages are, if in present working directory it is ``.``
