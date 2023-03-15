@@ -43,6 +43,8 @@ sftp> put -r <package-name>
 ```
 
 **Install on Bianca**
+
+On Bianca
 install it (Yes, you can do it from this place) using the usual
 
 ``` sh 
@@ -86,7 +88,6 @@ If you have not uploaded anything to your wharf, this will be empty. It might ha
 
 - **Alt1: If you would like all yor locally installed packages:**
 
-- Start sftp
 ``` bash
 sftp> put -r ~/.local/lib/python<version>/site-packages/
 ```
@@ -96,16 +97,39 @@ sftp> put -r ~/.local/lib/python<version>/site-packages/
 - Check what was installed. It may have been several dependency packages as well. Look at the times!
 
 ``` bash
-$ ls -lrt ~/.local/lib/python<version>/site-packages/
+sftp>  lls -lrt ~/.local/lib/python<version>/site-packages/
 ```
 
-- Start sftp
 ``` bash
-$ sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 1>
+sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 1>
 # and if several packages
-$ sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 2>
+sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 2>
 # and so on...
 ```
+
+**Move to site-packages folder**
+On Bianca
+
+``` bash
+cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
+mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
+```
+
+!!! info "If many files or packages"
+
+    you may want to tar before copying to include all possible symbolic links:
+
+	``` bash
+    	$ tar cfz <tarfile.tar.gz> <package>
+	```
+    and in target directory (wharf_mnt) on Bianca:
+
+    ``` bash 
+    $ tar xfz <tarfile.tar.gz> #if there is a tar file!
+    $ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
+    ```
+
+
 ## Isolated/virtual environments
 
 - We HIGHLY recommend using a virtual environment during installation, since this makes it easier to install for different versions of Python.  
@@ -120,7 +144,7 @@ $ sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 2>
 
 - More information [here](https://uppmax.github.io/HPC-python/isolated.html). 
 
-**Example, where python packages from the loaded module are used**
+**Example, where python packages from the loaded module are used (``--system-site-packages``)**
 
 ``` bash
 $ module load python/3.6.8
@@ -146,22 +170,28 @@ $ source <path>/projectB/bin/activate
 
 - Virtual environments can be saved easily anywhere
 	
-** Moving the files from Rackham to Bianca**
+**Transfer to the Wharf**
 
 ``` bash
-    $ cp –a <package_dir> <wharf_mnt_path>
+sftp douglas-sens2017625@bianca-sftp
+sftp> cd douglas-sens2017625/
+sftp> dir
+sftp>
 ```
-you may want to tar before copying to include all possible symbolic links:
+If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
 
 ``` bash
-    $ tar cfz <tarfile.tar.gz> <package>
+sftp> put -r <path>/projectB
 ```
-and in target directory (wharf_mnt) on Bianca:
 
-``` bash 
-$ tar xfz <tarfile.tar.gz> #if there is a tar file!
-$ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
+**Move to site-packages folder**
+On Bianca
+
+``` bash
+cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
+mv –a  projectB <path to any place, like project folder>
 ```
+
 
 !!! error
 
