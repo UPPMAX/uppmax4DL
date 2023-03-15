@@ -1,7 +1,5 @@
 # Introduction to compute nodes
 
-## What kind of work will you perform?
-
 ## Submitting jobs
 
 !!! info "Objectives"
