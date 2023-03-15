@@ -10,78 +10,76 @@
 
 - Overview of UPPMAX systems
 
-  - Several clusters, like 
+    - Several clusters, like 
 
-    - Bianca
-    - Rackham
+        - Bianca
+        - Rackham
 
-  - Login and compute nodes
+    - Login and compute nodes
 
 - Logging in
  
-  - ThinLinc, a must for graphics
-  - ssh, may be faster if you just use command-line
-  - VPN
-  - 2FA
+    - ThinLinc, a must for graphics
+    - ssh, may be faster if you just use command-line
+    - VPN
+    - 2FA
 
 
 - command-line intro
 
-
-  - navigation
-  - aliases
-  - chmod
+    - navigation 
+    - aliases
+    - chmod
 
 
 - Module systems and workflows
 
 
-  - modules adds paths to tools
+    - modules adds paths to tools
 
 
-    - module load ...
-    - bioinfo-tools may be required to load you tool
+        - module load ...
+        - bioinfo-tools may be required to load you tool
 
 
-  - workflows
+    - workflows
 
 
 - Transfering files
 
 
-  - The "WHARF" works like a dock at the harbour.
-  - There are several ways to use the wharf to transfer files
+    - The "WHARF" works like a dock at the harbour.
+    - There are several ways to use the wharf to transfer files
 
 
-    - copy
-    - transit server
-    - rsync, scp/sftp
+      - copy
+      - transit server
+      - rsync, scp/sftp
 
 
 - NAISS-SENS and sensitive data
 
 
-  - Sensitive personal data
-  - Pseudonymisation and anonymisation
-  - Apply for project
+    - Sensitive personal data
+    - Pseudonymisation and anonymisation
+    - Apply for project
 
 
 - Introduction to compute nodes
 
-
-  - Submitting jobs
-
-
-    - Slurm, sbatch, the job queue
-    - Jobs
-    - Slurm parameters
-    - Interactive jobs 
+    - Submitting jobs
 
 
-      - (allows you to work interactively with commandline and yopur tools but on a compute node.
+        - Slurm, sbatch, the job queue
+        - Jobs
+        - Slurm parameters
+        - Interactive jobs 
 
 
-  - How compute nodes are moved between project clusters
+            - (allows you to work interactively with commandline and yopur tools but on a compute node.
+
+
+    - How compute nodes are moved between project clusters
 
 
     - Other Slurm tools
@@ -89,18 +87,18 @@
 - Software and package installation
 
 
-  - Install software yourself
-  - Packages and libraries to scripting programs
+    - Install software yourself
+    - Packages and libraries to scripting programs
 
-    - Conda
-    - Python packages with pip
-    - R packages
-    - Julia packages
+        - Conda
+        - Python packages with pip
+        - R packages
+        - Julia packages
 
-  - "Containers"
+    - "Containers"
 
-    - Singularity
-    - Docker
+        - Singularity
+        - Docker
 
-  - Build from source
-  - Summary about the Bianca Hardware
+    - Build from source
+    - Summary about the Bianca Hardware
