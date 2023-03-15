@@ -11,8 +11,8 @@
 **Is it not there? Then proceed!**
 
 !!! info
-
     **Methods:**
+    
     - You can either just download a python package, transfer to Wharf and Bianca and install there.
     - Install it on Rackham. Perhaps you need it here as well! Then transfer to Wharf and Bianca local python library.
     - Make a virtual environment with one or several packages on Rackham. Then transfer to Wharf and Bianca (any place).
