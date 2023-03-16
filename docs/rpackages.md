@@ -27,21 +27,21 @@ dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
 #### Methods
 
 - automatic download and install from CRAN
-  - <https://uppmax.github.io/bianca_workshop/rpackages/#automatical-download-and-install-from-cran>
+    - <https://uppmax.github.io/bianca_workshop/rpackages/#automatical-download-and-install-from-cran>
 
 - automatic download and install from GitHub
-  - <https://uppmax.github.io/bianca_workshop/rpackages/#automatic-download-and-install-from-github>
+    - <https://uppmax.github.io/bianca_workshop/rpackages/#automatic-download-and-install-from-github>
 
 - manual download and install
-  - <https://uppmax.github.io/bianca_workshop/rpackages/#manual-download-and-install>
-  - **NOTE** that if you install a package this way, you need to handle any dependencies yourself.
-    - For instance you might get use of our modules  
+    - <https://uppmax.github.io/bianca_workshop/rpackages/#manual-download-and-install>
+    - **NOTE** that if you install a package this way, you need to handle any dependencies yourself.
+        - For instance you might get use of our modules  
 
 ### Transfer to wharf
 
 - You may transfer the whole R library (in you home folder)  
 - or select the directory(-ies) related to you new installation
-  - **note** there may be more than one directory
+    - **note** there may be more than one directory
 
 ### Move package to local Bianca R package path 
 
