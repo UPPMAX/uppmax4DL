@@ -34,7 +34,7 @@
 
     1. Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules1/#workflows) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
     
-    ???+ tip "Answer"
+    ??? tip "Answer"
         - edit a file using you prefered editor, named `my_bio_worksflow.sh`, for example, with the content
         
         ```bash
