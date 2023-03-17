@@ -93,35 +93,37 @@
 
 ???+ question "Install Tidycmprsk"
 
-     - Install the package Tidycmprsk on Rackham and use sftp to get it to Bianca.
-     - [tidycmprsk on GitHub](https://mskcc-epi-bio.github.io/tidycmprsk/)
+    - Install the package Tidycmprsk on Rackham and use sftp to get it to Bianca.
+    - [tidycmprsk on GitHub](https://mskcc-epi-bio.github.io/tidycmprsk/)
      
-     ??? tip "Answer"
-         <https://uppmax.github.io/bianca_workshop/rpackages/#example-install-tidycmprsk>
+    ??? tip "Answer"
+        <https://uppmax.github.io/bianca_workshop/rpackages/#example-install-tidycmprsk>
 
 ### Conda installation
 
 ???+ question "Install with Conda directly on Bianca"
 
-     - Install python=3.7 and numpy=1.15 with Conda directly on Bianca.
+    - Install python=3.7 and numpy=1.15 with Conda directly on Bianca.
 
-     ??? tip "Answer"
-         <https://uppmax.github.io/bianca_workshop/conda/#exercises>
+    ??? tip "Answer"
+        <https://uppmax.github.io/bianca_workshop/conda/#exercises>
 
 
 ### Pip installation with virtual environment
 
 ???+ question "Install with pip"
 
-     - Install with numpy==pip on Rackham and use sftp to get it to Bianca.
+    - Install with numpy==pip on Rackham and use sftp to get it to Bianca.
 
-     ??? tip "Answer"
-         <https://uppmax.github.io/bianca_workshop/pip>
+    ??? tip "Answer"
+        <https://uppmax.github.io/bianca_workshop/pip>
 
 
 ### Singularity/apptainer
 
-???+ question "Install gatk on bianca"
+???+ question "Install gatk on bianca with apptainer"
 
-     ??? tip "Answer"
-         <https://uppmax.github.io/bianca_workshop/containers/#example-i-want-gatk-on-bianca>
+    - Use the docker image for gatk/4.3.0.0 and insatll on rackham and tranfer to Bianca.
+
+    ??? tip "Answer"
+        <https://uppmax.github.io/bianca_workshop/containers/#example-i-want-gatk-on-bianca>
