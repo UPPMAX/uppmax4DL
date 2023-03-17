@@ -38,15 +38,15 @@
 
 ???+ question "Install Tidycmprsk"
 
-       ??? tip "Answer"
-           <https://uppmax.github.io/bianca_workshop/rpackages/#example-install-tidycmprsk>
+     ??? tip "Answer"
+         <https://uppmax.github.io/bianca_workshop/rpackages/#example-install-tidycmprsk>
 - 
 ### Conda installation
 
 ???+ question "Create a conda environment and install some packages"
 
-       ??? tip "Answer"
-           <https://uppmax.github.io/bianca_workshop/conda/#exercises>
+     ??? tip "Answer"
+         <https://uppmax.github.io/bianca_workshop/conda/#exercises>
 
 
 
@@ -56,5 +56,5 @@
 
 ???+ question "Install gatk on bianca"
 
-       ??? tip "Answer"
-           <https://uppmax.github.io/bianca_workshop/containers/#example-i-want-gatk-on-bianca>
+     ??? tip "Answer"
+         <https://uppmax.github.io/bianca_workshop/containers/#example-i-want-gatk-on-bianca>
