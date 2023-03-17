@@ -9,6 +9,17 @@
 
 ## Working with modules
 
+???+ question "Assignment: View in IGV"
+
+    
+    1. load the genome, the bam file, and the annotated vcf into IGV for viewing
+
+        ??? tip "Answer"
+            ``` python
+            >>> print("Assignment7")
+            Assignment7
+            ```
+
 
 ## Transfering files
 
@@ -17,3 +28,5 @@
 
 
 ## Doing installations
+
+### Rpackage installation
