@@ -79,12 +79,12 @@
 
         - make the file executable
         ```bash
-        chmoad a+x my_bio_workflow.sh
+        $ chmoad a+x my_bio_workflow.sh
         ```
         
         - submit the job
         ```bash
-        sbatch my_bio_workflow.sh
+        $ sbatch my_bio_workflow.sh
         ```
         
 ## Doing installations
