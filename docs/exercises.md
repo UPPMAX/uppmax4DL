@@ -93,19 +93,31 @@
 
 ???+ question "Install Tidycmprsk"
 
+     - Install the package Tidycmprsk on Rackham and use sftp to get it to Bianca.
+     - [tidycmprsk on GitHub](https://mskcc-epi-bio.github.io/tidycmprsk/)
+     
      ??? tip "Answer"
          <https://uppmax.github.io/bianca_workshop/rpackages/#example-install-tidycmprsk>
-- 
+
 ### Conda installation
 
-???+ question "Create a conda environment and install some packages"
+???+ question "Install with Conda directly on Bianca"
+
+     - Install python=3.7 and numpy=1.15 with Conda directly on Bianca.
 
      ??? tip "Answer"
          <https://uppmax.github.io/bianca_workshop/conda/#exercises>
 
 
+### Pip installation with virtual environment
 
-### Pip installation
+???+ question "Install with pip"
+
+     - Install with numpy==pip on Rackham and use sftp to get it to Bianca.
+
+     ??? tip "Answer"
+         <https://uppmax.github.io/bianca_workshop/pip>
+
 
 ### Singularity/apptainer
 
