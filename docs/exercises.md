@@ -9,7 +9,7 @@
 
 ## Working with modules
 
-???+ question "Assignment: View in IGV"
+???+ question "View in IGV"
 
     
     1. Load the genome, the bam file, and the annotated vcf that we got from the [demo](https://uppmax.github.io/bianca_workshop/modules1/#workflows) into IGV for viewing
@@ -36,14 +36,25 @@
 
 ### Rpackage installation
 
-- Install Tidycmprsk
+???+ question "Install Tidycmprsk"
+
+       ??? tip "Answer"
+           <https://uppmax.github.io/bianca_workshop/rpackages/#example-install-tidycmprsk>
 - 
 ### Conda installation
 
-- Create a conda environment and install some packages
+???+ question "Create a conda environment and install some packages"
+
+       ??? tip "Answer"
+           <https://uppmax.github.io/bianca_workshop/conda/#exercises>
+
+
 
 ### Pip installation
 
 ### Singularity/apptainer
 
-- gatk on bianca
+???+ question "Install gatk on bianca"
+
+       ??? tip "Answer"
+           <https://uppmax.github.io/bianca_workshop/containers/#example-i-want-gatk-on-bianca>
