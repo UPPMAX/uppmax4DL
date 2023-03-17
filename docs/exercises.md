@@ -12,12 +12,14 @@
 ???+ question "Assignment: View in IGV"
 
     
-    1. load the genome, the bam file, and the annotated vcf into IGV for viewing
+    1. Load the genome, the bam file, and the annotated vcf that we got from the [demo](https://uppmax.github.io/bianca_workshop/modules1/#workflows) into IGV for viewing
 
         ??? tip "Answer"
-            ``` python
-            >>> print("Assignment7")
-            Assignment7
+            For this small example we use igv-core. Good is also to be on a compute node.
+            
+            ``` bash
+            $ ml bioinfo-tools IGV
+            $ igv-core --genome genome.fa ERR1252289.subset.bam ERR1252289.subset.snpEff.vcf.gz
             ```
 
 
