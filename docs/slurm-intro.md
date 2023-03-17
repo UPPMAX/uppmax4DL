@@ -141,7 +141,7 @@ In short, this program goes over the following procedure, over and over again:
     - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is overdrafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
 
 
-??? abstract "Keypoints"
+!!! abstract "Keypoints"
     - You are always in the login node unless you:
         - start an interactive session
         - start a batch job
