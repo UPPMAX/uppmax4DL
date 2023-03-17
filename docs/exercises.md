@@ -77,7 +77,7 @@
         tabix -p vcf ERR1252289.subset.snpEff.vcf.gz
         ```
 
-        - make the file executable
+        - make the job script executable
         ```bash
         $ chmoad a+x my_bio_workflow.sh
         ```
