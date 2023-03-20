@@ -23,12 +23,18 @@
 
 ## Transfering files
 
-???+ question "Copy files between to sns projects
+???+ question "Copy files between to Sens projects"
 
-    - Use the Transit server to copy a file from the the Bianca workshop project to another project, if you belong to one. 
+    - Use the Transit server to copy a file (e.g. the interactive session script) from the the Bianca workshop project to another project, if you belong to one. 
 
         ??? tip "Answer"
-
+            
+            1. Connect to transit
+            2. Mount the projects with mount_wharf
+            3. Move/copy the file(s) from sens2023531 to your other project.
+            4. Log in to the other Sens project on Bianca and move the file from the wharf to a good place
+           
+            
 
 ## Using the compute nodes
 
@@ -105,7 +111,7 @@
 
 ???+ question "Install with Conda directly on Bianca"
 
-    - Install python=3.7 and numpy=1.15 with Conda directly on Bianca.
+    - Install ``python=3.7`` and ``numpy=1.15`` with Conda directly on Bianca.
 
     ??? tip "Answer"
         <https://uppmax.github.io/bianca_workshop/conda/#exercises>
