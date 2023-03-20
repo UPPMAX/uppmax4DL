@@ -4,35 +4,37 @@
 
     We put some exercises here for you, if you want to get some more hands-on.
     
-## Working on Bianca
-
 
 ## Working with modules
 
 ???+ question "View in IGV"
 
-    
-    1. Load the genome, the bam file, and the annotated vcf that we got from the [demo](https://uppmax.github.io/bianca_workshop/modules1/#workflows) into IGV for viewing
+   
+    - Load the genome, the bam file, and the annotated vcf that we got from the [demo](https://uppmax.github.io/bianca_workshop/modules1/#workflows) into IGV for viewing
 
         ??? tip "Answer"
             For this small example we use igv-core. Good is also to be on a compute node.
             
             ``` bash
             $ ml bioinfo-tools IGV
-            $ igv-core --genome genome.fa ERR1252289.subset.bam ERR1252289.subset.snpEff.vcf.gz
+            $ igv-core --genome genome.fa 
             ```
-
+            Then open ERR1252289.subset.bam ERR1252289.subset.snpEff.vcf.gz from the GUI.
 
 ## Transfering files
 
-- Use the Transit server to copy a file from the the Bianca workshop project to another project, if you belong to one. 
+???+ question "Copy files between to sns projects
+
+    - Use the Transit server to copy a file from the the Bianca workshop project to another project, if you belong to one. 
+
+        ??? tip "Answer"
 
 
 ## Using the compute nodes
 
 ???+ question "Submit a Slurm job"
 
-    1. Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules1/#workflows) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
+    - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules1/#workflows) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
     
     ??? tip "Answer"
         - edit a file using you prefered editor, named `my_bio_worksflow.sh`, for example, with the content
