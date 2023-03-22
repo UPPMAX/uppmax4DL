@@ -1,6 +1,6 @@
-# bianca_workshop
+# UPPMAX4DL
 
-This repository contains the source code for the [Bianca workshop](https://uppmax.github.io/bianca_workshop/)
+This repository contains the source code for the [UPPMAX for Deep Learning course](https://uppmax.github.io/uppmax4dl/)
 
 
 ## Credits
