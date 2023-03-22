@@ -11,28 +11,17 @@ template: home.html
 <br/><br/>
 
 
-# Welcome to the Bianca workshop!
+# Welcome to UPPMAX for Deep Learning!
     
 </center>
 
-!!! info "Introduction to Bianca: Handling Sensitive Research Data"
-    
-    - Are you working with your sensitive data in your research? 
-    - If yes, welcome to a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca. 
-    - We will tell you about 
-    
-        - NAISS-SENS, 
-        - how to login to Bianca, 
-        - transfer files via wharf, 
-        - Slurm and the module system, 
-        - and how to work with Conda packages.
 
 <center>
 <br>
     
 <br/><br/>
 
-[Get started using Bianca](practicalities.md){ .md-button .md-button--primary }
+[Let's get started!](uppmax.md){ .md-button .md-button--primary }
 
 <br/><br/>
 

@@ -1,33 +1,20 @@
-site_name: Bianca workshop
+site_name: UPPMAX for Deep Learning
 
 nav:
   - Home: index.md
-  - Practicalities: practicalities.md
-  - Getting Started:
     - Overview: overview.md
-    - Logging in to Bianca: login_bianca.md
-    - Command-line intro: commandline.md
+    - Login: login.md
+    - Slurm: slurm-intro.md
     - Module system: modules1.md
-    - Transfering files to/from Bianca: transfer.md
-  - NAISS-SENS and sensitive data: naiss-sens-bianca.md
-  - The compute nodes and install yourself: 
-    - Introduction to compute nodes: slurm-intro.md
-    - Software and package installation: install.md
-  - Summary: summary.md
-  - Extra material:
-    - slurm.md
-    - conda.md
-    - pip.md
-    - rpackages.md
-    - julia.md
-    - containers.md
-    - jupyter.md
-  - Exercises: exercises.md
+    - Jupyter Notebooks: jupyter.md
+    - Module system: modules1.md
+    - Python packages: pip.md
+#    - Software and package installation: install.md
      
  
 theme:
   name: material
-  greetings: Welcome to Bianca workshop
+  greetings: Welcome to UPPMAX for Deep Learning
   font:
     text: Lato
     code: JetBrains Mono
