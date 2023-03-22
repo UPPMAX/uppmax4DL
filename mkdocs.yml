@@ -2,6 +2,7 @@ site_name: UPPMAX for Deep Learning
 
 nav:
   - Home: index.md
+  - Course content:
     - Overview: overview.md
     - Login: login.md
     - Slurm: slurm-intro.md
