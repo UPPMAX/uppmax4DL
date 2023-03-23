@@ -63,6 +63,7 @@ module load software/version
 ```
 
 Useful SBATCH options:
+
 - `--mail-type=BEGIN,END,FAIL,TIME_LIMIT_80`
 - `--output=slurm-%j.out`
 - `--error=slurm-%j.err `
