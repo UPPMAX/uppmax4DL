@@ -93,7 +93,7 @@ Useful commands:
 ```bash
 #SBATCH -M snowy
 #SBATCH --gres=gpu:1
-#SBATCH —gpus-per-node=1
+#SBATCH --gpus-per-node=1
 ```
 
 ??? Example of a job running on part of a GPU node
