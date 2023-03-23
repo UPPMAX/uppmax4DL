@@ -48,7 +48,7 @@ tensorboard --bind_all --logdir=./tensorboard-log-dir
 ...
 TensorBoard 2.5.0 at http://s???.uppmax.uu.se:6006/
 ```
-Change the path & name `./tensorboard-log-dir` as you wish.
+Change the path & name `./tensorboard-log-dir` as you wish. Each running job should have its own directory for TensorBoard to parse the logs correctly.
 
 By default, TensorBoard will attach the port `6006` to localhost. If it's taken, it will chose another one. You may see the chosen port in the output when you start TensorBoard from the command line.
 
