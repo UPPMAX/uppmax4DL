@@ -74,6 +74,7 @@ Next, on your computer open a web browser and visit http://localhost:8080. You s
 Have a look at this getting started tutorial from TensorFlow: https://www.tensorflow.org/tensorboard/get_started.
 
 !!! warning
+
 Limit the memory needs of your application. What is a suitable `TF_FORCE_GPU_ALLOW_GROWTH`? Read more on this and other memory growth pointers at https://www.tensorflow.org/guide/gpu.
 
 
