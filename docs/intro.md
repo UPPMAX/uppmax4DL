@@ -35,7 +35,7 @@ How to submit a job to Slurm?
 
 ```bash
 sbatch  -A naiss2023-22-247 -t 10:00  -p core  -n 10  my_job.sh
-``
+```
 
 What should a jobscript contain?
   - project number
