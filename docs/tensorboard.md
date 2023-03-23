@@ -68,7 +68,7 @@ Next, on your computer open a web browser and visit <http://localhost:8080>. You
 ### Solution 2: Using ThinLic
 
 - Launch a web browser on ThinLinc.
-- Visit `http://s???.uppmax.uu.se:6006`. Update the port and the snowy node as needed.
+- Visit `http://s???.uppmax.uu.se:6006` or `localhost:6006`. Update the port and the snowy node as needed.
 
 ## Where to go from here?
 Have a look at this getting started tutorial from TensorFlow: <https://www.tensorflow.org/tensorboard/get_started>.
