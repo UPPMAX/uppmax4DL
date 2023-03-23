@@ -44,18 +44,21 @@ TensorBoard can be started from the command line as `tensorboard`. You need to s
 
 Example:
 ```bash
-tensorboard --logdir=./tensorboard-log-dir
+tensorboard --bind_all --logdir=./tensorboard-log-dir
+...
+TensorBoard 2.5.0 at http://s???.uppmax.uu.se:6006/
 ```
 Change the path & name `./tensorboard-log-dir` as you wish.
 
 By default, TensorBoard will attach the port `6006` to localhost. If it's taken, it will chose another one. You may see the chosen port in the output when you start TensorBoard from the command line.
+
 
 ## 4. Accesss TensoBoard
 
 ### Solution 1: Using ssh-tunnelling
 
 ```bash
-ssh -L 8080:localhost:6006 user@rackham.uppmax.uu.se
+ssh -L 8080:s???.uppmax.uu.se:6006 user@rackham.uppmax.uu.se
 ```
 Update the port if needed.
 
@@ -65,6 +68,6 @@ Next, on your computer open a web browser and visit http://localhost:8080. You s
 ### Solution 2: Using ThinLic
 
 - Launch a web browser on ThinLinc.
-- Visit `http://localhost:6006`. Update the port if needed.
+- Visit `http://s???.uppmax.uu.se:6006`. Update the port and the snowy node as needed.
 
 
