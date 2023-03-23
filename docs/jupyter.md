@@ -9,10 +9,10 @@
 ## 1. Connect to Rackham using ThinLinc.
 
 You may download the ThinLinc client from here:
-https://www.cendio.com/thinlinc/download
+<https://www.cendio.com/thinlinc/download>
 
 You may also use the web browser to connect:
-https://rackham-gui.uppmax.uu.se
+<https://rackham-gui.uppmax.uu.se>
 You need to set up 2FA for the ThinLinc web.
 
 ## 2. Open a terminal in ThinLinc and ask for an interactive session to Snowy.
