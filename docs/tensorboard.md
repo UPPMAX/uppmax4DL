@@ -8,10 +8,10 @@
 ## 1. Connect to Rackham using ThinLinc.
 
 You may download the ThinLinc client from here:
-https://www.cendio.com/thinlinc/download
+<https://www.cendio.com/thinlinc/download>
 
 You may also use the web browser to connect:
-https://rackham-gui.uppmax.uu.se
+<https://rackham-gui.uppmax.uu.se>
 You need to set up 2FA for the ThinLinc web.
 
 ## 2. Open a terminal in ThinLinc and ask for an interactive session to Snowy.
@@ -62,7 +62,7 @@ ssh -L 8080:s???.uppmax.uu.se:6006 user@rackham.uppmax.uu.se
 ```
 Update the port if needed.
 
-Next, on your computer open a web browser and visit http://localhost:8080. You should now see the Tensorboard UI.
+Next, on your computer open a web browser and visit <http://localhost:8080>. You should now see the Tensorboard UI.
 
 
 ### Solution 2: Using ThinLic
@@ -71,10 +71,10 @@ Next, on your computer open a web browser and visit http://localhost:8080. You s
 - Visit `http://s???.uppmax.uu.se:6006`. Update the port and the snowy node as needed.
 
 ## Where to go from here?
-Have a look at this getting started tutorial from TensorFlow: https://www.tensorflow.org/tensorboard/get_started.
+Have a look at this getting started tutorial from TensorFlow: <https://www.tensorflow.org/tensorboard/get_started>.
 
 !!! warning
 
-Limit the memory needs of your application. What is a suitable `TF_FORCE_GPU_ALLOW_GROWTH`? Read more on this and other memory growth pointers at https://www.tensorflow.org/guide/gpu.
+Limit the memory needs of your application. What is a suitable `TF_FORCE_GPU_ALLOW_GROWTH`? Read more on this and other memory growth pointers at <https://www.tensorflow.org/guide/gpu>.
 
 
