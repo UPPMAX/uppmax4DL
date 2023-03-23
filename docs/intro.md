@@ -125,7 +125,7 @@ module load intelcuda/2019b
   #SBATCH -n 1
   #SBATCH -t 10:00:00
 
-  module load bioinfotools
+  module load bioinfo-tools
   module load bwa/0.7.17 samtools/1.14
 
   export SRCDIR=$HOME/path-to-input
