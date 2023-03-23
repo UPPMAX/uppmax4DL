@@ -169,3 +169,12 @@ You may use scontrol to modify some of the job arrays.
     - `nvidia-smi --help` or `man nvidia-smi`
   - `module load nvtop`
      - `nvtop`
+
+
+## Additional information
+
+- [UPPMAX webpage](https://www.uppmax.uu.se/)
+- [Slurm](https://www.uppmax.uu.se/support/user-guides/slurm-user-guide/)
+- [Snowy](https://www.uppmax.uu.se/support/user-guides/snowy-user-guide/)
+- [GPU:s on Snowy](https://www.uppmax.uu.se/support/user-guides/using-the-gpu-nodes-on-snowy/)
+- [TensorFlow on Snowy/Bianca](https://www.uppmax.uu.se/support/user-guides/tensorflow-user-guide/)
