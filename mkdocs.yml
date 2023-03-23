@@ -5,10 +5,11 @@ nav:
   - Course content:
     - Overview: overview.md
     - Login: login.md
+    - Module system: modules.md
     - Slurm: slurm-intro.md
-    - Module system: modules1.md
     - Jupyter Notebooks: jupyter.md
-    - Python packages: pip.md
+    - TensorBoard: tensorboard.md
+#    - Python packages: pip.md
 #    - Software and package installation: install.md
      
  
