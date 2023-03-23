@@ -4,7 +4,7 @@ nav:
   - Home: index.md
   - Course content:
     - Overview: overview.md
-    - Login: login.md
+#    - Login: login.md
     - Module system: modules.md
     - Slurm: slurm-intro.md
     - Jupyter Notebooks: jupyter.md
