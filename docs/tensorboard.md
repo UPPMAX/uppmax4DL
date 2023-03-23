@@ -70,4 +70,10 @@ Next, on your computer open a web browser and visit http://localhost:8080. You s
 - Launch a web browser on ThinLinc.
 - Visit `http://s???.uppmax.uu.se:6006`. Update the port and the snowy node as needed.
 
+## Where to go from here?
+Have a look at this getting started tutorial from TensorFlow: https://www.tensorflow.org/tensorboard/get_started.
+
+!!! warning
+Limit the memory needs of your application. What is a suitable `TF_FORCE_GPU_ALLOW_GROWTH`? Read more on this and other memory growth pointers at https://www.tensorflow.org/guide/gpu.
+
 
