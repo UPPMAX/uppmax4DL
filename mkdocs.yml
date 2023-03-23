@@ -8,7 +8,6 @@ nav:
     - Slurm: slurm-intro.md
     - Module system: modules1.md
     - Jupyter Notebooks: jupyter.md
-    - Module system: modules1.md
     - Python packages: pip.md
 #    - Software and package installation: install.md
      

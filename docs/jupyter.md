@@ -1,43 +1,53 @@
-# Running Jupyter on Bianca
+# Running Jupyter on Snowy
 
 !!! info
 
-    - You can run Python in a **jupyter-notebook**, i.e. in a web interface with possibility of inline figures and debugging.
+    - You can run Python in a **jupyter-notebook** or **jupyter-lab**, which provide a web interface with possibility of inline figures and debugging.
     - **Jupyter-lab** is installed in the **python>=3.10.8 module**
-    - You can install a personal version of juputer-lab with Conda for lower versions. An easy way to do this is to load the python module as well. In shell:
+    - You may also install your own version of jupyter-notebook or jupyter-lab if you have certain version requirements.
 
-!!! warning
+1. Connect to Rackham using ThinLinc.
 
-    Always start jupyter in a **ThinLinc** session and preferably in a **interactiv**e session.
+You may download the ThinLinc client from here:
+https://www.cendio.com/thinlinc/download
 
+You may also use the web browser to connect:
+https://rackham-gui.uppmax.uu.se
+You need to set up 2FA for the ThinLinc web.
 
-## Start
+2. Open a terminal in ThinLinc and ask for an interactive session to Snowy.
 
-Start a notebook like this:
+salloc -A naiss2023-22-247 -p node -N 1 -M snowy --gpus=1 --gpus-per-node=1 -t 04:00:00
 
-```bash
-$ module load python/<version>
-$ jupyter-notebook
-```
-or jupyter lab:
+Note: We have a magnetic 4-node reservation for today: naiss2023-22-247_1.
 
-``` bash
-$ jupyter-lab
-```
+Is the GPU visible?
+echo $CUDA_VISIBLE_DEVICES
 
-A local Firefox session (not a internet web page!) should start with the Jupyter notebook/lab interface. If not,  copy-paste one of the addresses into the address files in an open firefox session (start with ``firefox &``).
-
-## Jupyter in a virtual environment (venv)
-
-You could also use jupyter- (lab or notebook) in a virtual environment.
-
-If you decide to use the ``--system-site-packages`` configuration you will get jupyter from the python modules you created you virtual environment with.
-However, you won't find your locally installed packages from that jupyter session. To solve this reinstall jupyter within the virtual environment by force:
+3. Load the needed modules
 
 ```bash
-$ pip install -I jupyter
+module load python_ML_packages/3.9.5-gpu
+pip list
 ```
-and run it as above.
 
-Be sure to start the kernel with the virtual environment name, like "project A", and not "Python 3 (ipykernel)".
+And start the Jupyter notebook:
+`jupyter-notebook --ip 0.0.0.0 --no-browser`
+
+4. Open the notebook.
+
+Solution 1:
+Click on any of the links.
+This will open a Jupyter notebook in a Firefox browser on Rackham.
+
+Solution 2:
+Instead of opening Jupyter in a browser in ThinLinc, you may use the browser on your computer.
+You need to use ssh-tunnelling for this:
+
+ssh -L 8000:s175:8888 iusan@rackham.uppmax.uu.se
+
+
+
+localhost:<port>/?token<tokenID>
+Example: localhost:8000/?token=ab8a98df7b6606316849015daebaca5d2fa6331d32a47446
       
