@@ -21,7 +21,7 @@ template: home.html
     
 <br/><br/>
 
-[Let's get started!](overview.md){ .md-button .md-button--primary }
+[Let's get started!](intro.md){ .md-button .md-button--primary }
 
 <br/><br/>
 
