@@ -2,32 +2,34 @@
 
 ## What is neeed to be able to run at UPPMAX
 - SUPR
-  - account
-  - project
+    - account
+    - project
 
 ## How to access the clusters?
 - login
-  - ssh
-  - ThinLinc
+    - ssh
+    - ThinLinc
 
 ## Where should keep my data?
-  - `uquota`
+- `uquota`
 
 ## How to transfer files?
-  - `scp`
-  - `rsync`
+- `scp`
+- `rsync`
     - example: `rsync -av /local/dir user@rackham.uppmax.uu.se:/proj/naiss2023-22-247/nobackup/private/user/.`
 
 ## The module system
-  - built on LMOD
+
+- built on LMOD
 
 Some useful comamnds:
-  - `module avail <name>`
-  - `module spider <name>`
-  - `module load <module>/<version>`
-  - `module list`
-  - `module unload <module>/<version>`
-  - `module purge`
+
+- `module avail <name>`
+- `module spider <name>`
+- `module load <module>/<version>`
+- `module list`
+- `module unload <module>/<version>`
+- `module purge`
 
 ## Slurm
 
@@ -38,12 +40,13 @@ sbatch  -A naiss2023-22-247 -t 10:00  -p core  -n 10  my_job.sh
 ```
 
 What should a jobscript contain?
-  - project number
-  - max time
-  - partition
-  - number or core and/or nodes
-  - job name
-  - special features
+  
+- project number
+- max time
+- partition
+- number or core and/or nodes
+- job name
+- special features
   
 ### A typical job script:
 
@@ -60,27 +63,28 @@ module load software/version
 ```
 
 Useful SBATCH options:
-  - `--mail-type=BEGIN,END,FAIL,TIME_LIMIT_80`
-  - `--output=slurm-%j.out`
-  - `--error=slurm-%j.err `
+- `--mail-type=BEGIN,END,FAIL,TIME_LIMIT_80`
+- `--output=slurm-%j.out`
+- `--error=slurm-%j.err `
 
 
 Useful commands:
-  - `jobinfo -p devel`
-  - `sinfo -p node - M snowy`
-  - `jobinfo -u username --state=running`
-  - `jobinfo -u username --state=pending`
-  - `salloc -A naiss2023-22-247 --begin=2023-03-24T08:00:00` starts an interactive job earliest tomorrow at 08:00
+
+- `jobinfo -p devel`
+- `sinfo -p node - M snowy`
+- `jobinfo -u username --state=running`
+- `jobinfo -u username --state=pending`
+- `salloc -A naiss2023-22-247 --begin=2023-03-24T08:00:00` starts an interactive job earliest tomorrow at 08:00
 
 ### How to cancel jobs?
-  - `scancel <jobid>`
+- `scancel <jobid>`
 
 ## Job dependencies
-  - `sbatch jobscript.sh`   submitted job with jobid1
-  - `sbatch anotherjobscript.sh`  submitted job with jobid2
-  - `--dependency=afterok:jobid1:jobid2` job will only start running after the successful end of jobs jobid1:jobid2
-  - very handy for clearly defined workflows
-  - One may also use `--dependency=afternotok:jobid` in case you’d like to resubmit a failed job, OOM for example, to a node with a higher memory: `-C mem215GB` or `-C mem1TB`
+- `sbatch jobscript.sh`   submitted job with jobid1
+- `sbatch anotherjobscript.sh`  submitted job with jobid2
+- `--dependency=afterok:jobid1:jobid2` job will only start running after the successful end of jobs jobid1:jobid2
+- very handy for clearly defined workflows
+- One may also use `--dependency=afternotok:jobid` in case you’d like to resubmit a failed job, OOM for example, to a node with a higher memory: `-C mem215GB` or `-C mem1TB`
 
 
 ## GPU flags
@@ -163,12 +167,15 @@ You may use scontrol to modify some of the job arrays.
 
 
 ## Profiling on the GPUs
-  - `nvidia-smi`
+- `nvidia-smi`
+
     - `nvidia-smi dmon -o DT`
     - `nvidia-smi --format=noheader,csv --query-compute-apps=timestamp,gpu_name,pid,name,used_memory --loop=1 -f sample_run.log`
     - `nvidia-smi --help` or `man nvidia-smi`
-  - `module load nvtop`
-     - `nvtop`
+
+- `module load nvtop`
+
+    - `nvtop`
 
 
 ## Additional information
