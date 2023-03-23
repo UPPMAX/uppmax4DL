@@ -112,7 +112,7 @@ module load intelcuda/2019b
 
 ??? Example
 
-  ```bash
+```bash
   #!/bin/bash
   #SBATCH -J jobname
   #SBATCH -A naiss2023-22-247
@@ -130,7 +130,8 @@ module load intelcuda/2019b
 
   ./foo.pl bar.txt
 
-cp *.out $SRCDIR/path-to-output/.
+  cp *.out $SRCDIR/path-to-output/.
+
 ```
 
 ## Job arrays
