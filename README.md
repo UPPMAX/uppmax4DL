@@ -1,6 +1,6 @@
 # UPPMAX4DL
 
-This repository contains the source code for the [UPPMAX for Deep Learning course](https://uppmax.github.io/uppmax4dl/)
+This repository contains the source code for the [UPPMAX for Deep Learning course](https://uppmax.github.io/uppmax4DL/)
 
 
 ## Credits
