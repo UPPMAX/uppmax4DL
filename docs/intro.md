@@ -1,6 +1,6 @@
 # Overview
 
-## What is neeed to be able to run at UPPMAX
+## What is needed to be able to run at UPPMAX
 - SUPR
     - account
     - project
@@ -10,13 +10,15 @@
     - ssh
     - ThinLinc
 
-## Where should keep my data?
+## Where should you keep your data?
 - `uquota`
 
 ## How to transfer files?
-- `scp`
+- `sftp`
 - `rsync`
     - example: `rsync -av /local/dir user@rackham.uppmax.uu.se:/proj/naiss2023-22-247/nobackup/private/user/.`
+- SFTP graphical tools  
+    - [WinSCP](https://docs.uppmax.uu.se/software/rackham_file_transfer_using_winscp/) and [FileZilla](https://docs.uppmax.uu.se/software/rackham_file_transfer_using_filezilla/)
 
 ## The module system
 
@@ -85,7 +87,8 @@ Useful commands:
 - `sbatch anotherjobscript.sh`  submitted job with jobid2
 - `--dependency=afterok:jobid1:jobid2` job will only start running after the successful end of jobs jobid1:jobid2
 - very handy for clearly defined workflows
-- One may also use `--dependency=afternotok:jobid` in case you’d like to resubmit a failed job, OOM for example, to a node with a higher memory: `-C mem215GB` or `-C mem1TB`
+- One may also use `--dependency=afternotok:jobid` in case you’d like to resubmit a failed job, OOM for example, to a node with a higher memory: `-C mem215GB` or `-C mem1TB`  
+- More in [slurm](https://slurm.schedmd.com/sbatch.html#OPT_dependency) documents.
 
 
 ## GPU flags
@@ -115,56 +118,56 @@ module load intelcuda/2019b
 
 ## I/O intensive jobs: use the scratch local to the node
 
-??? Example
+??? example "Example"
 
-```bash
-  #!/bin/bash
-  #SBATCH -J jobname
-  #SBATCH -A naiss2023-22-247
-  #SBATCH -p core
-  #SBATCH -n 1
-  #SBATCH -t 10:00:00
+    ```bash
+    #!/bin/bash
+    #SBATCH -J jobname
+    #SBATCH -A naiss2023-22-247
+    #SBATCH -p core
+    #SBATCH -n 1
+    #SBATCH -t 10:00:00
 
-  module load bioinfo-tools
-  module load bwa/0.7.17 samtools/1.14
+    module load bioinfo-tools
+    module load bwa/0.7.17 samtools/1.14
 
-  export SRCDIR=$HOME/path-to-input
+    export SRCDIR=$HOME/path-to-input
 
-  cp $SRCDIR/foo.pl $SRCDIR/bar.txt $SNIC_TMP/.
-  cd $SNIC_TMP
+    cp $SRCDIR/foo.pl $SRCDIR/bar.txt $SNIC_TMP/.
+    cd $SNIC_TMP
 
-  ./foo.pl bar.txt
+    ./foo.pl bar.txt
 
-  cp *.out $SRCDIR/path-to-output/.
+    cp *.out $SRCDIR/path-to-output/.
 
-```
+    ```
 
 ## Job arrays
 
-??? Example
-  Submit many jobs at once with the same or similar parameters
-  Use $SLURM_ARRAY_TASK_ID in the script in order to find the correct path
-  
-  ```bash
-  #!/bin/bash
-  #SBATCH -A naiss2023-22-21
-  #SBATCH -p node
-  #SBATCH -N 2
-  #SBATCH -t 01:00:00
-  #SBATCH -J jobarray
-  #SBATCH --array=0-19
-  #SBATCH --mail-type=ALL,ARRAY_TASKS
+??? example "Example"  
+    Submit many jobs at once with the same or similar parameters
+    Use $SLURM_ARRAY_TASK_ID in the script in order to find the correct path
 
-  # SLURM_ARRAY_TASK_ID tells the script which iteration to run
-  echo $SLURM_ARRAY_TASK_ID
+    ```bash
+    #!/bin/bash
+    #SBATCH -A naiss2023-22-21
+    #SBATCH -p node
+    #SBATCH -N 2
+    #SBATCH -t 01:00:00
+    #SBATCH -J jobarray
+    #SBATCH --array=0-19
+    #SBATCH --mail-type=ALL,ARRAY_TASKS
 
-  cd /pathtomydirectory/dir_$SLURM_ARRAY_TASK_ID/
+    # SLURM_ARRAY_TASK_ID tells the script which iteration to run
+    echo $SLURM_ARRAY_TASK_ID
 
-  srun -n 40 my-program
-  env
-  ```
+    cd /pathtomydirectory/dir_$SLURM_ARRAY_TASK_ID/
 
-You may use scontrol to modify some of the job arrays.
+    srun -n 40 my-program
+    env
+    ```
+
+    You may use scontrol to modify some of the job arrays.
 
 
 ## Profiling on the GPUs
