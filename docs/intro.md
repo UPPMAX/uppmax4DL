@@ -185,7 +185,7 @@ Useful commands:
 ## Additional information
 
 - [UPPMAX webpage](https://www.uppmax.uu.se/)
-- [Slurm](https://www.uppmax.uu.se/support/user-guides/slurm-user-guide/)
-- [Snowy](https://www.uppmax.uu.se/support/user-guides/snowy-user-guide/)
-- [GPU:s on Snowy](https://www.uppmax.uu.se/support/user-guides/using-the-gpu-nodes-on-snowy/)
-- [TensorFlow on Snowy/Bianca](https://www.uppmax.uu.se/support/user-guides/tensorflow-user-guide/)
+- [Slurm](https://docs.uppmax.uu.se/cluster_guides/slurm/)
+- [Snowy](https://docs.uppmax.uu.se/cluster_guides/snowy/)
+- [GPU:s on Snowy](https://docs.uppmax.uu.se/cluster_guides/slurm/#need-more-resources-or-gpu)
+- [TensorFlow on Snowy/Bianca](https://docs.uppmax.uu.se/software/tensorflow/)
