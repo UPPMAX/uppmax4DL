@@ -99,22 +99,22 @@ Useful commands:
 #SBATCH --gpus-per-node=1
 ```
 
-??? Example of a job running on part of a GPU node
+??? example "Example of a job running on part of a GPU node"
 
-```bash
-#!/bin/bash
-#SBATCH -J GPUjob
-#SBATCH -A snic2023-22-247
-#SBATCH -t 03-00:00:00
-#SBATCH -p core
-#SBATCH -n 16
-#SBATCH -M snowy
-#SBATCH --gres=gpu:1
-#SBATCH --gres=mps:50
+    ```bash
+    #!/bin/bash
+    #SBATCH -J GPUjob
+    #SBATCH -A snic2023-22-247
+    #SBATCH -t 03-00:00:00
+    #SBATCH -p core
+    #SBATCH -n 16
+    #SBATCH -M snowy
+    #SBATCH --gres=gpu:1
+    #SBATCH --gres=mps:50
 
-module use /sw/EasyBuild/snowy/modules/all/
-module load intelcuda/2019b
-```
+    module use /sw/EasyBuild/snowy/modules/all/
+    module load intelcuda/2019b
+    ```
 
 ## I/O intensive jobs: use the scratch local to the node
 
