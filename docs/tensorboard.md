@@ -53,7 +53,7 @@ Change the path & name `./tensorboard-log-dir` as you wish. Each running job sho
 By default, TensorBoard will attach the port `6006` to localhost. If it's taken, it will chose another one. You may see the chosen port in the output when you start TensorBoard from the command line.
 
 
-## 4. Accesss TensoBoard
+## 4. Accesss TensorBoard
 
 ### Solution 1: Using ssh-tunnelling
 
@@ -65,7 +65,7 @@ Update the port if needed.
 Next, on your computer open a web browser and visit <http://localhost:8080>. You should now see the Tensorboard UI.
 
 
-### Solution 2: Using ThinLic
+### Solution 2: Using ThinLinc
 
 - Launch a web browser on ThinLinc.
 - Visit `http://s???.uppmax.uu.se:6006` or `localhost:8080`. Update the local port, in this example `8080`, and the snowy node `s???` as needed.

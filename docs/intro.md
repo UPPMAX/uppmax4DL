@@ -38,7 +38,7 @@ Some useful comamnds:
 How to submit a job to Slurm?
 
 ```bash
-sbatch  -A naiss2023-22-247 -t 10:00  -p core  -n 10  my_job.sh
+sbatch  -A uppmax2024-2-21 -t 10:00  -p core  -n 10  my_job.sh
 ```
 
 What should a jobscript contain?
@@ -116,6 +116,12 @@ Useful commands:
     module load intelcuda/2019b
     ```
 
+??? example "Example of an interactive session on Snowy"
+
+    ```bash
+    interactive -A uppmax2024-2-21 -p node -N 1 -t 01:00:00 --gres=gpu:1
+    ```
+
 ## I/O intensive jobs: use the scratch local to the node
 
 ??? example "Example"
@@ -181,7 +187,11 @@ Useful commands:
 
     - `nvtop`
 
-
+- Check CUDA and pytorch accessibility from python  
+    ```python
+    module load python_ML_packages
+    python -c "import torch; print(torch.__version__); print(torch.version.cuda); print(torch.cuda.get_device_properties(0)); print(torch.randn(1).cuda())"
+    ```
 ## Additional information
 
 - [UPPMAX webpage](https://www.uppmax.uu.se/)
@@ -189,3 +199,4 @@ Useful commands:
 - [Snowy](https://docs.uppmax.uu.se/cluster_guides/snowy/)
 - [GPU:s on Snowy](https://docs.uppmax.uu.se/cluster_guides/slurm/#need-more-resources-or-gpu)
 - [TensorFlow on Snowy/Bianca](https://docs.uppmax.uu.se/software/tensorflow/)
+- [Software and package installation](https://docs.uppmax.uu.se/software/install/)
