@@ -9,7 +9,8 @@ nav:
 #    - Slurm: slurm-intro.md
     - Intro: intro.md
     - Jupyter Notebooks: jupyter.md
-    - TensorBoard: tensorboard.md
+    - DL Exercises: DL_exercises.md
+    # - TensorBoard: tensorboard.md
 #    - Python packages: pip.md
 #    - Software and package installation: install.md
      

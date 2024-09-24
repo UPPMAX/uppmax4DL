@@ -15,8 +15,9 @@
 
 ## How to transfer files?
 - `sftp`
-- `rsync`
-    - example: `rsync -av /local/dir user@rackham.uppmax.uu.se:/proj/naiss2023-22-247/nobackup/private/user/.`
+- [`scp`](https://docs.uppmax.uu.se/software/rackham_file_transfer_using_scp/)
+<!-- - `rsync`
+    - example: `rsync -av /local/dir user@rackham.uppmax.uu.se:/proj/naiss2023-22-247/nobackup/private/user/.` -->
 - SFTP graphical tools  
     - [WinSCP](https://docs.uppmax.uu.se/software/rackham_file_transfer_using_winscp/) and [FileZilla](https://docs.uppmax.uu.se/software/rackham_file_transfer_using_filezilla/)
 
@@ -38,7 +39,7 @@ Some useful comamnds:
 How to submit a job to Slurm?
 
 ```bash
-sbatch  -A uppmax2024-2-21 -t 10:00  -p core  -n 10  my_job.sh
+sbatch  -A uppmax2024-2-21 -t 02:00:00  -p core  -n 10  my_job.sh
 ```
 
 What should a jobscript contain?
@@ -54,7 +55,7 @@ What should a jobscript contain?
 
 ```bash
 #!/bin/bash
-#SBATCH -A naiss2023-22-247
+#SBATCH -A uppmax2024-2-21
 #SBATCH -p node
 #SBATCH -N 1
 #SBATCH -t 24:00:00
@@ -129,7 +130,7 @@ Useful commands:
     ```bash
     #!/bin/bash
     #SBATCH -J jobname
-    #SBATCH -A naiss2023-22-247
+    #SBATCH -A uppmax2024-2-21
     #SBATCH -p core
     #SBATCH -n 1
     #SBATCH -t 10:00:00
