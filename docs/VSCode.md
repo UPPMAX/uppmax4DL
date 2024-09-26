@@ -35,8 +35,11 @@ Go to Command Palette `Ctrl+Shift+P` or `F1` on your local VSCode. Search for "i
 ## 3. Port forwarding to use Snowy gpus
 
 
+
 ## 4. Working with jupyter server on Rackham and snowy
 
-### Solution 1:
+### Rackham:
 
-### Solution 2:
+### Snowy:
+
+Start an interactive session with GPU allocation on Snowy `interactive -A uppmax202x-x-xx -p node -N 1 -t 02:00:00 --gres=gpu:1 -M snowy`. Module load the jupyter packages `module load python_ML_packages` and start the jupyter server `jupyter notebook --ip 0.0.0.0 --no-browser`. This should start a jupyter server on Snowy compute node with one T4 GPU. Copy the URL of the running jupyter server which goes something like `http://s193.uppmax.uu.se:8888/tree?token=xxx` and paste it in the jupyter kernel path on your local VSCode.
