@@ -23,12 +23,12 @@
 
 ???+ question "Copy files between to your private folder"
 
-    - Use scp to copy a file from the your local laptop to your folder on uppmax2024-2-21. Download CIFAR-10 python pickeled (dataset here)[https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz]
+    - Use scp to copy a file from the your local laptop to your folder on uppmax2024-2-21. Download CIFAR-10 python pickeled [dataset here](https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz)
     - Do the same activity but with Filezilla or WinSCP. Delete your ealier uploaded data to make space for the new incoming one.
 
         ??? tip "Answer"
             
-            Refer to (SCP documentation here)[https://docs.uppmax.uu.se/software/rackham_file_transfer_using_scp/]
+            Refer to [SCP documentation here](https://docs.uppmax.uu.se/software/rackham_file_transfer_using_scp/)
            
             
 
@@ -36,7 +36,7 @@
 
 ???+ question "Submit a Slurm job"
 
-    - Close the (cifar10 resnet repository)[https://github.com/akamaster/pytorch_resnet_cifar10?tab=readme-ov-file] and edit the run.sh by adding appropriate slurm sbatch commands.
+    - Close the [cifar10 resnet repository](https://github.com/akamaster/pytorch_resnet_cifar10?tab=readme-ov-file) and edit the run.sh by adding appropriate slurm sbatch commands.
     
     ??? tip "Answer"
         - edit a file using you prefered editor, named `my_bio_worksflow.sh`, for example, with the content
