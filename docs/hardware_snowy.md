@@ -1,7 +1,7 @@
 # Snowy Hardware
 
-![Snowy cluster](img/snowy_120_x_186.jpg)
-<img src="img/uppmax_serverroom.png" height="186" alt="Server room">
+![Snowy cluster](./img/snowy_120_x_186.jpg)
+<img src="./img/uppmax_serverroom.png" height="186" alt="Server room">
 
 Nodes    | CPUs    |  Cores |  Memory     | Scratch    | GPUs | Name | Comment
 --------------- | --------------- | --------------- | --------------- |--------------- |--------------- |--------------- |---------------

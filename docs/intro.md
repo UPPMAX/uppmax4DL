@@ -179,7 +179,13 @@ Useful commands:
     You may use scontrol to modify some of the job arrays.
 
 
-## Profiling on the GPUs
+## GPU accessibility check
+
+- Chech CUDA environment variable
+    ```bash
+    [jayan@s180 uppmax2025-3-5]$ env | grep CUDA
+    CUDA_VISIBLE_DEVICES=0
+    ```
 
 - Check CUDA and pytorch accessibility from python  
     ```python
@@ -192,5 +198,4 @@ Useful commands:
 - [Slurm](https://docs.uppmax.uu.se/cluster_guides/slurm/)
 - [Snowy](https://docs.uppmax.uu.se/cluster_guides/snowy/)
 - [GPU:s on Snowy](https://docs.uppmax.uu.se/cluster_guides/slurm/#need-more-resources-or-gpu)
-- [TensorFlow on Snowy/Bianca](https://docs.uppmax.uu.se/software/tensorflow/)
 - [Software and package installation](https://docs.uppmax.uu.se/software/install/)
