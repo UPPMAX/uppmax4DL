@@ -67,7 +67,7 @@
 
         - make the job script executable
         ```bash
-        $ chmoad a+x run.sh
+        $ chmod a+x run.sh
         ```
         
         - submit the job

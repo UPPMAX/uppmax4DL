@@ -23,7 +23,7 @@
 
 ## The module system
 
-- built on LMOD
+Built on LMOD, a module system to handle user's environment variables.
 
 Some useful comamnds:
 
@@ -36,6 +36,8 @@ Some useful comamnds:
 
 ## Slurm
 
+A job schedular used in many supercomputers and HPCs.  
+
 How to submit a job to Slurm?
 
 ```bash
@@ -44,18 +46,18 @@ sbatch  -A uppmax2024-2-21 -t 02:00:00  -p core  -n 10  my_job.sh
 
 What should a jobscript contain?
   
-- project number
-- max time
-- partition
-- number or core and/or nodes
-- job name
-- special features
+- `-A` : project number 
+- `-t` : max time
+- `-p` : partition
+- `-n/-N` : number or core and/or nodes
+- `-J` : job name
+- special features : `--gres, --gpus-per-node` etc.
   
 ### A typical job script:
 
 ```bash
 #!/bin/bash
-#SBATCH -A uppmax2024-2-21
+#SBATCH -A uppmax2025-3-5
 #SBATCH -p node
 #SBATCH -N 1
 #SBATCH -t 24:00:00
@@ -105,7 +107,7 @@ Useful commands:
     ```bash
     #!/bin/bash
     #SBATCH -J GPUjob
-    #SBATCH -A snic2023-22-247
+    #SBATCH -A uppmax2025-3-5
     #SBATCH -t 03-00:00:00
     #SBATCH -p core
     #SBATCH -n 16
@@ -178,15 +180,6 @@ Useful commands:
 
 
 ## Profiling on the GPUs
-- `nvidia-smi`
-
-    - `nvidia-smi dmon -o DT`
-    - `nvidia-smi --format=noheader,csv --query-compute-apps=timestamp,gpu_name,pid,name,used_memory --loop=1 -f sample_run.log`
-    - `nvidia-smi --help` or `man nvidia-smi`
-
-- `module load nvtop`
-
-    - `nvtop`
 
 - Check CUDA and pytorch accessibility from python  
     ```python

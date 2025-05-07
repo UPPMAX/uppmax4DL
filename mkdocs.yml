@@ -11,6 +11,7 @@ nav:
     - Jupyter Notebooks: jupyter.md
     - VS Code: VSCode.md
     - DL Exercises: DL_exercises.md
+    - Profling: profiling.md
     # - TensorBoard: tensorboard.md
 #    - Python packages: pip.md
 #    - Software and package installation: install.md
