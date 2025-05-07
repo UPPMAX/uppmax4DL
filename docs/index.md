@@ -2,7 +2,7 @@
 template: home.html
 ---
 
-<center>
+<div style="text-align: center;">
 
 <br/><br/>
 
@@ -10,20 +10,12 @@ template: home.html
 
 <br/><br/>
 
-
-# Welcome to UPPMAX for Deep Learning!
+<h1>Welcome to UPPMAX for Deep Learning!</h1>
     
-</center>
+<br><br/>
 
-
-<center>
-<br>
-    
-<br/><br/>
-
-[Let's get started!](intro.md){ .md-button .md-button--primary }
+<a href="intro.md" class="md-button md-button--primary" style="text-decoration: none;">Let's get started! 🚀</a>
 
 <br/><br/>
 
-
-</center>
+</div>
