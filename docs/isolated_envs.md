@@ -1,15 +1,5 @@
 # Use isolated environments
 
-!!! abstract "Learning objectives"
-    - Practice using the documentation of your HPC cluster
-    - Find out which isolated environment tool to use on your HPC cluster
-    - Work (create, activate, work, deactivate) with isolated environments
-      in the way recommended by your HPC cluster
-    - (optional) work (create, activate, work, deactivate) with isolated environments
-      in the other way (if any) possible on your HPC cluster
-    - (optional) export and import a virtual
-      environment
-
 ## Isolated environments
 
 - As an example, maybe you have been using TensorFlow 1.x.x for your project and 
@@ -126,20 +116,20 @@ The next points will be the same for all clusters
     - Only works for Python environments
     - Only works with Python versions already installed
 
-??? "Example NSC"
+??? "Example"
     ```console
-    ml buildtool-easybuild/4.8.0-hpce082752a2 GCC/13.2.0 Python/3.11.5 
+    ml python/3.11.5 
     which python
     python -V
-    cd /proj/hpc-python-spring-naiss/users/<username>
-    python -m venv env-matplotlib
-    source activate  env-matplotlib
-    pip install matplotlib
+    cd /proj/uppmax2025-3-5/private/<username>
+    python -m venv torch_env
+    source activate  torch_env
+    pip install torch torchvision 
     python
     ```
     
     ```python
-    >>> import matplotlib
+    >>> import torch
     ```
 
 !!! note
@@ -283,7 +273,8 @@ Next steps are the same for all clusters
 ## Exercises
 
 !!! question "Exercise 0: Make a decision between `venv` or `conda`."
-    - go with `venv` first as it is simpler to manage.
+    - go with `venv` first as it is simpler to setup.
+    - go with `conda` if you need many envs to manage.
 
 !!! question "Exercise 1: Cover the documentation for venvs or conda"
     First try to find it by navigating.
