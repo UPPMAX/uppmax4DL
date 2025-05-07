@@ -23,6 +23,7 @@ Nodes    | CPUs    |  Cores |  Memory     | Scratch    | GPUs | Name | Comment
 GPU on Snowy: NVIDIA T4 (16GB)
 
 Performance in TFLOPS and TOPS (10<sup>12</sup> operations per sec):  
+
 | Data type | A100          | T4   |
 | --------  | ------------- | ---- |
 |      FP64 | 9.7 \| 19.5\* | 0.25 |
