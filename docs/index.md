@@ -14,7 +14,7 @@ template: home.html
     
 <br><br/>
 
-<a href="intro.md" class="md-button md-button--primary" style="text-decoration: none;">Let's get started! 🚀</a>
+<a href="intro/" class="md-button md-button--primary" style="text-decoration: none;">Let's get started! 🚀</a>
 
 <br/><br/>
 
