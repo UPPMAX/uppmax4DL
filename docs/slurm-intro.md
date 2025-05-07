@@ -57,7 +57,7 @@
 #### Try interactive
 
 ```
-$ interactive -A sens2023531 -p core -n 1 -t 10:00
+$ interactive -A uppmax2025-3-5 -p core -n 1 -t 10:00
 ```
 
 - Which node are you on?
@@ -68,7 +68,7 @@ $ interactive -A sens2023531 -p core -n 1 -t 10:00
 ```bash
 #!/bin/bash
 
-#SBATCH -A sens2023531  # Project ID
+#SBATCH -A uppmax2025-3-5  # Project ID
 
 #SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes) 
 
@@ -80,12 +80,12 @@ $ interactive -A sens2023531 -p core -n 1 -t 10:00
 
 # go to some directory
 
-cd /proj/sens2023531/
+cd /proj/uppmax2025-3-5/
 pwd -P
 
 # load software modules
 
-module load bioinfo-tools
+module load python3/3.12.7
 module list
 
 # do something
@@ -122,7 +122,7 @@ In short, this program goes over the following procedure, over and over again:
     - Introduction quide for installing own software or packages
     - Very short introduction to developing old programs
 
-!!! note "Node types"
+<!-- !!! note "Node types"
 
     - Bianca has three node types: thin, fat and gpu. 
         - thin being the typical cluster node with 128 GB memory 
@@ -132,14 +132,14 @@ In short, this program goes over the following procedure, over and over again:
             - Please note that requesting 512 GB can not be combined with requesting GPUs.
         - You may also add "-C gpu" to your submission line to request a GPU node with two NVIDIA A100 40 GB. 
             - Please note that all GPU nodes have 256 GB of RAM, and are thus "fat" as well. All compute nodes in Bianca has 16 CPU cores in total.
-    - Please note that there are only 5 nodes with 256 GB of RAM, 2 nodes with 512 GB of RAM and 4 nodes with 2xA100 GPUs. The wait times for these node types are expected to be somewhat longer.
+    - Please note that there are only 5 nodes with 256 GB of RAM, 2 nodes with 512 GB of RAM and 4 nodes with 2xA100 GPUs. The wait times for these node types are expected to be somewhat longer. -->
    
-!!! note "Some Limits"
+<!-- !!! note "Some Limits"
 
     - There is a job walltime limit of ten days (240 hours).
     - We restrict each user to at most 5000 running and waiting jobs in total.
     - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is overdrafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
-
+ -->
 
 !!! abstract "Keypoints"
     - You are always in the login node unless you:

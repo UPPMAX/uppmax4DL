@@ -37,4 +37,4 @@ Performance in TFLOPS and TOPS (10<sup>12</sup> operations per sec):
 \*Performance on Tensor Core.  
 \*\*Up to a factor of two faster with sparsity.
 
-Submitting jobs : https://docs.uppmax.uu.se/cluster_guides/slurm_on_snowy/
+Submitting jobs : [Slurm on snowy](https://docs.uppmax.uu.se/cluster_guides/slurm_on_snowy/)

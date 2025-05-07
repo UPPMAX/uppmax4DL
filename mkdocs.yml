@@ -7,7 +7,6 @@ nav:
 #    - Login: login.md
     - Intro: intro.md
     - Hardware: hardware_snowy.md
-    - Module system: modules.md
     - Slurm: slurm-intro.md
     - Jupyter Notebooks: jupyter.md
     - VS Code: VSCode.md

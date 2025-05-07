@@ -76,11 +76,10 @@ Useful SBATCH options:
 
 Useful commands:
 
+- `interactive -A naiss2023-22-247 -M snowy -p core -n 4` starts an interactive job on snowy
 - `jobinfo -p devel`
-- `sinfo -p node - M snowy`
-- `jobinfo -u username --state=running`
-- `jobinfo -u username --state=pending`
-- `salloc -A naiss2023-22-247 --begin=2023-03-24T08:00:00` starts an interactive job earliest tomorrow at 08:00
+- `sinfo -p node -M snowy`
+- `jobinfo -u username`
 
 ### How to cancel jobs?
 - `scancel <jobid>`
@@ -120,7 +119,7 @@ Useful commands:
 ??? example "Example of an interactive session on Snowy"
 
     ```bash
-    interactive -A uppmax2025-3-5 -p node -N 1 -t 01:00:00 --gres=gpu:1
+    interactive -A uppmax2025-3-5 -p node -N 1 -t 01:01:00 --gres=gpu:1
     ```
 
 ## I/O intensive jobs: use the scratch local to the node
