@@ -10,7 +10,7 @@
 ???+ question "Make arrangements for the new project"
 
    
-    - Find your way into your project uppmax2024-2-21 by logging in to Rackham by ThinLinc/ssh/VSCode.
+    - Find your way into your project uppmax2025-3-5 by logging in to Rackham by ThinLinc/ssh/VSCode.
     - Go to private folder and make an empty folder with your name
 
         ??? tip "Answer"
@@ -23,7 +23,7 @@
 
 ???+ question "Copy files between to your private folder"
 
-    - Use scp to copy a file from the your local laptop to your folder on uppmax2024-2-21. Download CIFAR-10 python pickeled [dataset here](https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz)
+    - Use scp to copy a file from the your local laptop to your folder on uppmax2025-3-5. Download CIFAR-10 python pickeled [dataset here](https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz)
     - Do the same activity but with Filezilla or WinSCP. Delete your ealier uploaded data to make space for the new incoming one.
 
         ??? tip "Answer"
@@ -44,7 +44,7 @@
         ```bash
             #!/bin/bash -l
 
-            #SBATCH -A uppmax2024-2-21
+            #SBATCH -A uppmax2025-3-5
             #SBATCH -p node
             #SBATCH -N 1
             #SBATCH -t 01:00:00

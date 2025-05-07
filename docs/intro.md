@@ -41,7 +41,7 @@ A job schedular used in many supercomputers and HPCs.
 How to submit a job to Slurm?
 
 ```bash
-sbatch  -A uppmax2024-2-21 -t 02:00:00  -p core  -n 10  my_job.sh
+sbatch  -A uppmax2025-3-5 -t 02:00:00  -p core  -n 10  my_job.sh
 ```
 
 What should a jobscript contain?
@@ -99,7 +99,6 @@ Useful commands:
 ```bash
 #SBATCH -M snowy
 #SBATCH --gres=gpu:1
-#SBATCH --gpus-per-node=1
 ```
 
 ??? example "Example of a job running on part of a GPU node"
@@ -113,7 +112,6 @@ Useful commands:
     #SBATCH -n 16
     #SBATCH -M snowy
     #SBATCH --gres=gpu:1
-    #SBATCH --gres=mps:50
 
     module use /sw/EasyBuild/snowy/modules/all/
     module load intelcuda/2019b
@@ -122,7 +120,7 @@ Useful commands:
 ??? example "Example of an interactive session on Snowy"
 
     ```bash
-    interactive -A uppmax2024-2-21 -p node -N 1 -t 01:00:00 --gres=gpu:1
+    interactive -A uppmax2025-3-5 -p node -N 1 -t 01:00:00 --gres=gpu:1
     ```
 
 ## I/O intensive jobs: use the scratch local to the node
@@ -132,7 +130,7 @@ Useful commands:
     ```bash
     #!/bin/bash
     #SBATCH -J jobname
-    #SBATCH -A uppmax2024-2-21
+    #SBATCH -A uppmax2025-3-5
     #SBATCH -p core
     #SBATCH -n 1
     #SBATCH -t 10:00:00
@@ -185,6 +183,10 @@ Useful commands:
     ```bash
     [jayan@s180 uppmax2025-3-5]$ env | grep CUDA
     CUDA_VISIBLE_DEVICES=0
+    ```
+    or
+    ```bash
+    echo $CUDA_VISIBLE_DEVICES
     ```
 
 - Check CUDA and pytorch accessibility from python  

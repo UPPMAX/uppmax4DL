@@ -18,10 +18,10 @@ You need to set up 2FA for the ThinLinc web.
 ## 2. Open a terminal in ThinLinc and ask for an interactive session to Snowy.
 
 ```bash
-interactive -A uppmax2024-2-21 -p node -N 1 -M snowy --gpus=1 -t 04:00:00
+interactive -A uppmax2025-3-5 -p node -N 1 -M snowy --gpus=1 -t 04:00:00
 ```
 
-Note: We have a magnetic 10-node reservation for today: `uppmax2024-2-21`.
+Note: We have a magnetic 10-node reservation for today: `uppmax2025-3-5`.
 
 Is the GPU visible?
 ```bash

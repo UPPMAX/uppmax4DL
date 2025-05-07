@@ -5,9 +5,10 @@ nav:
   - Course content:
 #    - Overview: overview.md
 #    - Login: login.md
-#    - Module system: modules.md
-#    - Slurm: slurm-intro.md
     - Intro: intro.md
+    - Hardware: hardware_snowy.md
+    - Module system: modules.md
+    - Slurm: slurm-intro.md
     - Jupyter Notebooks: jupyter.md
     - VS Code: VSCode.md
     - DL Exercises: DL_exercises.md
