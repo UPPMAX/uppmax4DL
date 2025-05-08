@@ -50,13 +50,6 @@
     - To use self-installed Python packages in a batch script, you also need to load the above mentioned modules and activate the environment. An example of this will follow later in the course. 
     - To see which Python packages you, yourself, have installed, you can use `pip list --user` while the environment you have installed the packages in is active. To see all packages, use `pip list`. 
 
-??? "Other tools perhaps covered in the future"
-    - [pixi](https://pixi.sh/latest/): package management tool for developers 
-        - It allows the developer to install libraries and applications in a reproducible way. Use pixi cross-platform, on Windows, Mac and Linux.
-        - could replace conda/mamba
-    
-    - [uv](https://docs.astral.sh/uv/): An extremely fast Python package and project manager, written in Rust. 
-        - A single tool to replace pip, pip-tools, pipx, poetry, pyenv, twine, virtualenv, and more
 
 ## Virtual environment - venv & virtualenv
 
@@ -147,17 +140,20 @@ The next points will be the same for all clusters
     - That is,  you cannot load the python module and use the packages therein inside you Conda environment.
 
 ??? "Conda channels"
-    - bioconda
-    - biocore
-    - conda-forge
-    - dranew
-    - free
-    - main
-    - pro
-    - qiime2
-    - r
-    - r2018.11
-    - scilifelab-lts
+  - conda-forge
+  - scilifelab-lts
+  - r
+  - main
+  - bioconda
+  - free
+  - pro
+  - qiime2
+  - biocore
+  - dranew
+  - r2018.11
+  - nvidia
+  - pytorch
+  - anaconda
      
     You reach them all by loading the conda module. You don't have to state the specific channel when using UPPMAX. Otherwise you do with `conda -c <channel> ...`
 
@@ -170,35 +166,21 @@ The next points will be the same for all clusters
         - Do a `conda clean -a` once in a while to remove unused and unnecessary files
 
 !!! tip
-    - The conda environemnts inclusing many small files are by default stored in `~/.conda` folder that is in your $HOME directory with limited storage.
-    - Move your `.conda` directory to your project folder and make a soft link to it from `$HOME`
-    - Do the following (`mkdir -p` ignores error output and will not recfreate anothe folder if it already exists):
-         - (replace what is inside `<>` with relevant path)
-    
-    - Solution 1
-    
-       This works nicely if you have several projects. Then you can change these varables according to what you are currently working with.
-    
-       ```bash
-       export CONDA_ENVS_PATH="path/to/your/project/(subdir)"
-       export CONDA_PKG_DIRS="path/to/your/project/(subdir)"
-       ```
-    
-    - Solution 2 
-    
-       - This may not be a good idea if you have several projects.
-    
-       ```bash
-       $ mkdir -p ~/.conda
-       $ mv ~/.conda /<path-to-project-folder>/<username>/
-       $ ln -s /<path-to-project-folder>/<username>/.conda ~/.conda
-       ```
+    - The conda environemnts includes many small files are by default stored in `~/.conda` folder that is in your $HOME directory with limited storage.
+
+    This works nicely if you have several projects. Then you can change these varables according to what you are currently working with.
+
+    ```bash
+    export CONDA_ENVS_PATH="path/to/your/project/(subdir)"
+    export CONDA_PKG_DIRS="path/to/your/project/(subdir)"
+    ```
 
 ### Typical workflow
 
 The first 2 steps are cluster dependent and will therefore be slightly different.
 
-1. Make conda available from a software module, like `ml load conda` or similar, or use own installation of miniconda or miniforge.
+1. Make conda available from a software module: `source /sw/apps/conda/latest/rackham_stage/etc/profile.d/conda.sh`, or use own installation of miniconda or miniforge.
+
 2. First time
 
 ??? "First time"
@@ -208,8 +190,14 @@ The first 2 steps are cluster dependent and will therefore be slightly different
     
     ```console
     $ export CONDA_ENVS_PATH="path/to/your/project/(subdir)"
+    $ mkdir -p $CONDA_ENVS_PATH
     $ export CONDA_PKG_DIRS="path/to/your/project/(subdir)"
+    $ mkdir -p $CONDA_PKGS_DIRS
     ```
+
+    - Disable the auto activation of the `(base)` environment  
+    `(base) conda config --set auto_activate_base false`
+    - Logout and login again!
 
 Next steps are the same for all clusters
 
@@ -258,9 +246,6 @@ Next steps are the same for all clusters
 
 ## Install from file
 
-- All centers has had different approaches in what is included in the module system and not.
-- Therefore the solution to complete the necessary packages needed for the course lessons, different approaches has to be made.
-- This is left as exercise for you, see Exercise 4.
 
 ### venv
 
@@ -279,17 +264,15 @@ Next steps are the same for all clusters
 !!! question "Exercise 1: Cover the documentation for venvs or conda"
     First try to find it by navigating.
     
-
-??? "Solution"
-    #### venv
-    
     - [Python venv](https://docs.uppmax.uu.se/software/python_venv/)
     - [Video By Richel](https://www.youtube.com/watch?v=lj_Q-5l0BqU)
     
     #### conda
 
-    - https://docs.uppmax.uu.se/software/conda/
+    - Installing using available source file : https://hackmd.io/@pmitev/module_conda_Rackham
+    - Your own conda installation: https://hackmd.io/@pmitev/conda_on_Rackham
+    - Installing using available module : https://docs.uppmax.uu.se/software/conda/
     
 
 !!! question "Exercise 2: Prepare the course environment"
-    install transformers and pytorch
+    install transformers torch torchvision notebook
