@@ -15,8 +15,8 @@
 
         ??? tip "Answer"
             `ssh jayan@rackham.uppmax.uu.se`  
-            `ssh -X jayan@rackham.uppmax.uu.se`
-            `cd /proj/uppmax2025-3-5`
+            `ssh -X jayan@rackham.uppmax.uu.se`  
+            `cd /proj/uppmax2025-3-5`  
             `mkdir`  
     
     - Copy contents from `uppmax_workshop` to your private folder. 
@@ -86,25 +86,25 @@
 
         ??? tip "Answer"
                 
-                * Install matplotlib and seaborn and start an interactive snowy session:  
+            - Install matplotlib and seaborn and start an interactive snowy session:  
 
-                ```console
+            ```console
                 source torch_env/bin/acivate
                 pip install matplotlib seaborn
                 interactive -A uppmax2025-3-5 -M snowy -p node -N 1 -t 1:01:00 --gres=gpu:1
                 source torch_env/bin/acivate
                 jupyter notebook --ip 0.0.0.0 --no-browser
-                ```
-                * Then tunnel:  
+            ```
+            - Then tunnel:  
                 `ssh -L 8888:s123:8888 username@rackham.uppmax.uu.se`
                 
-                * Copy the localhost url and paste it in your browser
+            - Copy the localhost url and paste it in your browser
 
 
 ### Cache management
 
 * By default HF will install the models and temp files to yur `$HOME` folde which is rather limited to 32 GB and 300k files. 
-* To avoid that, you can set `HF_HOME` and `HF_HUB_CACHE` variables to your project folder. Follow instructions on https://huggingface.co/docs/transformers/en/installation?cpu-only=PyTorch#cache-directory. 
+* To avoid that, you can set `HF_HOME` and `HF_HUB_CACHE` variables to your project folder. [Follow instructions on HuggingFace's documentation](https://huggingface.co/docs/transformers/en/installation?cpu-only=PyTorch#cache-directory).
 
 <!-- ## Doing installations
 

@@ -263,15 +263,15 @@ Next steps are the same for all clusters
 
 !!! question "Exercise 1: Cover the documentation for venvs or conda"
     First try to find it by navigating.
-    
-    - [Python venv](https://docs.uppmax.uu.se/software/python_venv/)
-    - [Video By Richel](https://www.youtube.com/watch?v=lj_Q-5l0BqU)
-    
-    #### conda
 
-    - Installing using available source file : https://hackmd.io/@pmitev/module_conda_Rackham
-    - Your own conda installation: https://hackmd.io/@pmitev/conda_on_Rackham
-    - Installing using available module : https://docs.uppmax.uu.se/software/conda/
+    **For venv:**
+    - [Python venv documentation at UPPMAX](https://docs.uppmax.uu.se/software/python_venv/)
+    - [Video Tutorial By Richel](https://www.youtube.com/watch?v=lj_Q-5l0BqU)
+
+    **For conda:**
+    - [Installing using available source file](https://hackmd.io/@pmitev/module_conda_Rackham)
+    - [Your own conda installation](https://hackmd.io/@pmitev/conda_on_Rackham)
+    - [Installing using available module](https://docs.uppmax.uu.se/software/conda/)
     
 
 !!! question "Exercise 2: Prepare the course environment"
