@@ -11,25 +11,36 @@
 
    
     - Find your way into your project uppmax2025-3-5 by logging in to Rackham by ThinLinc/ssh/VSCode.
-    - Go to private folder and make an empty folder with your name
+    - Go to private folder and make an empty folder with your name under `private` or `nobackup/private`
 
         ??? tip "Answer"
             `ssh jayan@rackham.uppmax.uu.se`  
             `ssh -X jayan@rackham.uppmax.uu.se`
+            `cd /proj/uppmax2025-3-5`
             `mkdir`  
+    
+    - Copy contents from `uppmax_workshop` to your private folder. 
 
 
-## Transfering files
+## Create environment
 
-???+ question "Copy files between to your private folder"
+???+ question "Use venv or conda to prepare your environment"
 
-    - Use scp to copy a file from the your local laptop to your folder on uppmax2025-3-5. Download CIFAR-10 python pickeled [dataset here](https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz)
-    - Do the same activity but with Filezilla or WinSCP. Delete your ealier uploaded data to make space for the new incoming one.
+    - Module load python and use venv to create a environment with pytorch, transformers and jupyter.
 
         ??? tip "Answer"
             
-            Refer to [SCP documentation here](https://docs.uppmax.uu.se/software/rackham_file_transfer_using_scp/)
-           
+            ```console
+            module load python/3.12.7
+            which python
+            python -V
+            python -m venv torch_env
+            ```
+
+            If using conda, follow instructions from "Use isolated environments" section.
+
+    - Activate your env and install desired packages.
+
             
 
 ## Using the compute nodes
@@ -75,13 +86,13 @@
         $ sbatch run.sh
         ```
         
-## Doing installations
+<!-- ## Doing installations
 
 
 ### Conda installation
 
 ???+ question "Install with Conda directly on Rackham"
 
-    - Install ``python>3.11``, transformers, torch, torchvision, notebook (using pip), pytorch-cuda=12.4, ipython, pillow
+    - Install ``python>3.11``, transformers, torch, torchvision, notebook (using pip), pytorch-cuda=12.4, ipython, pillow -->
 
 
