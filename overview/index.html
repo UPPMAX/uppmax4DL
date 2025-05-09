@@ -1,0 +1,853 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Overview - UPPMAX for Deep Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="UPPMAX for Deep Learning" class="md-header__button md-logo" aria-label="UPPMAX for Deep Learning" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UPPMAX for Deep Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../intro/" class="md-tabs__link">
+          
+  
+  
+  Course content
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UPPMAX for Deep Learning" class="md-nav__button md-logo" aria-label="UPPMAX for Deep Learning" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    UPPMAX for Deep Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Course content
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Course content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware_snowy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slurm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isolated_envs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Isolated Environments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jupyter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jupyter Notebooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VSCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VS Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DL_exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DL Exercises
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../profiling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Profling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#naiss" class="md-nav__link">
+    <span class="md-ellipsis">
+      NAISS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uppmax-missions" class="md-nav__link">
+    <span class="md-ellipsis">
+      UPPMAX missions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uppmax-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      UPPMAX systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-performance-computing-hpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Performance Computing — HPC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="High Performance Computing — HPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a cluster?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-about-the-three-common-uppmax-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary about the three "common" UPPMAX clusters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-the-uppmax-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of the UPPMAX systems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Anchor link to this section for reference">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Objectives</p>
+<ul>
+<li>We'll get an overview of UPPMAX and SNIC/NAISS and how a computer cluster works</li>
+</ul>
+</div>
+<p><strong>UPPMAX = UppMACS</strong>
+- <a href="http://uppmax.uu.se">Uppsala Multidisciplinary Center for Advanced Computational Science</a></p>
+<h2 id="naiss">NAISS<a class="headerlink" href="#naiss" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li><a href="https://www.naiss.se/"><strong>National Academic Infrastructure for Supercomputing in Sweden</strong></a></li>
+<li>
+<p>Mission: to provide a quality high-performance computing environment nationally</p>
+</li>
+<li>
+<p>Starting 1 January 2023, the National Academic Infrastructure for Supercomputing in Sweden (NAISS) is the new organization for high-performance computing, storage, and date services for academic users in Sweden. </p>
+</li>
+<li>From the users perspective, there will initially only be minimal differences between the SNIC and NAISS regimes.<ul>
+<li>FAQ:s — <a href="https://www.naiss.se/">https://www.naiss.se/</a></li>
+</ul>
+</li>
+<li>Application rounds: <a href="https://www.naiss.se//#application-rounds-for-compute-and-storage-resources">https://www.naiss.se//#application-rounds-for-compute-and-storage-resources</a></li>
+<li>NAISS and Uppsala University fund UPPMAX — UU’s supercomputing center.</li>
+</ul>
+<h2 id="uppmax-missions">UPPMAX missions<a class="headerlink" href="#uppmax-missions" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>Runs the clusters placed in Uppsala.</li>
+<li>More details in the afternoon about Organisational orienteering!</li>
+</ul>
+<h2 id="uppmax-systems">UPPMAX systems<a class="headerlink" href="#uppmax-systems" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>Clusters<ul>
+<li>Rackham (general purpose)<ul>
+<li>Snowy (Long runs and GPU:s)</li>
+</ul>
+</li>
+<li><strong>Bianca (sensitive data)</strong><ul>
+<li>Miarka (new for LifeScience)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Storage<ul>
+<li>On-load directly connected to the clusters</li>
+<li>Off-load for large data not needed for computation analysis anymore</li>
+</ul>
+</li>
+<li>Cloud<ul>
+<li>Dis (region EAST-1)</li>
+</ul>
+</li>
+</ul>
+<h2 id="high-performance-computing-hpc">High Performance Computing — HPC<a class="headerlink" href="#high-performance-computing-hpc" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="what-is-a-cluster">What is a cluster?<a class="headerlink" href="#what-is-a-cluster" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>
+<p>A network of computers, each computer working as a <strong>node</strong>.</p>
+</li>
+<li>
+<p>From small scale RaspberryPi cluster... </p>
+</li>
+</ul>
+<p><img alt="RaspBerry" src="../img/IMG_5111.jpeg" width="400" /></p>
+<ul>
+<li>To supercomputers like Rackham.</li>
+</ul>
+<p><img alt="Rackham" src="../img/uppmax-light2.jpg" /></p>
+<ul>
+<li>Each node contains several processor cores and RAM and a local disk called scratch.</li>
+</ul>
+<p><img alt="Node" src="../img/node.png" /></p>
+<ul>
+<li>
+<p>The user logs in to <strong>login nodes</strong>  via Internet through ssh or Thinlinc.</p>
+</li>
+<li>
+<p>Here the file management and lighter data analysis can be performed.</p>
+</li>
+</ul>
+<p><img alt="RaspBerry" src="../img/nodes.png" /></p>
+<p><img alt="RaspBerry" src="../img/Bild1.png" width="400" /></p>
+<ul>
+<li>The <strong>calculation nodes</strong> have to be used for intense computing. </li>
+</ul>
+<h2 id="summary-about-the-three-common-uppmax-clusters">Summary about the three "common" UPPMAX clusters<a class="headerlink" href="#summary-about-the-three-common-uppmax-clusters" title="Anchor link to this section for reference">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Rackham</th>
+<th>Snowy</th>
+<th>Bianca</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>General-purpose</td>
+<td>General-purpose</td>
+<td>Sensitive</td>
+</tr>
+<tr>
+<td><strong>#  Nodes (Intel)</strong></td>
+<td>486+144</td>
+<td>228+ <br>50 Nvidia T4 GPUs</td>
+<td>288 +  <br>10 nodes á 2 <br>NVIDIA A100 GPUs</td>
+</tr>
+<tr>
+<td><strong>Cores per node</strong></td>
+<td>20/16</td>
+<td>16</td>
+<td>16/64</td>
+</tr>
+<tr>
+<td><strong>Memory per node</strong></td>
+<td>128 GB</td>
+<td>128 GB</td>
+<td>128 GB</td>
+</tr>
+<tr>
+<td><strong>Fat nodes</strong></td>
+<td>256 GB &amp; 1 TB</td>
+<td>256, 512 GB &amp; 4 TB</td>
+<td>256 &amp; 512 GB</td>
+</tr>
+<tr>
+<td><strong>Local disk (scratch)</strong></td>
+<td>2/3 TB</td>
+<td>4 TB</td>
+<td>4 TB</td>
+</tr>
+<tr>
+<td><strong>Login nodes</strong></td>
+<td>Yes</td>
+<td>No (reached from Rackham)</td>
+<td>Yes (2 cores and 15 GB)</td>
+</tr>
+<tr>
+<td><strong>"Home" storage</strong></td>
+<td>Domus</td>
+<td>Domus</td>
+<td>Castor</td>
+</tr>
+<tr>
+<td><strong>"Project" Storage</strong></td>
+<td>Crex, Lutra</td>
+<td>Crex, Lutra</td>
+<td>Castor</td>
+</tr>
+</tbody>
+</table>
+<h2 id="overview-of-the-uppmax-systems">Overview of the UPPMAX systems<a class="headerlink" href="#overview-of-the-uppmax-systems" title="Anchor link to this section for reference">&para;</a></h2>
+<pre class="mermaid"><code>
+  graph TB
+
+  Node1 -- interactive --&gt; SubGraph2Flow
+  Node1 -- sbatch --&gt; SubGraph2Flow
+  subgraph "Snowy"
+  SubGraph2Flow(calculation nodes) 
+        end
+
+        thinlinc -- usr-sensXXX + 2FA + VPN ----&gt; SubGraph1Flow
+        terminal -- usr --&gt; Node1
+        terminal -- usr-sensXXX + 2FA + VPN ----&gt; SubGraph1Flow
+        Node1 -- usr-sensXXX + 2FA + no VPN ----&gt; SubGraph1Flow
+
+        subgraph "Bianca"
+        SubGraph1Flow(Bianca login) -- usr+passwd --&gt; private(private cluster)
+        private -- interactive --&gt; calcB(calculation nodes)
+        private -- sbatch --&gt; calcB
+        end
+
+        subgraph "Rackham"
+        Node1[Login] -- interactive --&gt; Node2[calculation nodes]
+        Node1 -- sbatch --&gt; Node2
+        end</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Next session</p>
+<p>We will try the different forms to log in to Bianca!</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">keypoints</p>
+<ul>
+<li>NAISS makes available large-scale high-performance computing resources, storage capacity, and advanced user support, for Swedish research. </li>
+<li>UPPMAX runs the local resources placed at Uppsala Universty</li>
+<li>A cluster consists of several inter-connected computers that can work individually or together.</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.footer", "search.suggest", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
