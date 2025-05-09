@@ -5,6 +5,14 @@
     - You can run VSCode on your local and still be able to work with modules loaded or environment created on Rackham. 
     - Similarly it is possible to take advantage of Snowy GPUs meanwhile developing on your local computer. 
 
+!!! warning "Latest VSCode does not work"
+
+    VSCode versions 1.99 and newer no longer support the operating system used on Rackham.
+    Downgrade VSCode to version 1.98 or earlier to use with Rackham.
+
+    This will not be needed with the upcoming Rackham replacement cluster [Pelle](../cluster_guides/pelle.md).
+
+
 ## 1. Connect your local VSCode to VSCode server running on Rackham
 
 A step by step approach is available on UPPMAX [VSCode documentation](https://docs.uppmax.uu.se/software/vscode_on_rackham/). 
